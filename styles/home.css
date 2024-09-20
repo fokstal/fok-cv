@@ -1,0 +1,23 @@
+.home {
+    display: none;
+}
+
+.home .logo-home {
+    position: relative;
+}
+
+.home nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.home .links {
+    margin-top: 160px;
+}
+
+.home .hello-text {
+    display: block;
+    margin-left: 400px;
+    font-size: 54px;
+}

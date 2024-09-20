@@ -1,0 +1,100 @@
+.contact {
+    display: none;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* WRITE ME BOX */
+
+.write-me-box {
+    display: flex;
+}
+
+.contact .form {
+    width: calc(var(--container-width) / 2);
+    margin-right: 170px;
+}
+
+.contact img {
+    display: block;
+    width: calc(var(--container-width) / 2);
+    transition: transform 1s;
+    transform-origin: center;
+}
+
+.rotate {
+    transform: rotateY(360deg);
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.form-box label {
+    font-size: 24px;
+    color: #000;
+    opacity: .6;
+}
+
+.form-box input {
+    font-size: 20px;
+}
+
+.form-box textarea {
+    font-size: 20px;
+}
+
+.form button {
+    display: block;
+    background-color: #F9EDDF;
+    border: none;
+
+    width: 120px;
+    height: 40px;
+    margin: 0 auto;
+
+    font-size: 18px;
+}
+
+.form button:hover {
+    opacity: .7;
+}
+
+
+/* TAKE MORE TEXT */
+
+.take-more-text {
+    display: flex;
+    width: 210px;
+    margin-left: auto;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 60px;
+}
+
+.take-more-text img {
+    display: block;
+    width: 24px;
+    margin-left: 15px;
+}
+
+
+/* NETWORK LINK */
+
+.network-link {
+    display: flex;
+    margin: 5% 0;
+}
+
+.network-link a {
+    margin: 0 auto;
+}
+
+.network-link img {
+    display: block;
+    width: 120px;
+}

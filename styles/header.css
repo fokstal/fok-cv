@@ -1,0 +1,11 @@
+header {
+    display: none;
+    align-items: center;
+}
+
+header .links {
+    margin-left: auto;
+}
+
+
+
