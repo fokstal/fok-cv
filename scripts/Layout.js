@@ -64,6 +64,7 @@ export default class Layout {
 
         setTimeout(() => {
             container.innerHTML = this.pageList[pageName + "Page"];
+            document.title = "fok ∙ " + pageName;
 
             container.classList.remove("fade-out");
         }, 200);
