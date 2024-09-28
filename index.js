@@ -1,7 +1,7 @@
-import Layout from "./Layout.js";
-import sendMessageToEmail from "./email.js";
-import LanguageWorker from "./LanguageWorker.js";
-import AccessModeWorker from "./AccessModeWorker.js";
+import Layout from "./scripts/Layout.js";
+import sendMessageToEmail from "./scripts/email.js";
+import LanguageWorker from "./scripts/LanguageWorker.js";
+import AccessModeWorker from "./scripts/AccessModeWorker.js";
 
 const container = document.querySelector(".container");
 const layout = new Layout(container, "home");
