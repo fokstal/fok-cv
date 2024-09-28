@@ -1,7 +1,3 @@
-.home {
-    display: none;
-}
-
 .home .logo-home {
     position: relative;
 }
@@ -10,10 +6,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.home .links {
-    margin-top: 160px;
+    align-items: center;
 }
 
 .home .hello-text {
