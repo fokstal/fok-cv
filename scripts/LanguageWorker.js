@@ -1,3 +1,5 @@
+import translation from "./translation.js";
+
 const LanguageEnum = Object.freeze({
     BY: 'BY',
     EN: 'EN',
@@ -24,19 +26,35 @@ class LanguageWorker {
         if (!localStorage.getItem(localKey.currentLang))
             localStorage.setItem(localKey.currentLang, LanguageEnum.EN);
 
-        this.languageSelectEl.value = localStorage.getItem(localKey.currentLang);
+        this.languageSelectEl.value = localStorage.getItem(localKey.currentLang);;
+
+        this.translateSite();
     }
 
     changeLanguage = () => {
-        const selectedLang = this.languageSelectEl.options[this.languageSelectEl.selectedIndex].text;
+        const selectedLanguage = this.languageSelectEl.options[this.languageSelectEl.selectedIndex].text;
 
-        if (LanguageEnum[selectedLang]) {
-            localStorage.setItem(localKey.currentLang, selectedLang);
+        if (LanguageEnum[selectedLanguage]) {
+            localStorage.setItem(localKey.currentLang, selectedLanguage);
+            this.translateSite(selectedLanguage);
             return;
         }
 
         throw new Error("No supported language in select.");
     };
+
+    translateSite = () => {
+        const currentLanguage = localStorage.getItem(localKey.currentLang);
+
+        document
+            .querySelectorAll("[translate-key]")
+            .forEach(el => {
+                const translateKey = el.getAttribute("translate-key");
+                const oldInnerHtml = el.innerHTML;
+
+                el.innerHTML = translation[currentLanguage][translateKey] || oldInnerHtml;
+            })
+    }
 }
 
 export default LanguageWorker;

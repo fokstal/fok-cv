@@ -1,27 +1,27 @@
 <main class="contact">
     <div class="write-me-box">
         <div class="form">
-            <h1>Write me</h1>
+            <h1 translate-key="writeMe">Write me</h1>
             <div class="form-box">
-                <label for="nameBox">Name *</label>
+                <label for="nameBox" translate-key="nameForm">Name *</label>
                 <input type="text" name="" id="nameBox">
             </div>
             <div class="form-box" style="margin-bottom: 35px;">
-                <label for="emailBox">Email *</label>
+                <label for="emailBox" translate-key="emailForm">Email *</label>
                 <input type="text" name="" id="emailBox">
             </div>
             <div class="form-box">
-                <label for="messageBox">Message *</label>
+                <label for="messageBox" translate-key="messageForm">Message *</label>
                 <textarea name="" id="messageBox" rows="5"></textarea>
             </div>
-            <button type="button" onclick="sendMessageToEmail()">
+            <button type="button" onclick="sendMessageToEmail()" translate-key="btnForm">
                 write
             </button>
         </div>
         <img id="pigeonImg" src="./images/pigeon-img.jpg" alt="Pigeon images">
     </div>
     <span class="take-more-text">
-        take more links
+        <p  translate-key="moreLinks">take more links</p>
         <img src="icons/arrow-down.svg" alt="\/">
     </span>
     <div class="network-link">

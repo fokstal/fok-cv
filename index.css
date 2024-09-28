@@ -283,7 +283,7 @@ a:hover {
 .links {
   display: flex;
   text-align: center;
-  width: 371px;
+  width: auto;
 }
 
 .links a {

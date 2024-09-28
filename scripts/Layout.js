@@ -5,10 +5,11 @@ const sessionKey = {
 export default class Layout {
     root = null;
     basePageName = "";
+    languageWorker = null;
     pageList = [];
 
-    constructor(root, basePageName) {
-        if (root == null || basePageName == null)
+    constructor(root, basePageName, languageWorker) {
+        if (!root || !basePageName || !languageWorker)
             throw new Error("Init values is failed!");
 
         this.root = root;
@@ -91,7 +92,9 @@ export default class Layout {
                         aEl.classList.add("selected");
                     else
                         aEl.classList.remove("selected");
-                })
+                });
+
+                languageWorker.translateSite();
         }, 200);
     }
 }
