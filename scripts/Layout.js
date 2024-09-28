@@ -31,7 +31,7 @@ export default class Layout {
             aboutPage: this.combineLayout(headerLayout, aboutLayout),
             contactPage: this.combineLayout(headerLayout, contactLayout),
         }
-        
+
         let pageName = sessionStorage.getItem(sessionKey.currentPage);
         this.container.innerHTML = this.pageList[pageName + "Page"];
         document.title = "fok ∙ " + pageName;
@@ -65,7 +65,7 @@ export default class Layout {
         return result;
     }
 
-    changePageByLink(pageName) {
+    changePageByLink(pageName, el) {
         const container = this.container;
         sessionStorage.setItem(sessionKey.currentPage, pageName);
 
@@ -76,6 +76,15 @@ export default class Layout {
             document.title = "fok ∙ " + pageName;
 
             container.classList.remove("fade-out");
+
+            const currentPage = sessionStorage.getItem(sessionKey.currentPage);
+            document
+                .querySelector(".links")
+                .querySelectorAll("a")
+                .forEach(aEl => {
+                    if (aEl.textContent === currentPage)
+                        aEl.classList.toggle("selected");
+                })
         }, 200);
     }
 }
