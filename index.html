@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fok</title>
@@ -90,7 +89,21 @@
         </main>
         <footer>
             <hr width="700">
-            <img src="icons/share-one.svg">
+            <div class="footer-ctrl">
+                <a class="share" title="Share link on site">
+                    <img src="icons/share-one.svg">
+                </a>
+                <div class="select-box" title="Change language">
+                    <select name="lang" id="langSelect">
+                        <option value="BY">BY</option>
+                        <option value="RU">RU</option>
+                        <option value="EN">EN</option>
+                    </select>
+                </div>
+                <a id="accessModeToggle" title="Accessibility mode toggle">
+                    <img class="fade" id="accessModeImg" src="icons/eye-closed.svg" width="24">
+                </a>
+            </div>
             <a href="https://github.com/Fokstal" target="_blank">© 2024 Fokstal</a>
         </footer>
     </div>

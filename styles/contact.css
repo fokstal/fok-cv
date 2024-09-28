@@ -1,7 +1,7 @@
 .contact {
     display: none;
-    width: 1200px;
     margin: 0 auto;
+    padding: 0;
 }
 
 
@@ -13,12 +13,13 @@
 
 .contact .form {
     width: calc(var(--container-width) / 2);
+    height: 100%;
     margin-right: 170px;
 }
 
 .contact img {
     display: block;
-    width: calc(var(--container-width) / 2);
+    height: 100%;
     transition: transform 1s;
     transform-origin: center;
 }
@@ -30,8 +31,8 @@
 .form-box {
     display: flex;
     flex-direction: column;
-    text-align: right;
     margin-bottom: 10px;
+    align-items: end;
 }
 
 .form-box label {
@@ -41,11 +42,14 @@
 }
 
 .form-box input {
+    width: 70%;
     font-size: 20px;
 }
 
 .form-box textarea {
+    width: 100%;
     font-size: 20px;
+    resize: vertical;
 }
 
 .form button {

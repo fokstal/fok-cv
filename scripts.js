@@ -1,14 +1,24 @@
-document.querySelector(".contact").style.display = "inline";
 document.querySelector("header").style.display = "flex";
+document.querySelector(".contact").style.display = "inline";
+
+const LanguageEnum = Object.freeze({
+    BY: 'BY',
+    EN: 'EN',
+    RU: 'RU',
+});
+
+let isAccessMode = false;
+let currentLang = LanguageEnum.EN;
 
 const headerEl = document.querySelector("header");
 const mainHomeEl = document.querySelector(".home");
 const mainElList = document.querySelectorAll("main");
-
 const pigeonImgEl = document.querySelector("#pigeonImg");
 const inputBoxList = document.querySelectorAll("input");
 const textareaEl = document.querySelector("textarea");
+const langSelect = document.querySelector("#langSelect");
 
+langSelect.value = currentLang;
 
 document
     .querySelectorAll(".links")
@@ -33,6 +43,7 @@ document
             });
     });
 
+
 document
     .querySelector(".logo")
     .addEventListener("click", () => {
@@ -53,3 +64,33 @@ const sendMessageToEmail = () => {
     });
     textareaEl.value = null;
 }
+
+
+document
+    .querySelector("#accessModeToggle")
+    .addEventListener("click", () => {
+        isAccessMode = !isAccessMode;
+
+        const accessModeImg = document.querySelector("#accessModeImg");
+
+        accessModeImg.classList.add('fade-out');
+
+        accessModeImg.addEventListener('transitionend', function () {
+            const iconName = isAccessMode ? "eye.svg" : "eye-closed.svg";
+
+            accessModeImg.src = window.location.origin + "/icons/" + iconName;
+            accessModeImg.classList.remove('fade-out');
+        }, { once: true });
+    });
+
+
+langSelect.addEventListener("change", () => {
+    const selectedLang = langSelect.options[langSelect.selectedIndex].text;
+
+        if (LanguageEnum[selectedLang]) {
+            currentLang = selectedLang;
+            return;
+        }
+        
+        throw new Error("No supported language in select.");
+    });
