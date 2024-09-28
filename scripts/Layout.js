@@ -3,15 +3,15 @@ const sessionKey = {
 }
 
 export default class Layout {
-    container = null;
+    root = null;
     basePageName = "";
     pageList = [];
 
-    constructor(container, basePageName) {
-        if (container == null || basePageName == null)
+    constructor(root, basePageName) {
+        if (root == null || basePageName == null)
             throw new Error("Init values is failed!");
 
-        this.container = container;
+        this.root = root;
         this.basePageName = basePageName;
 
         if (!sessionStorage.getItem(sessionKey.currentPage))
@@ -19,22 +19,21 @@ export default class Layout {
     }
 
     async init() {
-        const aboutLayout = await this.getLayoutFromFile("./components/about.html");
-        const contactLayout = await this.getLayoutFromFile("./components/contact.html");
-        const expLayout = await this.getLayoutFromFile("./components/exp.html");
-        const headerLayout = await this.getLayoutFromFile("./components/header.html");
-        const homeLayout = await this.getLayoutFromFile("./components/home.html");
-
         this.pageList = {
-            homePage: this.combineLayout(homeLayout),
-            expPage: this.combineLayout(headerLayout, expLayout),
-            aboutPage: this.combineLayout(headerLayout, aboutLayout),
-            contactPage: this.combineLayout(headerLayout, contactLayout),
+            homePage: await this.getLayoutFromFile("./pages/home.html"),
+            expPage: await this.getLayoutFromFile("./pages/exp.html"),
+            aboutPage: await this.getLayoutFromFile("./pages/about.html"),
+            contactPage: await this.getLayoutFromFile("./pages/contact.html"),
         }
 
         let pageName = sessionStorage.getItem(sessionKey.currentPage);
-        this.container.innerHTML = this.pageList[pageName + "Page"];
+        this.root.innerHTML = this.pageList[pageName + "Page"];
         document.title = "fok ∙ " + pageName;
+
+        if (pageName === "home")
+            document.querySelector(".logo").classList.add("home");
+        else
+            document.querySelector(".logo").classList.remove("home");
     }
 
     async getLayoutFromFile(pathToPage) {
@@ -65,8 +64,8 @@ export default class Layout {
         return result;
     }
 
-    changePageByLink(pageName, el) {
-        const container = this.container;
+    changePageByLink(pageName) {
+        const container = this.root;
         sessionStorage.setItem(sessionKey.currentPage, pageName);
 
         container.classList.add("fade-out");
@@ -78,12 +77,20 @@ export default class Layout {
             container.classList.remove("fade-out");
 
             const currentPage = sessionStorage.getItem(sessionKey.currentPage);
+
+            if (pageName === "home")
+                document.querySelector(".logo").classList.add("home");
+            else
+                document.querySelector(".logo").classList.remove("home");
+
             document
                 .querySelector(".links")
                 .querySelectorAll("a")
                 .forEach(aEl => {
                     if (aEl.textContent === currentPage)
-                        aEl.classList.toggle("selected");
+                        aEl.classList.add("selected");
+                    else
+                        aEl.classList.remove("selected");
                 })
         }, 200);
     }

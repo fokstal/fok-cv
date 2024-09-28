@@ -17,26 +17,37 @@
 
 <body>
     <div class="container">
-    </div>
-    <footer>
-        <hr width="700">
-        <div class="footer-ctrl">
-            <a class="share" title="Share link on site">
-                <img src="icons/share-one.svg">
-            </a>
-            <div class="select-box" title="Change language">
-                <select onchange="changeLanguage()" id="languageSelect">
-                    <option value="BY">BY</option>
-                    <option value="RU">RU</option>
-                    <option value="EN">EN</option>
-                </select>
+        <header>
+            <a class="logo" onclick="changePageByLink('home')">f</a>
+            <div class="links">
+                <a onclick="changePageByLink('exp', this)">exp</a>
+                <a onclick="changePageByLink('about', this)">about</a>
+                <a onclick="changePageByLink('contact', this)">contact</a>
             </div>
-            <a onclick="toggleAccessMode()" title="Accessibility mode toggle">
-                <img class="fade" id="accessModeImg" src="icons/eye-closed.svg" width="24">
-            </a>
+        </header>
+        <div class="root">
+            
         </div>
-        <a href="https://github.com/Fokstal" target="_blank">© 2024 Fokstal</a>
-    </footer>
+        <footer>
+            <hr width="700">
+            <div class="footer-ctrl">
+                <a class="share" title="Share link on site">
+                    <img src="icons/share-one.svg">
+                </a>
+                <div class="select-box" title="Change language">
+                    <select onchange="changeLanguage()" id="languageSelect">
+                        <option value="BY">BY</option>
+                        <option value="RU">RU</option>
+                        <option value="EN">EN</option>
+                    </select>
+                </div>
+                <a onclick="toggleAccessMode()" title="Accessibility mode toggle">
+                    <img class="fade" id="accessModeImg" src="icons/eye-closed.svg" width="24">
+                </a>
+            </div>
+            <a href="https://github.com/Fokstal" target="_blank">© 2024 Fokstal</a>
+        </footer>
+    </div>
 </body>
 
 </html>
