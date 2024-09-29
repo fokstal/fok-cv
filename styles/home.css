@@ -6,7 +6,7 @@
 .home .hello-text {
     display: inline-block;
     margin-right: 10%;
-    font-size: 54px;
+    font-size: max(4vw, 28px);
     text-align: left;
     white-space: nowrap;
 }
