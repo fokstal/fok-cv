@@ -1,16 +1,12 @@
-.home .logo-home {
-    position: relative;
-}
-
-.home nav {
+.home {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
 }
 
 .home .hello-text {
-    display: block;
-    margin-left: 400px;
+    display: inline-block;
+    margin-right: 10%;
     font-size: 54px;
+    text-align: left;
+    white-space: nowrap;
 }
