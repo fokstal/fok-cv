@@ -14,13 +14,18 @@ const translation = {
         messageForm: "Паведамленне *",
         btnForm: "напiсаць",
         moreLinks: "больш спасылак",
+        title: {
+            shareLink: "Падзяліцца спасылкай на старонку",
+            changeLanguage: "Змяніць мову",
+            accessMode: "Версія для людзей са слабым зрокам",
+        },
     },
     RU: {
         exp: "опыт",
         about: "обо мне",
         contact: "контакты",
         helloText: `
-            Приветствую мир!<br>
+            Приветствую, мир!<br>
             Меня зовут <strong>Кирилл</strong><br>
             и я <strong>.NET Разработчик!</strong><br>
         `,
@@ -30,6 +35,11 @@ const translation = {
         messageForm: "Сообщение *",
         btnForm: "написать",
         moreLinks: "больше ссылок",
+        title: {
+            shareLink: "Поделиться ссылкой на страницу",
+            changeLanguage: "Изменить язык",
+            accessMode: "Версия для слабовидящих",
+        },
     },
     EN: {
         exp: "exp",
@@ -46,6 +56,11 @@ const translation = {
         messageForm: "Message *",
         btnForm: "write",
         moreLinks: "take more links",
+        title: {
+            shareLink: "Share link on site",
+            changeLanguage: "Change language",
+            accessMode: "Accessibility mode toggle",
+        },
     },
 }
 

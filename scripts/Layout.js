@@ -14,6 +14,7 @@ export default class Layout {
 
         this.root = root;
         this.basePageName = basePageName;
+        this.languageWorker = languageWorker;
 
         if (!sessionStorage.getItem(sessionKey.currentPage))
             sessionStorage.setItem(sessionKey.currentPage, this.basePageName);
@@ -35,6 +36,8 @@ export default class Layout {
             document.querySelector(".logo").classList.add("home");
         else
             document.querySelector(".logo").classList.remove("home");
+
+        this.languageWorker.translateSite();
     }
 
     async getLayoutFromFile(pathToPage) {
@@ -94,7 +97,7 @@ export default class Layout {
                         aEl.classList.remove("selected");
                 });
 
-                languageWorker.translateSite();
+                this.languageWorker.translateSite();
         }, 200);
     }
 }

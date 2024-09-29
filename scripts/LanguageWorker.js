@@ -26,9 +26,7 @@ class LanguageWorker {
         if (!localStorage.getItem(localKey.currentLang))
             localStorage.setItem(localKey.currentLang, LanguageEnum.EN);
 
-        this.languageSelectEl.value = localStorage.getItem(localKey.currentLang);;
-
-        this.translateSite();
+        this.languageSelectEl.value = localStorage.getItem(localKey.currentLang);
     }
 
     changeLanguage = () => {
@@ -53,7 +51,16 @@ class LanguageWorker {
                 const oldInnerHtml = el.innerHTML;
 
                 el.innerHTML = translation[currentLanguage][translateKey] || oldInnerHtml;
-            })
+            });
+
+        document
+            .querySelectorAll("[translate-title-key]")
+            .forEach(el => {
+                const translateTitleKey = el.getAttribute("translate-title-key");
+                const oldTitle = el.title;
+
+                el.title = translation[currentLanguage]["title"][translateTitleKey] || oldTitle;
+            });
     }
 }
 
