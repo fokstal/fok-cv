@@ -29,6 +29,8 @@ class ConfigApp {
 
         this.startPageName = startPageName;
         this.baseLanguage = baseLanguage;
+
+        Object.freeze(this.elementList);
     }
 }
 
