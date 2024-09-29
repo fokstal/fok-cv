@@ -1,5 +1,10 @@
 footer {
+    justify-content: center;
     text-align: center;
+}
+
+footer .footer-line {
+    width: 40vw;
 }
 
 footer a {
