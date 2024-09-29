@@ -15,9 +15,6 @@ class LanguageWorker {
     }
 
     constructor(languageSelectEl, baseLanguage) {
-        if (languageSelectEl == null || LanguageEnum[baseLanguage] == null)
-            throw new Error("Init values is failed!");
-
         this.baseLanguage = baseLanguage;
         this.languageSelectEl = languageSelectEl;
         this.currentLanguage = localStorage.getItem(StorageKey.local.currentLanguage) || baseLanguage;

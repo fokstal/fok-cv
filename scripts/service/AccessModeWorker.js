@@ -20,12 +20,6 @@ class AccessModeWorker {
     }
 
     constructor(accessModeImgEl, baseValue = false) {
-        if (accessModeImgEl == null)
-            throw new Error("AccessModeImgEl is null!");
-
-        if (baseValue != true && baseValue != false)
-            throw new Error("BaseValue is incorrect!");
-
         this.accessModeImgEl = accessModeImgEl;
         this.baseValue = baseValue;
         this.currentIsAccessMode = sessionStorage.getItem(StorageKey.session.isAccessMode) === "true" || baseValue;

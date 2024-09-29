@@ -16,9 +16,6 @@ export default class Layout {
     }
 
     constructor(root, basePageName, languageWorker) {
-        if (root == null || basePageName == null || languageWorker == null)
-            throw new Error("Init values is failed!");
-
         this.root = root;
         this.basePageName = basePageName;
         this.languageWorker = languageWorker;
