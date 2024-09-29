@@ -4,11 +4,13 @@ import translation from "../const/translation.js";
 class LanguageWorker {
     languageSelectEl = null;
     baseLanguage = LanguageEnum.EN;
+    #currentLanguage = this.baseLanguage;
 
     get currentLanguage() {
-        return localStorage.getItem(StorageKey.local.currentLanguage);
+        return this.#currentLanguage;
     }
     set currentLanguage(language) {
+        this.#currentLanguage = language;
         localStorage.setItem(StorageKey.local.currentLanguage, language);
     }
 
@@ -18,10 +20,7 @@ class LanguageWorker {
 
         this.baseLanguage = baseLanguage;
         this.languageSelectEl = languageSelectEl;
-
-        if (this.currentLanguage == null)
-            this.currentLanguage = this.baseLanguage;
-
+        this.currentLanguage = localStorage.getItem(StorageKey.local.currentLanguage) || baseLanguage;
         this.languageSelectEl.value = this.currentLanguage;
     }
 
@@ -46,7 +45,7 @@ class LanguageWorker {
 
                 el.innerHTML = translation[this.currentLanguage][translateKey] || oldInnerHtml;
             });
-
+            
         document
             .querySelectorAll("[translate-title-key]")
             .forEach(el => {

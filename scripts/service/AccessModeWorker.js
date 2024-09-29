@@ -3,11 +3,13 @@ import { StorageKey, Folder, IconFullName } from "../const/const.js";
 class AccessModeWorker {
     accessModeImgEl = null;
     baseValue = false;
+    #currentIsAccessMode = this.baseValue;
 
     get currentIsAccessMode() {
-        return sessionStorage.getItem(StorageKey.session.isAccessMode) === "true";
+        return this.#currentIsAccessMode;
     }
     set currentIsAccessMode(isAccessMode) {
+        this.#currentIsAccessMode = isAccessMode;
         sessionStorage.setItem(StorageKey.session.isAccessMode, isAccessMode);
     }
 
@@ -26,10 +28,7 @@ class AccessModeWorker {
 
         this.accessModeImgEl = accessModeImgEl;
         this.baseValue = baseValue;
-
-        if (!this.currentIsAccessMode)
-            this.currentIsAccessMode = baseValue;
-
+        this.currentIsAccessMode = sessionStorage.getItem(StorageKey.session.isAccessMode) === "true" || baseValue;
         this.accessModeImgEl.src = this.currentIconPath;
     }
 
@@ -37,11 +36,9 @@ class AccessModeWorker {
         this.currentIsAccessMode = !this.currentIsAccessMode;
 
         this.accessModeImgEl.classList.add("fade-out");
-
         this.accessModeImgEl.addEventListener("transitionend", () => {
             this.accessModeImgEl.src = this.currentIconPath;
             this.accessModeImgEl.classList.remove("fade-out");
-
         }, { once: true });
     };
 }

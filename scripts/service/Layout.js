@@ -2,14 +2,16 @@ import { StorageKey, Folder, PageName } from "../const/const.js";
 
 export default class Layout {
     root = null;
-    basePageName = "";
+    basePageName = "home";
     languageWorker = null;
     pageList = [];
+    #currentPage = this.basePageName;
 
     get currentPage() {
-        return sessionStorage.getItem(StorageKey.session.currentPage);
+        return this.#currentPage;
     }
     set currentPage(pageName) {
+        this.#currentPage = pageName;
         sessionStorage.setItem(StorageKey.session.currentPage, pageName);
     }
 
@@ -20,9 +22,7 @@ export default class Layout {
         this.root = root;
         this.basePageName = basePageName;
         this.languageWorker = languageWorker;
-
-        if (!this.currentPage)
-            this.currentPage = this.basePageName;
+        this.currentPage = sessionStorage.getItem(StorageKey.session.currentPage) || basePageName;
     }
 
     async init() {
