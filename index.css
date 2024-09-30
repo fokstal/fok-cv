@@ -217,7 +217,7 @@ body {
   height: 100%;
   font-family: var(--font-family-base);
   font-weight: 200;
-  font-size: 40px;
+  font-size: 32px;
   color: var(--color-dark);
   background-color: var(--color-light);
 }
