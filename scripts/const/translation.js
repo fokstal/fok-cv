@@ -12,7 +12,7 @@ const translation = {
 
         // about page
         about: "пра мяне",
-        startTitle: "Мяне завуць Кірыл Лабуць, Прывітанне!",
+        startTitle: "Мяне завуць Кірыл Лабуць, прывітанне!",
         startText: "Lorem іpsum dolor sіt amet",
         educationTitle: "Адукацыя",
         educationText: "Lorem іpsum dolor sіt amet",
@@ -27,9 +27,9 @@ const translation = {
         // contact page
         contact: "кантакты",
         writeMe: "Напісаць мне",
-        nameForm: "Імя *",
-        emailForm: "Электронная пошта *",
-        messageForm: "Паведамленне *",
+        nameForm: "імя *",
+        emailForm: "электронная пошта *",
+        messageForm: "паведамленне *",
         btnForm: "напісаць",
         moreLinks: "больш спасылак",
 
@@ -53,7 +53,7 @@ const translation = {
 
         // about page
         about: "обо мне",
-        startTitle: "Меня зовут Кирилл Лабуть, Привет!",
+        startTitle: "Меня зовут Кирилл Лабуть, привет!",
         startText: "Lorem ipsum dolor sit amet",
         educationTitle: "Образование",
         educationText: "Lorem ipsum dolor sit amet",
@@ -68,9 +68,9 @@ const translation = {
         // contact page
         contact: "контакты",
         writeMe: "Написать мне",
-        nameForm: "Имя *",
-        emailForm: "Электронная почта *",
-        messageForm: "Сообщение *",
+        nameForm: "имя *",
+        emailForm: "электронная почта *",
+        messageForm: "сообщение *",
         btnForm: "написать",
         moreLinks: "больше ссылок",
 
@@ -94,7 +94,7 @@ const translation = {
 
         // about page
         about: "about",
-        startTitle: "I`am Kirill Labut, Hi!",
+        startTitle: "I`am Kirill Labut, hi!",
         startText: "Lorem ipsum dolor sit amet",
         educationTitle: "Education",
         educationText: "Lorem ipsum dolor sit amet",
@@ -109,9 +109,9 @@ const translation = {
         // contact page
         contact: "contact",
         writeMe: "Write me",
-        nameForm: "Name *",
-        emailForm: "Email *",
-        messageForm: "Message *",
+        nameForm: "name *",
+        emailForm: "email *",
+        messageForm: "message *",
         btnForm: "write",
         moreLinks: "take more links",
 
