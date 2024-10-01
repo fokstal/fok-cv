@@ -47,7 +47,7 @@
     flex-direction: column;
 }
 
-.hobby-info .text h1 {
+.hobby-info .text-block h1 {
     display: block;
     text-align: center;
     margin-top: 170px
@@ -60,13 +60,21 @@
 }
 
 .hobby-info .text-block img {
-    display: inline;
+    display: inline-block;
     width: 50px;
+}
+
+.hobby-info .text-block p {
+    display: inline-block;
+}
+
+.hobby-info .text-block .soccer-basketball-box {
+    display: flex;
+    justify-content: space-between;
 }
 
 .hobby-info .text-block .soccer {
     display: inline-block;
-    margin-right: 50%;
     transform: rotate(-5deg);
 }
 
@@ -75,7 +83,7 @@
     transform: rotate(3deg);
 }
 
-.hobby-info .text-block .any-game {
+.hobby-info .text-block .any-ball {
     display: block;
     text-align: center;
     transform: rotate(-1eg);
