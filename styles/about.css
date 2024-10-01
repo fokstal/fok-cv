@@ -2,18 +2,20 @@
 
 .start-info {
     display: flex;
+    justify-content: space-between;
 }
 
 .start-info img {
     display: inline-block;
-    width: 30%;
+    width: 50%;
     height: 100%;
     border-radius: 0 20px 0 0;
 }
 
 .start-info .text-block {
-    width: calc(var(--container-width) / 2);
-    margin-left: auto;
+    width: 100%;
+    text-align: center;
+    margin-left: 160px;
 }
 
 
