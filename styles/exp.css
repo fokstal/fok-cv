@@ -1,0 +1,76 @@
+.exp h1 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.exp img {
+    margin: 30px auto 0 auto;
+}
+
+.work-exp,
+.skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.place-exp {
+    display: flex;
+}
+
+.date {
+    width: 120px;
+    margin-right: 25%;
+}
+
+
+
+/* WORK-EXP */
+
+.exp li {
+    font-size: max(1.5vw, 26px);
+}
+
+
+
+/* COURSES */
+
+.course-text {
+    display: flex;
+}
+
+.udemy-asp-mvc img {
+    margin: 30px auto 0 auto;
+    width: 40%;
+}
+
+
+
+/* SKILLS */
+
+.spidergram {
+    width: 50%;
+}
+
+/* TEMP! */
+
+.fmwbar {
+    width: 40%;
+}
+
+/* TEMP! */
+
+.any-skills {
+    display: block;
+    width: 60%;
+    margin: 130px auto 0 auto;
+}
+
+.any-skills p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.any-skills span {
+    display: block;
+    text-align: center;
+}

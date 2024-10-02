@@ -250,11 +250,13 @@ h1 {
 h2 {
   font-weight: 300;
   font-size: max(2vw, 32px);
+  margin: 0;
 }
 
 h3 {
   font-weight: 200;
   font-size: max(2vw, 32px);
+  margin: 0;
 }
 
 a {
