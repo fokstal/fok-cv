@@ -28,7 +28,8 @@ export default class Layout {
         })).then(results => Object.assign({}, ...results));
 
         const currentPage = this.currentPage;
-
+        
+        this.#showSelectedLink(currentPage);
         this.#setPage(currentPage);
         this.#transformLogo(currentPage);
         this.languageWorker.translateSite();
