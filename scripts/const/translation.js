@@ -1,5 +1,8 @@
 const translation = {
     BY: {
+        // і
+        // ў
+    
         // home page
         helloText: `
             Прывітанне, свет!<br>
@@ -9,6 +12,26 @@ const translation = {
 
         // exp page
         exp: "вопыт",
+        workExpTitle: "Вопыт у рабоце",
+        ngaekTitle: `
+            Educational institution
+            <br>
+            "Novopolsky Agricultural and Economic College"
+        `,
+        ngaekPosition: "Сomputer technician",
+        ngaekExpMarkedList: `
+            <li>configured the local network</li>
+            <li>repaired and assembled PCs</li>
+            <li>supported the database of students</li>
+            <li>video conference</li>
+            <li>developed mini-applications</li>
+            <li>taught computer operator practice</li>
+        `,
+        coursesTitle: "Courses",
+        udemyTitle: "Udemy.com",
+        udemyCourseName: "ASP.NET Core MVC. Part 1",
+        skillsTitle: "Skills",
+        andAlsoText: "and also...",
 
         // about page
         about: "пра мяне",
@@ -50,6 +73,26 @@ const translation = {
 
         // exp page
         exp: "опыт",
+        workExpTitle: "Опыт работы",
+        ngaekTitle: `
+            Educational institution
+            <br>
+            "Novopolsky Agricultural and Economic College"
+        `,
+        ngaekPosition: "Сomputer technician",
+        ngaekExpMarkedList: `
+            <li>configured the local network</li>
+            <li>repaired and assembled PCs</li>
+            <li>supported the database of students</li>
+            <li>video conference</li>
+            <li>developed mini-applications</li>
+            <li>taught computer operator practice</li>
+        `,
+        coursesTitle: "Courses",
+        udemyTitle: "Udemy.com",
+        udemyCourseName: "ASP.NET Core MVC. Part 1",
+        skillsTitle: "Skills",
+        andAlsoText: "and also...",
 
         // about page
         about: "обо мне",
@@ -88,9 +131,29 @@ const translation = {
             My name is <strong>Kirill</strong><br>
             and I am a <strong>.NET Developer!</strong><br>
         `,
-        
+
         // exp page
         exp: "exp",
+        workExpTitle: "Work experience",
+        ngaekTitle: `
+            Educational institution
+            <br>
+            "Novopolsky Agricultural and Economic College"
+        `,
+        ngaekPosition: "Сomputer technician",
+        ngaekExpMarkedList: `
+            <li>configured the local network</li>
+            <li>repaired and assembled PCs</li>
+            <li>supported the database of students</li>
+            <li>video conference</li>
+            <li>developed mini-applications</li>
+            <li>taught computer operator practice</li>
+        `,
+        coursesTitle: "Courses",
+        udemyTitle: "Udemy.com",
+        udemyCourseName: "ASP.NET Core MVC. Part 1",
+        skillsTitle: "Skills",
+        andAlsoText: "and also...",
 
         // about page
         about: "about",
