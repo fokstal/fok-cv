@@ -1,5 +1,5 @@
 import { StorageKey, Folder, PageName } from "../const/const.js";
-import { itLanguageConfig, libAndFwConfig } from "../const/chartConfigs.js";
+import { itLanguageConfig, libAndFwConfig, commitFreqConfig } from "../const/chartConfigs.js";
 
 export default class Layout {
     root = null;
@@ -45,7 +45,7 @@ export default class Layout {
             if (pageNameToSelect == PageName.exp) {
                 new Chart(document.getElementById("it-language-chart"), itLanguageConfig);
                 new Chart(document.getElementById("lib-fw-chart"), libAndFwConfig);
-                new Chart(document.getElementById("kakoito-chart"), libAndFwConfig);
+                new Chart(document.getElementById("commit-freq-chart"), commitFreqConfig);
             }
 
             this.#showSelectedLink(pageNameToSelect);
