@@ -47,7 +47,13 @@
 
 /* SKILLS */
 
-.spidergram {
+.chart {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.skill-spidergram {
     width: 50%;
 }
 

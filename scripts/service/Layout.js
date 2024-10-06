@@ -1,4 +1,5 @@
 import { StorageKey, Folder, PageName } from "../const/const.js";
+import { itLanguageConfig, libAndFwConfig } from "../const/chartConfigs.js";
 
 export default class Layout {
     root = null;
@@ -27,12 +28,7 @@ export default class Layout {
             return { [`${pageName}`]: await Layout.getLayoutFromFile(`.${Folder.pages}${pageName}.html`) };
         })).then(results => Object.assign({}, ...results));
 
-        const currentPage = this.currentPage;
-        
-        this.#showSelectedLink(currentPage);
-        this.#setPage(currentPage);
-        this.#transformLogo(currentPage);
-        this.languageWorker.translateSite();
+        this.changePageByLink(this.currentPage)
     }
 
     changePageByLink(pageNameToSelect) {
@@ -42,9 +38,14 @@ export default class Layout {
         root.classList.add("fade-out");
 
         setTimeout(() => {
+            root.classList.remove("fade-out");
+
             this.#setPage(pageNameToSelect);
 
-            root.classList.remove("fade-out");
+            if (pageNameToSelect == PageName.exp) {
+                new Chart(document.getElementById("it-language-chart"), itLanguageConfig);
+                new Chart(document.getElementById("lib-fw-chart"), libAndFwConfig);
+            }
 
             this.#showSelectedLink(pageNameToSelect);
             this.#transformLogo(pageNameToSelect);
