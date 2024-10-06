@@ -22,9 +22,19 @@
     margin-right: 25%;
 }
 
+.exp-container {
+    display: flex;
+}
 
+.exp-container div {
+    margin: 0 5px;
+}
 
 /* WORK-EXP */
+
+.work-exp {
+    border-right: 1px #434343 solid;
+}
 
 .exp li {
     font-size: max(1.5vw, 26px);
@@ -47,22 +57,21 @@
 
 /* SKILLS */
 
+.chart-box {
+    display: flex;
+}
+
+.chart-column {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
 .chart {
-    display: block;
-    width: 70%;
-    margin: 0 auto;
+    display: flex;
+    flex: 1;
+    width: 90%;
 }
-
-.skill-spidergram {
-    width: 50%;
-}
-
-/* TEMP! */
-.fmwbar {
-    width: 40%;
-}
-
-/* TEMP! */
 
 .any-skills {
     display: block;

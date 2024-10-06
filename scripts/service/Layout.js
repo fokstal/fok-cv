@@ -45,6 +45,7 @@ export default class Layout {
             if (pageNameToSelect == PageName.exp) {
                 new Chart(document.getElementById("it-language-chart"), itLanguageConfig);
                 new Chart(document.getElementById("lib-fw-chart"), libAndFwConfig);
+                new Chart(document.getElementById("kakoito-chart"), libAndFwConfig);
             }
 
             this.#showSelectedLink(pageNameToSelect);
