@@ -5,5 +5,39 @@ header {
     align-items: center;
 }
 
+.logo {
+    font-family: var(--font-family-logo);
+    font-weight: 500;
+    font-size: 120px;
+    transition: font-size .3s ease;
+}
 
+.logo.home {
+    font-family: var(--font-family-logo);
+    font-weight: 500;
+    font-size: 290px;
+}
 
+nav {
+    display: flex;
+    text-align: center;
+    width: auto;
+}
+
+nav a {
+    font-weight: 500;
+    font-size: 26px;
+    color: #434343;
+    margin: 0 .65rem;
+
+    border-bottom: 1px solid transparent;
+    transition: all .2s ease;
+}
+
+nav a:hover {
+    border-bottom: 1px solid #434343;
+}
+
+nav a.selected {
+    border-bottom: 2px solid #434343;
+}

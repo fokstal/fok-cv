@@ -20,31 +20,31 @@
     <div class="container">
         <header>
             <a class="logo" onclick="changePageByLink('home')">f</a>
-            <div class="links">
+            <nav>
                 <a onclick="changePageByLink('exp', this)" translate-key="exp">exp</a>
                 <a onclick="changePageByLink('about', this)" translate-key="about">about</a>
                 <a onclick="changePageByLink('contact', this)" translate-key="contact">contact</a>
-            </div>
+            </nav>
         </header>
         <div class="root"></div>
         <footer>
             <hr class="footer-line">
             <div class="footer-ctrl">
-                <a class="share" translate-title-key="shareLink" title="Share link on site">
+                <button translate-title-key="shareLink" title="Share link on site">
                     <img src="icons/share-one.svg">
-                </a>
-                <div class="select-box" translate-title-key="changeLanguage" title="Change language">
+                </button>
+                <div class="language-select-box" translate-title-key="changeLanguage" title="Change language">
                     <select onchange="changeLanguage()" id="languageSelect">
                         <option value="BY">BY</option>
                         <option value="RU">RU</option>
                         <option value="EN">EN</option>
                     </select>
                 </div>
-                <a onclick="toggleAccessMode()" translate-title-key="accessMode" title="Accessibility mode toggle">
+                <button onclick="toggleAccessMode()" translate-title-key="accessMode" title="Accessibility mode toggle">
                     <img class="fade" id="accessModeImg" src="icons/eye-closed.svg" width="24">
-                </a>
+                </button>
             </div>
-            <a href="https://github.com/Fokstal" target="_blank">© 2024 Fokstal</a>
+            <a href="https://github.com/Fokstal" target="_blank" rel="noopener noreferrer">© 2024 Fokstal</a>
         </footer>
     </div>
 </body>

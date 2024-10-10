@@ -65,7 +65,7 @@ export default class Layout {
         const currentPage = this.currentPage;
 
         document
-            .querySelector(".links")
+            .querySelector("nav")
             .querySelectorAll("a")
             .forEach(aEl => {
                 if (aEl.textContent === currentPage)

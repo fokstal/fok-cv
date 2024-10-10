@@ -7,48 +7,30 @@
     margin: 30px auto 0 auto;
 }
 
-.work-exp,
+.exp li {
+    font-size: max(1.5vw, 26px);
+}
+
+.practice,
 .skills {
     display: flex;
     flex-direction: column;
 }
 
-.place-exp {
+.practice-place {
     display: flex;
 }
 
-.date {
+.practice-place .date {
     width: 120px;
     margin-right: 25%;
 }
 
-.exp-container {
-    display: flex;
-}
-
-.exp-container div {
-    margin: 0 5px;
-}
-
-/* WORK-EXP */
-
-.work-exp {
-    border-right: 1px #434343 solid;
-}
-
-.exp li {
-    font-size: max(1.5vw, 26px);
-}
 
 
+/* COURSE LIST */
 
-/* COURSES */
-
-.course-text {
-    display: flex;
-}
-
-.udemy-asp-mvc img {
+.course-list img {
     margin: 30px auto 0 auto;
     width: 40%;
 }
@@ -79,7 +61,7 @@
     margin: 130px auto 0 auto;
 }
 
-.any-skills p {
+.any-skills .and-also  {
     font-size: 20px;
     font-weight: 500;
 }

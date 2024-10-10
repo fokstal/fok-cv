@@ -1,15 +1,3 @@
-/* WRITE ME BOX */
-
-.write-me-box {
-    display: flex;
-}
-
-.contact .form {
-    width: calc(var(--container-width) / 2);
-    height: 100%;
-    margin-right: 170px;
-}
-
 .contact img {
     display: block;
     height: 100%;
@@ -17,8 +5,17 @@
     transform-origin: center;
 }
 
-.rotate {
-    transform: rotateY(360deg);
+
+
+/* WRITE ME BOX */
+.write-me-box {
+    display: flex;
+}
+
+.write-me-box form {
+    width: calc(var(--container-width) / 2);
+    height: 100%;
+    margin-right: 170px;
 }
 
 .form-box {
@@ -45,7 +42,7 @@
     resize: vertical;
 }
 
-.form button {
+form button {
     display: block;
     background-color: #F9EDDF;
     border: none;
@@ -57,9 +54,6 @@
     font-size: 18px;
 }
 
-.form button:hover {
-    opacity: .7;
-}
 
 
 /* TAKE MORE TEXT */
@@ -80,18 +74,19 @@
 }
 
 
+
 /* NETWORK LINK */
 
-.network-link {
+.network-links {
     display: flex;
     margin: 5% 0;
 }
 
-.network-link a {
+.network-links a {
     margin: 0 auto;
 }
 
-.network-link img {
+.network-links img {
     display: block;
     width: 120px;
 }

@@ -1,40 +1,42 @@
-/* START INFO */
+.about .education, .hobby {
+    display: flex;
+    flex-direction: column;
+}
 
-.start-info {
+
+
+/* PERSONAL */
+
+.personal {
     display: flex;
     justify-content: space-between;
 }
 
-.start-info img {
+.personal img {
     display: inline-block;
     width: 50%;
     height: 100%;
     border-radius: 0 20px 0 0;
 }
 
-.start-info .text-block {
+.personal-content {
+    display: inline-block;
     width: 100%;
     text-align: center;
-    margin-left: 160px;
 }
 
 
 
-/* EDUCATION INFO */
+/* EDUCATION */
 
-.education-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.education-info img {
+.education img {
     display: inline-block;
     margin: 60px auto 0 auto;
     width: 60%;
     border-radius: 20px 0 20px 0;
 }
 
-.education-info .text-block h1 {
+.education-content h1 {
     display: block;
     text-align: center;
     margin-top: 170px;
@@ -42,101 +44,96 @@
 
 
 
-/* HOBBY INFO */
+/* HOBBY */
 
-.hobby-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.hobby-info .text-block h1 {
+.hobby-content h1 {
     display: block;
     text-align: center;
     margin-top: 170px
 }
 
-.hobby-info .text-block {
+.hobby-content {
     display: block;
     width: 70%;
     margin: 0 auto;
 }
 
-.hobby-info .text-block img {
+.hobby-content img {
     display: inline-block;
     width: 50px;
 }
 
-.hobby-info .text-block p {
+.hobby-content span {
     display: inline-block;
 }
 
-.hobby-info .text-block .soccer-basketball-box {
+.hobby-content div {
     display: flex;
     justify-content: space-between;
 }
 
-.hobby-info .text-block .soccer {
+.hobby-content .soccer {
     display: inline-block;
     transform: rotate(-5deg);
 }
 
-.hobby-info .text-block .basketball {
+.hobby-content .basketball {
     display: inline-block;
     transform: rotate(3deg);
 }
 
-.hobby-info .text-block .any-ball {
+.hobby-content .any-ball {
     display: block;
     text-align: center;
     transform: rotate(-1eg);
 }
 
-.hobby-info .text-block .love-sport {
+.hobby-content .love-sport {
     display: block;
     margin-top: 100px;
     text-align: center;
     font-size: 80px;
 }
 
-.hobby-info .text-block .love-sport img {
+.hobby-content .love-sport img {
     width: 120px;
 }
 
-.hobby-info .text-block .any {
+.hobby-content .any {
     display: block;
     margin-top: 100px;
     text-align: center;
 }
 
-.hobby-info .text-block .any .any-icons img {
+.hobby-content .any .any-icons img {
     display: inline-block;
     margin: 0 100px;
 }
 
-.hobby-info .hobby-photos {
+.hobby-photos {
+    text-align: center;
+}
+
+.hobby-photos {
     display: flex;
     flex-direction: column;
     margin-top: 50px;
 }
 
-.hobby-info .hobby-photos img {
+.hobby-photos img {
     display: block;
     width: 510px;
 }
 
-.hobby-info .hobby-photos .sport-photo {
+.hobby-photos .sport {
     display: flex;
     flex-direction: row;
 }
 
-.hobby-info .hobby-photos .sport-photo-1 {
+.hobby-photos .sport-1 {
     margin-right: 50%;
 }
 
-.hobby-info .hobby-photos .any-photo {
+.hobby-photos .any {
     margin: 0 auto;
-}
-
-.hobby-info .hobby-photos {
-    text-align: center;
 }

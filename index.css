@@ -261,6 +261,11 @@ h3 {
 
 a {
   cursor: pointer;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 a:hover {
@@ -269,39 +274,24 @@ a:hover {
   transition: all .2s;
 }
 
-.logo {
-  font-family: var(--font-family-logo);
-  font-weight: 500;
-  font-size: 120px;
-  transition: font-size .3s ease;
+button:hover {
+  opacity: .7;
+
+  transition: all .2s;
 }
 
-.logo.home {
-  font-family: var(--font-family-logo);
-  font-weight: 500;
-  font-size: 290px;
+
+/* ANIMATION */
+
+.fade {
+  transition: opacity .1s ease-in-out;
+  opacity: 1;
 }
 
-.links {
-  display: flex;
-  text-align: center;
-  width: auto;
+.fade-out {
+  opacity: 0;
 }
 
-.links a {
-  font-weight: 500;
-  font-size: 26px;
-  color: #434343;
-  margin: 0 .65rem;
-
-  border-bottom: 1px solid transparent;
-  transition: all .2s ease;
-}
-
-a.selected {
-  border-bottom: 2px solid #434343;
-}
-
-.links a:hover {
-  border-bottom: 1px solid #434343;
+.rotate {
+  transform: rotateY(360deg);
 }
