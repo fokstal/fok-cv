@@ -12,7 +12,7 @@ const translation = {
 
         // exp page
         exp: "вопыт",
-        workExpTitle: "Вопыт у рабоце",
+        workListTitle: "Вопыт у рабоце",
         ngaekTitle: `
             Educational institution
             <br>
@@ -27,7 +27,7 @@ const translation = {
             <li>developed mini-applications</li>
             <li>taught computer operator practice</li>
         `,
-        coursesTitle: "Courses",
+        courseListTitle: "Courses",
         udemyTitle: "Udemy.com",
         udemyCourseName: "ASP.NET Core MVC. Part 1",
         skillsTitle: "Skills",
@@ -73,7 +73,7 @@ const translation = {
 
         // exp page
         exp: "опыт",
-        workExpTitle: "Опыт работы",
+        workListTitle: "Опыт работы",
         ngaekTitle: `
             Educational institution
             <br>
@@ -88,7 +88,7 @@ const translation = {
             <li>developed mini-applications</li>
             <li>taught computer operator practice</li>
         `,
-        coursesTitle: "Courses",
+        courseListTitle: "Courses",
         udemyTitle: "Udemy.com",
         udemyCourseName: "ASP.NET Core MVC. Part 1",
         skillsTitle: "Skills",
@@ -134,7 +134,7 @@ const translation = {
 
         // exp page
         exp: "exp",
-        workExpTitle: "Work experience",
+        workListTitle: "Works",
         ngaekTitle: `
             Educational institution
             <br>
@@ -149,7 +149,7 @@ const translation = {
             <li>developed mini-applications</li>
             <li>taught computer operator practice</li>
         `,
-        coursesTitle: "Courses",
+        courseListTitle: "Courses",
         udemyTitle: "Udemy.com",
         udemyCourseName: "ASP.NET Core MVC. Part 1",
         skillsTitle: "Skills",
