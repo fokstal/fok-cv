@@ -1,15 +1,17 @@
 import getCommitFrequency from "../service/getCommitFrequency.js";
+import takeRGBA from "../helpers/takeRandomRGBA.js";
 
 // IT LANGUAGE chart
 const itLanguageLabels = ["C#", "JavaScript", "XAML", "HTML&CSS", "SQL"];
+const itLanguageRGBA = takeRGBA();
 const itLanguageData = {
     labels: itLanguageLabels,
     datasets: [
         {
             label: "Language skill",
             data: [9, 6, 4, 8, 5],
-            borderColor: "rgba(186, 219, 173, 1)",
-            backgroundColor: "rgba(186, 219, 173, 0.1)",
+            borderColor: `rgba(${itLanguageRGBA.r}, ${itLanguageRGBA.g}, ${itLanguageRGBA.b}, 1)`,
+            backgroundColor: `rgba(${itLanguageRGBA.r}, ${itLanguageRGBA.g}, ${itLanguageRGBA.b}, .1)`,
         },
     ]
 };
@@ -50,26 +52,24 @@ const itLanguageConfig = {
 
 // LIBRARY and FRAMEWORK chart
 const libAndFwLabels = ["ASP.NET Core", "Entity Framework Core", "WPF", "React", "TypeScript"];
+const libAndFwRGBABorderList = [];
+const libAndFwRGBABackgroundList = [];
+
+libAndFwLabels.forEach(label => {
+    const rgba = takeRGBA();
+
+    libAndFwRGBABorderList.push(`rgba(${rgba.r}, ${rgba.g}, ${rgba.b}, 1)`);
+    libAndFwRGBABackgroundList.push(`rgba(${rgba.r}, ${rgba.g}, ${rgba.b}, .1)`);
+})
+
 const libAndFwData = {
     labels: libAndFwLabels,
     datasets: [
         {
             label: "Library and framework skill",
             data: [7, 4, 4, 3, 8],
-            borderColor: [
-                "rgba(252, 232, 131, 1)",
-                "rgba(228, 113, 122, 1)",
-                "rgba(186, 219, 173, 1)",
-                "rgba(127, 199, 255, 1)",
-                "rgba(204, 204, 255, 1)",
-            ],
-            backgroundColor: [
-                "rgba(252, 232, 131, 0.1)",
-                "rgba(228, 113, 122, 0.1)",
-                "rgba(186, 219, 173, 0.1)",
-                "rgba(127, 199, 255, 0.1)",
-                "rgba(204, 204, 255, 0.1)",
-            ],
+            borderColor: libAndFwRGBABorderList,
+            backgroundColor: libAndFwRGBABackgroundList,
             borderRadius: 5,
         },
     ]
@@ -135,12 +135,10 @@ Object.keys(commitCountToYear).forEach(year => {
     commitFreqYear.push(year);
     commitFreqCommitCount.push(commitCountToYear[year]);
 
-    let redInt = Math.random() * 255 + 1;
-    let greenInt = Math.random() * 255 + 1;
-    let blueInt = Math.random() * 255 + 1;
+    const rgba = takeRGBA();
 
-    commitFreqBorderColor.push(`rgba(${redInt}, ${greenInt}, ${blueInt}, 1)`);
-    commitFreqBackgroundColor.push(`rgba(${redInt}, ${greenInt}, ${blueInt}, 0.1)`);
+    commitFreqBorderColor.push(`rgba(${rgba.r}, ${rgba.g}, ${rgba.b}, 1)`);
+    commitFreqBackgroundColor.push(`rgba(${rgba.r}, ${rgba.g}, ${rgba.b}, .1)`);
 })
 
 // getCommitFrequency("Fokstal").then(commitCountsToYear => {
