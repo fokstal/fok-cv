@@ -77,7 +77,7 @@
 
 .any-skills {
     display: block;
-    width: 60%;
+    width: 40vw;
     margin: 130px auto 0 auto;
 }
 
@@ -86,7 +86,32 @@
     font-weight: 500;
 }
 
-.any-skills span {
+.any-skills p {
     display: block;
-    text-align: center;
+    text-align: left;
+}
+
+.skills-el {
+    display: inline-flex;
+    font-size: 20px;
+    padding: 1%;
+    border: 1px #434343 solid;
+    border-radius: 5px;
+    cursor: default;
+    align-items: center;
+}
+
+.skills-el[title] {
+    cursor: zoom-in;
+}
+
+.skills-el:hover {
+    opacity: .1;
+    transition: opacity .2s;
+}
+
+.skills-el img {
+    width: 40px;
+    margin: 0;
+    padding-right: 5%;
 }
