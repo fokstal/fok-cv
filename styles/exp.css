@@ -1,6 +1,6 @@
 .exp h1 {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 0px;
 }
 
 .exp img {
@@ -23,32 +23,6 @@
 
 .practice-place .date {
     font-size: 18px;
-}
-
-
-
-/* PRACTICE */
-
-.practice {
-    flex-direction: row;
-}
-
-.work-list {
-    width: 50%;
-    padding-right: 2%;
-    border-right: 1px #333 solid;
-    text-align: left;
-}
-
-.course-list {
-    width: 50%;
-    padding-left: 2%;
-    border-left: 1px #333 solid;
-    text-align: right;
-}
-
-.course-list img {
-    margin: 30px auto 0 auto;
 }
 
 
@@ -114,4 +88,31 @@
     width: 40px;
     margin: 0;
     padding-right: 5%;
+}
+
+
+
+/* PRACTICE */
+
+.practice {
+    flex-direction: column;
+    text-align: center;
+}
+
+.work-list h1 {
+    margin-top: 100px;
+}
+
+.work-list ul {
+    margin: 0 auto;
+    text-align: left;
+}
+
+.course-list h1 {
+    margin-top: 100px;
+}
+
+.course-list img {
+    margin: 30px auto 0 auto;
+    width: 40%;
 }
