@@ -220,6 +220,8 @@ body {
   font-size: max(2vw, 26px);
   color: var(--color-dark);
   background-color: var(--color-light);
+  scrollbar-width: thin;
+  scrollbar-color: green green;
 }
 
 .container {
