@@ -8,7 +8,7 @@ header {
 .logo {
     font-family: var(--font-family-logo);
     font-weight: 500;
-    font-size: 120px;
+    font-size: 80px;
     transition: font-size .3s ease;
 }
 
