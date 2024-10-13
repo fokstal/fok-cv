@@ -16,6 +16,7 @@
     width: calc(var(--container-width) / 2);
     height: 100%;
     margin-right: 170px;
+    text-align: end;
 }
 
 .form-box {

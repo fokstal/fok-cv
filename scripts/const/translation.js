@@ -50,9 +50,9 @@ const translation = {
         // contact page
         contact: "кантакты",
         writeMe: "Напісаць мне",
-        nameForm: "імя *",
-        emailForm: "электронная пошта *",
-        messageForm: "паведамленне *",
+        nameForm: "імя",
+        emailForm: "электронная пошта",
+        messageForm: "паведамленне",
         btnForm: "напісаць",
         moreLinks: "больш спасылак",
 
@@ -111,9 +111,9 @@ const translation = {
         // contact page
         contact: "контакты",
         writeMe: "Написать мне",
-        nameForm: "имя *",
-        emailForm: "электронная почта *",
-        messageForm: "сообщение *",
+        nameForm: "имя",
+        emailForm: "электронная почта",
+        messageForm: "сообщение",
         btnForm: "написать",
         moreLinks: "больше ссылок",
 
@@ -172,9 +172,9 @@ const translation = {
         // contact page
         contact: "contact",
         writeMe: "Write me",
-        nameForm: "name *",
-        emailForm: "email *",
-        messageForm: "message *",
+        nameForm: "name",
+        emailForm: "email",
+        messageForm: "message",
         btnForm: "write",
         moreLinks: "take more links",
 
