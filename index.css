@@ -207,7 +207,7 @@ svg * {
   --font-family-logo: "Mountainsof-Christmas", sans-serif;
 
   --container-width: 1680px;
-  --container-padding-x: 120px;
+  --container-padding-x: 200px;
 
   --transition-duration: .2s;
 }
