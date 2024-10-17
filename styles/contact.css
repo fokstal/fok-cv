@@ -84,7 +84,8 @@ form button {
 
 .network-links {
     display: flex;
-    margin: 5% 0;
+    width: 40vw;
+    margin: 5% auto;
 }
 
 .network-links a {
@@ -93,5 +94,5 @@ form button {
 
 .network-links img {
     display: block;
-    width: 120px;
+    width: 60px;
 }
