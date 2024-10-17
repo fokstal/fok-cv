@@ -53,6 +53,7 @@
     display: block;
     width: 40vw;
     margin: 130px auto 0 auto;
+    text-align: center;
 }
 
 .any-skills .and-also {
@@ -62,11 +63,11 @@
 
 .any-skills p {
     display: block;
-    text-align: left;
 }
 
 .skills-el {
     display: inline-flex;
+    width: auto;
     font-size: 20px;
     padding: 1%;
     border: 1px #434343 solid;
