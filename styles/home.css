@@ -4,8 +4,7 @@
 }
 
 .home .hello-text {
-    display: inline-block;
-    margin-right: 10%;
+    display: block;
     font-size: max(4vw, 28px);
     text-align: left;
     white-space: nowrap;

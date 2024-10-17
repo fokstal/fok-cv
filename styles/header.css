@@ -15,7 +15,7 @@ header {
 .logo.home {
     font-family: var(--font-family-logo);
     font-weight: 500;
-    font-size: 290px;
+    font-size: 200px;
 }
 
 nav {
