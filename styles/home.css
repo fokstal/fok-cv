@@ -1,11 +1,18 @@
 .home {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
 }
 
 .home .hello-text {
     display: block;
-    font-size: max(4vw, 28px);
+    font-size: max(28px, 4.5vw);
     text-align: left;
-    white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+    .home .hello-text {
+        margin-top: 30%;
+        text-align: center;
+    }
 }
