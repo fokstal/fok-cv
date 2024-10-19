@@ -7,6 +7,7 @@ export default class Layout {
     languageWorker = null;
     pageList = [];
     #currentPage = this.basePageName;
+    burgerCheckbox = null;
 
     get currentPage() {
         return this.#currentPage;
@@ -21,6 +22,7 @@ export default class Layout {
         this.basePageName = basePageName;
         this.languageWorker = languageWorker;
         this.currentPage = sessionStorage.getItem(StorageKey.session.currentPage) || basePageName;
+        this.burgerCheckbox = document.querySelector("#isViewBurgerCheckbox");
     }
 
     async init() {
@@ -29,6 +31,19 @@ export default class Layout {
         })).then(results => Object.assign({}, ...results));
 
         this.changePageByLink(this.currentPage)
+
+        this.burgerCheckbox.addEventListener("click", (el) => {
+            const isViewBurger = el.target.checked;
+
+            if (isViewBurger) {
+                this.root.style.visibility = "hidden";
+                this.root.style.opacity = 0;
+            }
+            else {
+                this.root.style.visibility = "visible";
+                this.root.style.opacity = 1;
+            }
+        })
     }
 
     changePageByLink(pageNameToSelect) {
@@ -39,6 +54,10 @@ export default class Layout {
 
         setTimeout(() => {
             root.classList.remove("fade-out");
+
+            this.burgerCheckbox.checked = false;
+            this.root.style.visibility = "visible";
+            this.root.style.opacity = 1;
 
             this.#setPage(pageNameToSelect);
 
@@ -65,14 +84,16 @@ export default class Layout {
         const currentPage = this.currentPage;
 
         document
-            .querySelector("nav")
-            .querySelectorAll("a")
-            .forEach(aEl => {
-                if (aEl.textContent === currentPage)
-                    aEl.classList.add("selected");
-                else
-                    aEl.classList.remove("selected");
-            });
+            .querySelectorAll("nav")
+            .forEach(navEl => {
+                navEl.querySelectorAll("a")
+                    .forEach(aEl => {
+                        if (aEl.textContent === currentPage)
+                            aEl.classList.add("selected");
+                        else
+                            aEl.classList.remove("selected");
+                    });
+            })
     }
 
     #transformLogo() {
