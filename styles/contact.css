@@ -1,5 +1,5 @@
 .contact img {
-    width: calc(var(--container-width) / 3);
+    width: 40vw;
     height: 100%;
     transition: transform 1s;
     transform-origin: center;
@@ -18,14 +18,15 @@
 }
 
 .write-me-box form {
-    width: calc(var(--container-width) / 2);
     height: 100%;
-    margin-right: 170px;
+    margin-right: 100px;
 }
 
 .form-box {
     display: flex;
+    width: 25vw;
     flex-direction: column;
+    margin: 0 auto;
     margin-bottom: 10px;
     align-items: end;
 }
@@ -96,3 +97,17 @@ form button {
     display: block;
     width: 60px;
 }
+
+@media (max-width: 1366px) {
+    .write-me-box {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .write-me-box form {
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+  }
