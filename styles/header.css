@@ -18,13 +18,16 @@ header {
     font-size: 200px;
 }
 
-nav {
+
+/* NAV LINKED LIST */
+
+nav[nav-type="linked-list"] {
     display: flex;
     text-align: center;
     width: auto;
 }
 
-nav a {
+nav[nav-type="linked-list"] a {
     font-weight: 500;
     font-size: 26px;
     color: #434343;
@@ -34,10 +37,115 @@ nav a {
     transition: all .2s ease;
 }
 
-nav a:hover {
+nav[nav-type="linked-list"] a:hover {
     border-bottom: 1px solid #434343;
 }
 
-nav a.selected {
+nav[nav-type="linked-list"] a.selected {
     border-bottom: 2px solid #434343;
+}
+
+/* NAV BURGER */
+
+nav[nav-type="burger"] {
+    display: none;
+}
+
+.burger-btn {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.burger-btn input {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.burger-lines {
+    z-index: 1;
+}
+
+.burger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform .3s ease-in-out;
+}
+
+.burger-lines .line2 {
+    transition: transform .1s ease-in-out;
+}
+
+.burger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform .3s ease-in-out;
+}
+
+.linked-list {
+    height: 120vh;
+    width: 100vw;
+    background: white;
+    transform: translate(-88%, -350%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.linked-list .links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transform: translateY(250%);
+}
+
+.burger-btn input:checked~.linked-list {
+    transform: translate(-81.5%, -10%);
+}
+
+.burger-btn input:checked~.burger-lines .line1 {
+    transform: rotate(45deg);
+}
+
+.burger-btn input:checked~.burger-lines .line2 {
+    transform: scaleY(0);
+}
+
+.burger-btn input:checked~.burger-lines .line3 {
+    transform: rotate(-45deg);
+}
+
+.burger-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 3px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger-lines span {
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background: #434343;
+}
+
+/*  */
+
+@media (max-width: 720px) {
+    nav[nav-type="linked-list"] {
+        display: none;
+    }
+
+    nav[nav-type="burger"] {
+        display: block;
+    }
 }

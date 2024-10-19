@@ -20,10 +20,27 @@
     <div class="container">
         <header>
             <a class="logo" onclick="changePageByLink('home')">f</a>
-            <nav>
+            <nav nav-type="linked-list">
                 <a onclick="changePageByLink('exp', this)" translate-key="exp">exp</a>
                 <a onclick="changePageByLink('about', this)" translate-key="about">about</a>
                 <a onclick="changePageByLink('contact', this)" translate-key="contact">contact</a>
+            </nav>
+            <nav nav-type="burger">
+                <button class="burger-btn">
+                    <input type="checkbox" id="isViewBurgerCheckbox">
+                    <div class="burger-lines">
+                        <span class="line1"></span>
+                        <span class="line2"></span>
+                        <span class="line3"></span>
+                    </div>
+                    <div class="linked-list">
+                        <div class="links">
+                            <a onclick="changePageByLink('exp', this)" translate-key="exp">exp</a>
+                            <a onclick="changePageByLink('about', this)" translate-key="about">about</a>
+                            <a onclick="changePageByLink('contact', this)" translate-key="contact">contact</a>
+                        </div>
+                    </div>
+                </button>
             </nav>
         </header>
         <div class="root"></div>
