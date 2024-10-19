@@ -20,6 +20,21 @@ const initApp = async (config) => {
     window.sendMessageToEmail = sendMessageToEmail;
     window.toggleAccessMode = accessModeWorker.toggleAccessMode;
     window.changeLanguage = languageWorker.changeLanguage;
+
+    document
+        .querySelector("#isViewBurgerCheckbox")
+        .addEventListener("click", (el) => {
+            const isViewBurger = el.target.checked;
+
+            if (isViewBurger) {
+                root.style.visibility = "hidden";
+                root.style.opacity = 0;
+            }
+            else {
+                root.style.visibility = "visible";
+                root.style.opacity = 1;
+            }
+        })
 }
 
 export default initApp;

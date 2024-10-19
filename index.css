@@ -192,7 +192,7 @@ body {
 
 .root {
   flex: 1 1 auto;
-  transition: opacity .2s ease;
+  transition: all .5s ease-in-out;
   opacity: 1;
 }
 

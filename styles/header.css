@@ -90,23 +90,27 @@ nav[nav-type="burger"] {
 }
 
 .linked-list {
-    height: 120vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100vw;
-    background: white;
-    transform: translate(-88%, -350%);
-    transition: transform 0.5s ease-in-out;
-    z-index: 0;
+    opacity: 0;
+    transition: all 1s;
 }
 
 .linked-list .links {
     display: flex;
     flex-direction: column;
     text-align: center;
-    transform: translateY(250%);
 }
 
 .burger-btn input:checked~.linked-list {
-    transform: translate(-81.5%, -10%);
+    opacity: 1;
+}
+
+.burger-btn input:checked .burger {
+    transform: translateX(-81.5%);
 }
 
 .burger-btn input:checked~.burger-lines .line1 {
