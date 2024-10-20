@@ -88,7 +88,7 @@ const libAndFwConfig = {
         responsive: true,
         plugins: {
             legend: {
-                display: false
+                display: false,
             },
             title: {
                 display: true,
@@ -102,8 +102,10 @@ const libAndFwConfig = {
             x: {
                 min: 0,
                 max: 10,
+                reverse: true,
             },
             y: {
+                position: "right",
                 angleLines: {
                     display: false
                 },
@@ -187,6 +189,7 @@ const commitFreqConfig = {
             y: {
                 min: 0,
                 max: 200,
+                position: "right",
             },
             x: {
                 angleLines: {
