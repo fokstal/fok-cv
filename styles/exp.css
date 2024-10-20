@@ -40,7 +40,7 @@
 
 .any-skills {
     display: block;
-    width: 40vw;
+    width: max(270px, 40vw);
     margin: 130px auto 0 auto;
     text-align: center;
 }
@@ -56,10 +56,13 @@
 
 .skills-el {
     display: inline-flex;
-    padding: 1%;
+    width: max(130px, 8vw);
+    padding: 5px;
+    margin: 2px 0;
     border: 1px #434343 solid;
-    border-radius: 10px;
-    align-items: center;
+    border-radius: 5px;
+    font-size: max(16px, 1vw);
+    justify-content: center;
 }
 
 .skills-el[title] {
@@ -72,9 +75,9 @@
 }
 
 .skills-el img {
-    width: 40px;
+    width: min(40px, 10vw);
     margin: 0;
-    padding-right: 5%;
+    padding-right: 10px;
 }
 
 
