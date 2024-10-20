@@ -53,7 +53,7 @@ const translation = {
         nameForm: "імя",
         emailForm: "электронная пошта",
         messageForm: "паведамленне",
-        btnForm: "напісаць",
+        btnForm: "адправіць",
         moreLinks: "больш спасылак",
 
         // tіtle
@@ -114,7 +114,7 @@ const translation = {
         nameForm: "имя",
         emailForm: "электронная почта",
         messageForm: "сообщение",
-        btnForm: "написать",
+        btnForm: "отправить",
         moreLinks: "больше ссылок",
 
         // title
@@ -175,7 +175,7 @@ const translation = {
         nameForm: "name",
         emailForm: "email",
         messageForm: "message",
-        btnForm: "write",
+        btnForm: "send",
         moreLinks: "take more links",
 
         // title
