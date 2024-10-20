@@ -35,6 +35,7 @@
 
 .skills .chart-box {
     display: flex;
+    align-items: center;
 }
 
 .chart-column {
@@ -46,7 +47,7 @@
 .skills .chart {
     display: flex;
     flex: 1;
-    width: 90%;
+    margin: 20px 0;
 }
 
 .any-skills {
@@ -116,4 +117,14 @@
 .course-list img {
     margin: 30px auto 0 auto;
     width: 40%;
+}
+
+@media (max-width:1366px) {
+    .skills .chart-box {
+        flex-direction: column;
+    }
+
+    .skills .chart {
+        width: max(300px, 50vw);
+    }
 }

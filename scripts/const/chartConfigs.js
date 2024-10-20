@@ -2,7 +2,7 @@ import getCommitFrequency from "../service/getCommitFrequency.js";
 import takeRGBA from "../helpers/takeRandomRGBA.js";
 
 // IT LANGUAGE chart
-const itLanguageLabels = ["C#", "JavaScript", "XAML", "HTML&CSS", "SQL"];
+const itLanguageLabels = ["C#", "JS", "XAML", "HTML&CSS", "SQL"];
 const itLanguageRGBA = takeRGBA();
 const itLanguageData = {
     labels: itLanguageLabels,
@@ -51,7 +51,7 @@ const itLanguageConfig = {
 };
 
 // LIBRARY and FRAMEWORK chart
-const libAndFwLabels = ["ASP.NET Core", "Entity Framework Core", "WPF", "React", "TypeScript"];
+const libAndFwLabels = ["ASP.NET Core", "EF Core", "WPF", "React", "TypeScript"];
 const libAndFwRGBABorderList = [];
 const libAndFwRGBABackgroundList = [];
 
