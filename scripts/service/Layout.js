@@ -1,10 +1,12 @@
 import { StorageKey, Folder, PageName } from "../const/const.js";
 import { itLanguageConfig, libAndFwConfig, commitFreqConfig } from "../const/chartConfigs.js";
+import ImgModal from "./ImgModal.js";
 
 export default class Layout {
     root = null;
     basePageName = "home";
     languageWorker = null;
+    imgModal = null;
     pageList = [];
     #currentPage = this.basePageName;
     burgerCheckbox = null;
@@ -21,6 +23,7 @@ export default class Layout {
         this.root = root;
         this.basePageName = basePageName;
         this.languageWorker = languageWorker;
+        this.imgModal = new ImgModal();
         this.currentPage = sessionStorage.getItem(StorageKey.session.currentPage) || basePageName;
         this.burgerCheckbox = document.querySelector("#isViewBurgerCheckbox");
     }
@@ -70,6 +73,7 @@ export default class Layout {
             this.#showSelectedLink(pageNameToSelect);
             this.#transformLogo(pageNameToSelect);
             this.languageWorker.translateSite();
+            this.imgModal.setOpenModalOnClick();
         }, 200);
     }
 

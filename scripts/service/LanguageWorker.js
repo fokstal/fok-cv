@@ -42,7 +42,7 @@ class LanguageWorker {
 
                 el.innerHTML = translation[this.currentLanguage][translateKey] || oldInnerHtml;
             });
-            
+
         document
             .querySelectorAll("[translate-title-key]")
             .forEach(el => {
