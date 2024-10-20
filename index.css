@@ -156,7 +156,7 @@ body {
   height: 100%;
   font-family: var(--font-family-base);
   font-weight: 200;
-  font-size: max(2vw, 26px);
+  font-size: max(20px, 2vw);
   color: var(--color-dark);
   background-color: var(--color-light);
   scrollbar-width: thin;
@@ -202,18 +202,20 @@ body {
 
 h1 {
   font-weight: 400;
-  font-size: max(3vw, 36px);
+  font-size: max(28px, 3vw);
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 h2 {
   font-weight: 300;
-  font-size: max(2vw, 32px);
+  font-size: max(24px, 2.5vw);
   margin: 0;
 }
 
 h3 {
   font-weight: 200;
-  font-size: max(2vw, 32px);
+  font-size: max(24px, 2.5vw);
   margin: 0;
 }
 

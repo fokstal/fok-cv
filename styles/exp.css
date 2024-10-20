@@ -7,22 +7,9 @@
     margin: 30px auto 0 auto;
 }
 
-.exp li {
-    font-size: max(1.5vw, 26px);
-}
-
 .practice,
 .skills {
     display: flex;
-}
-
-.practice-place {
-    display: flex;
-    flex-direction: column;
-}
-
-.practice-place .date {
-    font-size: 18px;
 }
 
 
@@ -35,19 +22,20 @@
 
 .skills .chart-box {
     display: flex;
-    align-items: center;
+    align-items: top;
 }
 
 .chart-column {
     display: flex;
     flex: 1;
     flex-direction: column;
+    align-items: end;
 }
 
 .skills .chart {
     display: flex;
     flex: 1;
-    margin: 20px 0;
+    width: 30vw;
 }
 
 .any-skills {
@@ -68,12 +56,9 @@
 
 .skills-el {
     display: inline-flex;
-    width: auto;
-    font-size: 20px;
     padding: 1%;
     border: 1px #434343 solid;
-    border-radius: 5px;
-    cursor: default;
+    border-radius: 10px;
     align-items: center;
 }
 
@@ -101,30 +86,40 @@
     text-align: center;
 }
 
-.work-list h1 {
+.practice h1 {
     margin-top: 100px;
 }
 
-.work-list ul {
-    margin: 0 auto;
+.practice ul {
     text-align: left;
+    margin: 20px auto 0 auto;
 }
 
-.course-list h1 {
-    margin-top: 100px;
+.practice-place {
+    display: flex;
+    flex-direction: column;
+}
+
+.practice-place .date {
+    font-size: 18px;
 }
 
 .course-list img {
-    margin: 30px auto 0 auto;
-    width: 40%;
+    margin-top: 20px;
+    max-width: 50%;
 }
 
 @media (max-width:1366px) {
     .skills .chart-box {
         flex-direction: column;
+        align-items: center;
     }
 
     .skills .chart {
         width: max(300px, 50vw);
+    }
+
+    .chart-column {
+        align-items: center;
     }
 }

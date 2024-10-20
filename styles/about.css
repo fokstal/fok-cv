@@ -1,4 +1,5 @@
-.about .education, .hobby {
+.about .education,
+.hobby {
     display: flex;
     flex-direction: column;
 }
@@ -9,14 +10,13 @@
 
 .personal {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 
 .personal img {
     display: inline-block;
-    width: 50%;
-    height: 100%;
-    border-radius: 0 20px 0 0;
+    width: min(550px, 40vw);
+    border-radius: 0 10px 0 0;
 }
 
 .personal-content {
@@ -25,21 +25,25 @@
     text-align: center;
 }
 
+.personal-content h1 {
+    margin-top: 20px;
+}
+
 
 
 /* EDUCATION */
 
 .education img {
     display: inline-block;
-    margin: 60px auto 0 auto;
-    width: 60%;
-    border-radius: 20px 0 20px 0;
+    margin: 20px auto 0 auto;
+    width: 60vw;
+    border-radius: 10px 0 10px 0;
 }
 
 .education-content h1 {
     display: block;
     text-align: center;
-    margin-top: 170px;
+    margin-top: 100px;
 }
 
 
@@ -49,7 +53,7 @@
 .hobby-content h1 {
     display: block;
     text-align: center;
-    margin-top: 170px
+    margin-top: 100px
 }
 
 .hobby-content {
@@ -60,7 +64,7 @@
 
 .hobby-content img {
     display: inline-block;
-    width: 50px;
+    width: min(50px, 10vw);
 }
 
 .hobby-content span {
@@ -80,6 +84,7 @@
 .hobby-content .basketball {
     display: inline-block;
     transform: rotate(3deg);
+    text-align: end;
 }
 
 .hobby-content .any-ball {
@@ -92,7 +97,7 @@
     display: block;
     margin-top: 100px;
     text-align: center;
-    font-size: 80px;
+    font-size: max(70px, 4.5vw);
 }
 
 .hobby-content .love-sport img {
@@ -105,9 +110,15 @@
     text-align: center;
 }
 
+.hobby-content .any .any-icons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
 .hobby-content .any .any-icons img {
     display: inline-block;
-    margin: 0 100px;
 }
 
 .hobby-photos {
@@ -128,12 +139,22 @@
 .hobby-photos .sport {
     display: flex;
     flex-direction: row;
-}
-
-.hobby-photos .sport-1 {
-    margin-right: 50%;
+    justify-content: space-between;
 }
 
 .hobby-photos .any {
     margin: 0 auto;
+}
+
+@media (max-width: 1420px) {
+    .hobby-photos .sport {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 720px) {
+    .personal {
+        flex-direction: column;
+    }
 }
