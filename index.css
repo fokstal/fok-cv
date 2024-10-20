@@ -196,6 +196,10 @@ body {
   opacity: 1;
 }
 
+.root main {
+  animation: main-fade 1s;
+}
+
 .fade-out {
   opacity: 0;
 }
@@ -254,4 +258,13 @@ button:hover {
 
 .rotate {
   transform: rotateY(360deg);
+}
+
+@keyframes main-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
