@@ -62,19 +62,19 @@ form button {
 /* TAKE MORE TEXT */
 
 .take-more-text {
-    display: flex;
-    width: 170px;
+    display: inline-flex;
+    width: 100%;
     margin-top: 50px;
-    margin-left: auto;
     font-size: 20px;
     font-weight: 500; 
-    justify-content: space-between;
+    justify-content: end;
 }
 
 .take-more-text img {
     display: block;
     width: 24px;
     height: 24px;
+    margin-left: 10px;
 }
 
 

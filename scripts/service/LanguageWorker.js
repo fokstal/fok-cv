@@ -51,6 +51,15 @@ class LanguageWorker {
 
                 el.title = translation[this.currentLanguage]["title"][translateTitleKey] || oldTitle;
             });
+
+        document
+            .querySelectorAll("[translate-alt-key]")
+            .forEach(el => {
+                const translateAltKey = el.getAttribute("translate-alt-key");
+                const oldAlt = el.alt;
+
+                el.alt = translation[this.currentLanguage]["imgAlt"][translateAltKey] || oldAlt;
+            });
     }
 }
 

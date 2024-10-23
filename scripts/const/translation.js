@@ -2,36 +2,36 @@ const translation = {
     BY: {
         // і
         // ў
-    
+
         // home page
         helloText: `
-            Прывітанне, свет!<br>
+            Прывітанне!<br>
             Мяне клічуць <strong>Кірыл</strong><br>
             і я <strong>.NET разработчык!</strong><br>
         `,
 
         // exp page
         exp: "вопыт",
-        workListTitle: "Вопыт у рабоце",
+        workListTitle: "Вопыт працы",
         ngaekTitle: `
-            Educational institution
+            Установа адукацыі
             <br>
-            "Novopolsky Agricultural and Economic College"
+            "Навапольскі дзяржаўны аграрна-эканамічны каледж"
         `,
-        ngaekPosition: "Сomputer technician",
+        ngaekPosition: "Тэхнік-праграміст",
         ngaekExpMarkedList: `
-            <li>configured the local network</li>
-            <li>repaired and assembled PCs</li>
-            <li>supported the database of students</li>
-            <li>video conference</li>
-            <li>developed mini-applications</li>
-            <li>taught computer operator practice</li>
+            <li>канфігураваў лакальную сетку</li>
+            <li>раманціраваў і ўсталёўваў камп'ютары</li>
+            <li>падтрымліваў базу даных студэнтаў</li>
+            <li>суправаджаў відэаканферэнцыі</li>
+            <li>распрацоўваў міні-прыкладанні</li>
+            <li>выкладаў практыку аператара ЭВМ</li>
         `,
-        courseListTitle: "Courses",
+        courseListTitle: "Курсы",
         udemyTitle: "Udemy.com",
-        udemyCourseName: "ASP.NET Core MVC. Part 1",
-        skillsTitle: "Skills",
-        andAlsoText: "and also...",
+        udemyCourseName: "ASP.NET Core MVC. Частка 1",
+        skillsTitle: "Навыкі",
+        andAlsoText: "а таксама...",
 
         // about page
         about: "пра мяне",
@@ -62,11 +62,22 @@ const translation = {
             changeLanguage: "Змяніць мову",
             accessMode: "Версія для людзей са слабым зрокам",
         },
+
+        // img alt
+        imgAlt: {
+            udemyCertificate: "ASP.NET Core MVC. Part 1 - Certificate",
+            myAvatar: "My avatar",
+            collegePhoto: "College photo",
+            meAndFootballTeam: "Photo with me and my football team",
+            meAndFiendInPingPong: "Photo of me and my friend playing ping-pong",
+            meAndMyGirlfriend: "Photo with me and my girlfriend",
+            pigeonImg: "Image with pigeons",
+        },
     },
     RU: {
         // home page
         helloText: `
-            Приветствую, мир!<br>
+            Доброго дня!<br>
             Меня зовут <strong>Кирилл</strong><br>
             и я <strong>.NET Разработчик!</strong><br>
         `,
@@ -75,24 +86,24 @@ const translation = {
         exp: "опыт",
         workListTitle: "Опыт работы",
         ngaekTitle: `
-            Educational institution
+            Учреждение образования
             <br>
-            "Novopolsky Agricultural and Economic College"
+            "Новопольский государственный аграрно-экономический колледж"
         `,
-        ngaekPosition: "Сomputer technician",
+        ngaekPosition: "Техник-программист",
         ngaekExpMarkedList: `
-            <li>configured the local network</li>
-            <li>repaired and assembled PCs</li>
-            <li>supported the database of students</li>
-            <li>video conference</li>
-            <li>developed mini-applications</li>
-            <li>taught computer operator practice</li>
+            <li>конфигурировал локальную сеть</li>
+            <li>ремонтировал и устанавливал компьютеры</li>
+            <li>поддерживал базу данных студентов</li>
+            <li>сопровождал видеоконференции</li>
+            <li>разрабатывал мини-приложения</li>
+            <li>преподавал практику оператора ЭВМ</li>
         `,
-        courseListTitle: "Courses",
+        courseListTitle: "Курсы",
         udemyTitle: "Udemy.com",
-        udemyCourseName: "ASP.NET Core MVC. Part 1",
-        skillsTitle: "Skills",
-        andAlsoText: "and also...",
+        udemyCourseName: "ASP.NET Core MVC. Часть 1",
+        skillsTitle: "Навыки",
+        andAlsoText: "а также...",
 
         // about page
         about: "обо мне",
@@ -122,6 +133,17 @@ const translation = {
             shareLink: "Поделиться ссылкой на страницу",
             changeLanguage: "Изменить язык",
             accessMode: "Версия для слабовидящих",
+        },
+
+        // img alt
+        imgAlt: {
+            udemyCertificate: "Сертыфікат па ASP.NET Core MVC. Частка 1",
+            myAvatar: "Мой аватар",
+            collegePhoto: "Фота каледжа",
+            meAndFootballTeam: "Фота са мной і маёй футбольнай камандай",
+            meAndFiendInPingPong: "Фотаздымак мяне і майго сябра, якія гуляюць у настольны тэніс",
+            meAndMyGirlfriend: "Фота са мной і маёй дзяўчынай",
+            pigeonImg: "Малюнак з галубамі",
         },
     },
     EN: {
@@ -183,6 +205,17 @@ const translation = {
             shareLink: "Share link on site",
             changeLanguage: "Change language",
             accessMode: "Accessibility mode toggle",
+        },
+
+        // img alt
+        imgAlt: {
+            udemyCertificate: "Certificate by ASP.NET Core MVC. Part 1",
+            myAvatar: "My avatar",
+            collegePhoto: "College photo",
+            meAndFootballTeam: "Photo with me and my football team",
+            meAndFiendInPingPong: "Photo of me and my friend playing ping-pong",
+            meAndMyGirlfriend: "Photo with me and my girlfriend",
+            pigeonImg: "Image with pigeons",
         },
     },
 }
