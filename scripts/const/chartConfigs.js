@@ -1,5 +1,6 @@
 import getCommitFrequency from "../service/getCommitFrequency.js";
 import takeRGBA from "../helpers/takeRandomRGBA.js";
+import translation from "./translation.js";
 
 // IT LANGUAGE chart
 const itLanguageLabels = ["C#", "JS", "XAML", "HTML&CSS", "SQL"];
@@ -8,7 +9,7 @@ const itLanguageData = {
     labels: itLanguageLabels,
     datasets: [
         {
-            label: "Language skill",
+            label: "IT Languages skill",
             data: [9, 6, 4, 8, 5],
             borderColor: `rgba(${itLanguageRGBA.r}, ${itLanguageRGBA.g}, ${itLanguageRGBA.b}, 1)`,
             backgroundColor: `rgba(${itLanguageRGBA.r}, ${itLanguageRGBA.g}, ${itLanguageRGBA.b}, .1)`,
@@ -27,7 +28,7 @@ const itLanguageConfig = {
             },
             title: {
                 display: true,
-                text: "Language skill",
+                text: "IT Languages skill",
                 font: {
                     weight: "100",
                 },
@@ -92,7 +93,7 @@ const libAndFwConfig = {
             },
             title: {
                 display: true,
-                text: "Frameworks skill",
+                text: "Libraries and frameworks skill",
                 font: {
                     weight: "100",
                 }
@@ -205,4 +206,24 @@ const commitFreqConfig = {
     },
 };
 
-export { itLanguageConfig, libAndFwConfig, commitFreqConfig };
+// Functions
+
+const getItLanguageConfig = (currentLanguage) => {
+    itLanguageConfig.options.plugins.title.text = translation[currentLanguage].chartTitle.itLanguage;
+
+    return itLanguageConfig;
+}
+
+const getLibAndFwConfig = (currentLanguage) => {
+    libAndFwConfig.options.plugins.title.text = translation[currentLanguage].chartTitle.libAndFwConfig;
+
+    return libAndFwConfig;
+}
+
+const getCommitFreqConfig = (currentLanguage) => {
+    commitFreqConfig.options.plugins.title.text = translation[currentLanguage].chartTitle.commitFreqConfig;
+
+    return commitFreqConfig;
+}
+
+export { getItLanguageConfig, getLibAndFwConfig, getCommitFreqConfig };

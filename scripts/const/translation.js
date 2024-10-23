@@ -73,6 +73,12 @@ const translation = {
             meAndMyGirlfriend: "Photo with me and my girlfriend",
             pigeonImg: "Image with pigeons",
         },
+        // chart title
+        chartTitle: {
+            itLanguage: "Веды моў праграмавання",
+            libAndFwConfig: "Веды бібліятэк і фрэймворкаў",
+            commitFreqConfig: "Частата камітаў на GitHub",
+        },
     },
     RU: {
         // home page
@@ -145,6 +151,13 @@ const translation = {
             meAndMyGirlfriend: "Фота са мной і маёй дзяўчынай",
             pigeonImg: "Малюнак з галубамі",
         },
+
+        // chart title
+        chartTitle: {
+            itLanguage: "Знание языков программирования",
+            libAndFwConfig: "Знание библиотек и фреймворков",
+            commitFreqConfig: "Частота коммитов на GitHub",
+        },
     },
     EN: {
         // home page
@@ -216,6 +229,13 @@ const translation = {
             meAndFiendInPingPong: "Photo of me and my friend playing ping-pong",
             meAndMyGirlfriend: "Photo with me and my girlfriend",
             pigeonImg: "Image with pigeons",
+        },
+
+        // chart title
+        chartTitle: {
+            itLanguage: "IT Languages skill",
+            libAndFwConfig: "Libraries and frameworks skill",
+            commitFreqConfig: "Commit frequency on GitHub",
         },
     },
 }
