@@ -76,8 +76,8 @@ const translation = {
         // chart title
         chartTitle: {
             itLanguage: "Веды моў праграмавання",
-            libAndFwConfig: "Веды бібліятэк і фрэймворкаў",
-            commitFreqConfig: "Частата камітаў на GitHub",
+            libAndFw: "Веды бібліятэк і фрэймворкаў",
+            commitFreq: "Частата камітаў на GitHub",
         },
     },
     RU: {
@@ -155,8 +155,8 @@ const translation = {
         // chart title
         chartTitle: {
             itLanguage: "Знание языков программирования",
-            libAndFwConfig: "Знание библиотек и фреймворков",
-            commitFreqConfig: "Частота коммитов на GitHub",
+            libAndFw: "Знание библиотек и фреймворков",
+            commitFreq: "Частота коммитов на GitHub",
         },
     },
     EN: {
@@ -234,8 +234,8 @@ const translation = {
         // chart title
         chartTitle: {
             itLanguage: "IT Languages skill",
-            libAndFwConfig: "Libraries and frameworks skill",
-            commitFreqConfig: "Commit frequency on GitHub",
+            libAndFw: "Libraries and frameworks skill",
+            commitFreq: "Commit frequency on GitHub",
         },
     },
 }

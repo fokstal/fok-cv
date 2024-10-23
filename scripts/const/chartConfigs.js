@@ -26,13 +26,6 @@ const itLanguageConfig = {
             legend: {
                 display: false
             },
-            title: {
-                display: true,
-                text: "IT Languages skill",
-                font: {
-                    weight: "100",
-                },
-            },
         },
         scales: {
             r: {
@@ -90,13 +83,6 @@ const libAndFwConfig = {
         plugins: {
             legend: {
                 display: false,
-            },
-            title: {
-                display: true,
-                text: "Libraries and frameworks skill",
-                font: {
-                    weight: "100",
-                }
             },
         },
         scales: {
@@ -178,13 +164,6 @@ const commitFreqConfig = {
             legend: {
                 display: false
             },
-            title: {
-                display: true,
-                text: "Commit frequency on GitHub",
-                font: {
-                    weight: "100",
-                }
-            },
         },
         scales: {
             y: {
@@ -206,24 +185,4 @@ const commitFreqConfig = {
     },
 };
 
-// Functions
-
-const getItLanguageConfig = (currentLanguage) => {
-    itLanguageConfig.options.plugins.title.text = translation[currentLanguage].chartTitle.itLanguage;
-
-    return itLanguageConfig;
-}
-
-const getLibAndFwConfig = (currentLanguage) => {
-    libAndFwConfig.options.plugins.title.text = translation[currentLanguage].chartTitle.libAndFwConfig;
-
-    return libAndFwConfig;
-}
-
-const getCommitFreqConfig = (currentLanguage) => {
-    commitFreqConfig.options.plugins.title.text = translation[currentLanguage].chartTitle.commitFreqConfig;
-
-    return commitFreqConfig;
-}
-
-export { getItLanguageConfig, getLibAndFwConfig, getCommitFreqConfig };
+export { itLanguageConfig, libAndFwConfig, commitFreqConfig };

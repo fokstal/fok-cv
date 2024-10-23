@@ -34,8 +34,17 @@
 
 .skills .chart {
     display: flex;
-    flex: 1;
     width: 30vw;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    text-align: center;
+}
+
+.skills .chart h2 {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: .6;
 }
 
 .any-skills {

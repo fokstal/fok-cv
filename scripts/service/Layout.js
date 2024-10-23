@@ -1,5 +1,5 @@
 import { StorageKey, Folder, PageName } from "../const/const.js";
-import { getItLanguageConfig, getLibAndFwConfig, getCommitFreqConfig } from "../const/chartConfigs.js";
+import { itLanguageConfig, libAndFwConfig, commitFreqConfig } from "../const/chartConfigs.js";
 import ImgModal from "./ImgModal.js";
 
 export default class Layout {
@@ -65,9 +65,9 @@ export default class Layout {
             this.#setPage(pageNameToSelect);
 
             if (pageNameToSelect == PageName.exp) {
-                new Chart(document.getElementById("it-language-chart"), getItLanguageConfig(this.languageWorker.currentLanguage));
-                new Chart(document.getElementById("lib-fw-chart"), getLibAndFwConfig(this.languageWorker.currentLanguage));
-                new Chart(document.getElementById("commit-freq-chart"), getCommitFreqConfig(this.languageWorker.currentLanguage));
+                new Chart(document.getElementById("it-language-chart"), itLanguageConfig);
+                new Chart(document.getElementById("lib-fw-chart"), libAndFwConfig);
+                new Chart(document.getElementById("commit-freq-chart"), commitFreqConfig);
             }
 
             this.#showSelectedLink(pageNameToSelect);

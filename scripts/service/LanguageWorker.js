@@ -60,6 +60,15 @@ class LanguageWorker {
 
                 el.alt = translation[this.currentLanguage]["imgAlt"][translateAltKey] || oldAlt;
             });
+
+        document
+            .querySelectorAll("[translate-chart-title-key]")
+            .forEach(el => {
+                const translateChartTitleKey = el.getAttribute("translate-chart-title-key");
+                const oldChartTitle = el.alt;
+
+                el.innerHTML = translation[this.currentLanguage]["chartTitle"][translateChartTitleKey] || oldChartTitle;
+            });
     }
 }
 
