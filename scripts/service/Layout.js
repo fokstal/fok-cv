@@ -92,7 +92,7 @@ export default class Layout {
             .forEach(navEl => {
                 navEl.querySelectorAll("a")
                     .forEach(aEl => {
-                        if (aEl.textContent === currentPage)
+                        if (aEl.id.includes(currentPage))
                             aEl.classList.add("selected");
                         else
                             aEl.classList.remove("selected");
