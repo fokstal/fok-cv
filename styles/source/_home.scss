@@ -1,12 +1,17 @@
-.home {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-
-    .hello-text {
-        display: block;
-        font-size: max(28px, 4.5vw);
-        text-align: left;
+body {
+    .container {
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        
+            h1 {
+                display: block;
+                font-size: max(28px, 4.5vw);
+                text-align: left;
+                font-weight: 100;
+            }
+        }
     }
 }
 

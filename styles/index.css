@@ -738,15 +738,16 @@ header .burger .burger-btn .burger-linked-list {
   }
 }
 
-.home {
+body .container .home {
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
-.home .hello-text {
+body .container .home h1 {
   display: block;
   font-size: max(28px, 4.5vw);
   text-align: left;
+  font-weight: 100;
 }
 
 @media (max-width: 720px) {
