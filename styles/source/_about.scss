@@ -1,0 +1,148 @@
+.about {
+    .personal {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        img {
+            display: inline-block;
+            width: min(550px, 40vw);
+            border-radius: 0 10px 0 0;
+        }
+
+        .personal-content {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+
+            h1 {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 720px) {
+            flex-direction: column;
+        }
+    }
+
+    .education {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            display: inline-block;
+            margin: 20px auto 0 auto;
+            width: 60vw;
+            border-radius: 10px 0 10px 0;
+        }
+
+        h1 {
+            display: block;
+            text-align: center;
+            margin-top: 100px;
+        }
+    }
+
+    .hobby {
+        display: flex;
+        flex-direction: column;
+
+        .hobby-content {
+            display: block;
+            width: 70%;
+            margin: 0 auto;
+
+            h1 {
+                display: block;
+                text-align: center;
+                margin-top: 100px
+            }
+
+            img {
+                display: inline-block;
+                width: min(50px, 10vw);
+            }
+
+            span {
+                display: inline-block;
+            }
+
+            div {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .soccer {
+                display: inline-block;
+                transform: rotate(-5deg);
+            }
+
+            .basketball {
+                display: inline-block;
+                transform: rotate(3deg);
+                text-align: end;
+            }
+
+            .any-ball {
+                display: block;
+                text-align: center;
+                transform: rotate(-1eg);
+            }
+
+            .love-sport {
+                display: block;
+                margin-top: 100px;
+                text-align: center;
+                font-size: max(70px, 4.5vw);
+
+                img {
+                    width: 120px;
+                }
+            }
+
+            .any {
+                display: block;
+                margin-top: 100px;
+                text-align: center;
+
+                .any-icons {
+                    display: flex;
+                    justify-content: space-between;
+                    max-width: 300px;
+                    margin: 0 auto;
+
+                    img {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+        .hobby-photos {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            text-align: center;
+
+            img {
+                display: block;
+                width: 510px;
+            }
+
+            .sport {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                @media (max-width: 1420px) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
+            .any {
+                margin: 0 auto;
+            }
+        }
+    }
+}
