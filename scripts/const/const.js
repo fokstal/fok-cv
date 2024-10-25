@@ -16,6 +16,7 @@ const StorageKey = {
 
 const Folder = {
     icons: "/icons/",
+    any: "/any/",
     pages: "/pages/",
 }
 
