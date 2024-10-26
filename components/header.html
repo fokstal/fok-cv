@@ -1,0 +1,24 @@
+<header>
+    <a class="logo" onclick="changePageByLink('home')">f</a>
+    <nav class="linked-list">
+        <a id="expLink" onclick="changePageByLink('exp', this)" translate-key="exp">exp</a>
+        <a id="aboutLink" onclick="changePageByLink('about', this)" translate-key="about">about</a>
+        <a id="contactLink" onclick="changePageByLink('contact', this)" translate-key="contact">contact</a>
+    </nav>
+    <div class="burger" nav-type="burger">
+        <button class="burger-btn">
+            <input type="checkbox" id="isViewBurgerCheckbox">
+            <div class="burger-lines">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <span class="line3"></span>
+            </div>
+            <nav class="burger-linked-list">
+                <a id="expLink" onclick="changePageByLink('exp', this)" translate-key="exp">exp</a>
+                <a id="aboutLink" onclick="changePageByLink('about', this)" translate-key="about">about</a>
+                <a id="contactLink" onclick="changePageByLink('contact', this)"
+                    translate-key="contact">contact</a>
+            </nav>
+        </button>
+    </div>
+</header>
