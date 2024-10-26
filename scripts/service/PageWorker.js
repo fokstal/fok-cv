@@ -1,13 +1,12 @@
-import { StorageKey, Folder, PageName } from "../const/const.js";
+import { StorageKey, Folder, PageName, ComponentsName } from "../const/const.js";
 import { itLanguageConfig, libAndFwConfig, commitFreqConfig } from "../const/chartConfigs.js";
 import ImgModal from "./ImgModal.js";
 
-export default class Layout {
-    root = null;
+class PageWorker {
+    indexLayout = null;
     basePageName = "home";
     languageWorker = null;
     imgModal = null;
-    pageList = [];
     #currentPage = this.basePageName;
     burgerCheckbox = null;
 
@@ -19,8 +18,8 @@ export default class Layout {
         sessionStorage.setItem(StorageKey.session.currentPage, pageName);
     }
 
-    constructor(root, basePageName, languageWorker) {
-        this.root = root;
+    constructor(indexLayout, basePageName, languageWorker) {
+        this.indexLayout = indexLayout;
         this.basePageName = basePageName;
         this.languageWorker = languageWorker;
         this.imgModal = new ImgModal();
@@ -28,29 +27,26 @@ export default class Layout {
         this.burgerCheckbox = document.querySelector("#isViewBurgerCheckbox");
     }
 
-    async init() {
-        this.pageList = await Promise.all(Object.values(PageName).map(async (pageName) => {
-            return { [`${pageName}`]: await Layout.getLayoutFromFile(`.${Folder.pages}${pageName}.html`) };
-        })).then(results => Object.assign({}, ...results));
-
+    init() {
         this.changePageByLink(this.currentPage)
 
         this.burgerCheckbox.addEventListener("click", (el) => {
             const isViewBurger = el.target.checked;
 
             if (isViewBurger) {
-                this.root.style.visibility = "hidden";
-                this.root.style.opacity = 0;
+                this.indexLayout.root.style.visibility = "hidden";
+                this.indexLayout.root.style.opacity = 0;
             }
             else {
-                this.root.style.visibility = "visible";
-                this.root.style.opacity = 1;
+                this.indexLayout.root.style.visibility = "visible";
+                this.indexLayout.root.style.opacity = 1;
             }
         })
     }
 
     changePageByLink(pageNameToSelect) {
-        const root = this.root;
+        const root = this.indexLayout.root;
+
         this.currentPage = pageNameToSelect;
 
         root.classList.add("fade-out");
@@ -59,8 +55,8 @@ export default class Layout {
             root.classList.remove("fade-out");
 
             this.burgerCheckbox.checked = false;
-            this.root.style.visibility = "visible";
-            this.root.style.opacity = 1;
+            root.style.visibility = "visible";
+            root.style.opacity = 1;
 
             this.#setPage(pageNameToSelect);
 
@@ -80,14 +76,15 @@ export default class Layout {
     #setPage() {
         const currentPage = this.currentPage;
 
-        this.root.innerHTML = this.pageList[currentPage];
+        this.indexLayout.root.innerHTML = this.indexLayout.components.pageList[currentPage].outerHTML;
+
         document.title = "fok ∙ " + currentPage;
     }
 
     #showSelectedLink() {
         const currentPage = this.currentPage;
 
-        document
+        this.indexLayout.container
             .querySelectorAll("nav")
             .forEach(navEl => {
                 navEl.querySelectorAll("a")
@@ -104,26 +101,10 @@ export default class Layout {
         const currentPage = this.currentPage;
 
         if (currentPage === PageName.home)
-            document.querySelector(".logo").classList.add("home");
+            this.indexLayout.container.querySelector(".logo").classList.add("home");
         else
-            document.querySelector(".logo").classList.remove("home");
-    }
-
-    static async getLayoutFromFile(pathToFile) {
-        const resp = await fetch(pathToFile)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Network drop: " + response.statusText);
-                }
-                return response.text();
-            })
-            .then(layout => {
-                return layout;
-            })
-            .catch(error => {
-                console.error("Initial layout failed:", error);
-            });
-
-        return resp;
+            this.indexLayout.container.querySelector(".logo").classList.remove("home");
     }
 }
+
+export default PageWorker

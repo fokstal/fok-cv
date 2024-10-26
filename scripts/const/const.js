@@ -17,12 +17,26 @@ const StorageKey = {
 const Folder = {
     icons: "/icons/",
     any: "/any/",
-    pages: "/pages/",
+    components: "/components/",
+    pages: "/components/pages/",
 }
 
 const IconFullName = {
     eye: "eye.svg",
     eyeClosed: "eye-closed.svg",
+}
+
+const ComponentsName = {
+    header: "header",
+    pages: {
+        home: "home",
+        exp: "exp",
+        about: "about",
+        contact: "contact",
+    },
+    footer: "footer",
+    overlay: "overlay",
+    imgModal: "imgModal",
 }
 
 const PageName = {
@@ -32,4 +46,4 @@ const PageName = {
     contact: "contact",
 }
 
-export { LanguageEnum, StorageKey, Folder, IconFullName, PageName }
+export { LanguageEnum, StorageKey, Folder, IconFullName, PageName, ComponentsName }

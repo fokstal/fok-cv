@@ -1,13 +1,22 @@
-import ConfigApp from "./scripts/models/ConfigApp.js";
+import IndexLayout from "./scripts/service/IndexLayout.js";
+import ConfigPageWorker from "./scripts/models/ConfigPageWorker.js";
 import { PageName, LanguageEnum } from "./scripts/const/const.js";
-import initApp from "./scripts/initApp.js";
+import initPageWorker from "./scripts/initPageWorker.js";
 
-const config = new ConfigApp(
-    ".root",
-    "#languageSelect",
-    "#accessModeImg",
-    PageName.home,
-    LanguageEnum.EN
-);
+async function initialize() {
+    const indexLayout = new IndexLayout(document.querySelector(".container"));
 
-await initApp(config);
+    await indexLayout.initAsync();
+
+    const pageWorkerConfig = new ConfigPageWorker(
+        indexLayout,
+        "#languageSelect",
+        "#accessModeImg",
+        PageName.home,
+        LanguageEnum.EN
+    );
+
+    initPageWorker(pageWorkerConfig);
+}
+
+await initialize();
