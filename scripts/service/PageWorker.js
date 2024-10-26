@@ -1,4 +1,4 @@
-import { StorageKey, Folder, PageName, ComponentsName } from "../const/const.js";
+import { StorageKey, PageName } from "../const/const.js";
 import { itLanguageConfig, libAndFwConfig, commitFreqConfig } from "../const/chartConfigs.js";
 import ImgModal from "./ImgModal.js";
 
