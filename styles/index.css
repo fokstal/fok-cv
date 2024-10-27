@@ -761,7 +761,7 @@ body .container .home h1 {
     text-align: center;
   }
 }
-.img-modal {
+.image-modal {
   position: fixed;
   display: none;
   top: 50%;
@@ -771,7 +771,7 @@ body .container .home h1 {
   justify-content: center;
   z-index: 11;
 }
-.img-modal img {
+.image-modal__content {
   max-width: 90vw;
   max-height: 95vh;
   -o-object-fit: cover;

@@ -1,4 +1,4 @@
-.img-modal {
+.image-modal {
     position: fixed;
     display: none;
     top: 50%;
@@ -8,7 +8,7 @@
     justify-content: center;
     z-index: 11;
 
-    img {
+    &__content {
         max-width: 90vw;
         max-height: 95vh;
         object-fit: cover;

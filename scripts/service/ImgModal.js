@@ -4,8 +4,8 @@ class ImgModal {
     overlay = null;
 
     constructor() {
-        this.imgModal = document.querySelector(".img-modal");
-        this.imgModalContent = this.imgModal.querySelector(".content");
+        this.imgModal = document.querySelector(".image-modal");
+        this.imgModalContent = this.imgModal.querySelector(".image-modal__content");
         this.overlay = document.querySelector("#overlay");
     }
 
