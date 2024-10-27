@@ -1,125 +1,130 @@
-.about .personal {
+.about__personal-info {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.about .personal img {
+.about__personal-info-photo {
   display: inline-block;
   width: min(550px, 40vw);
   border-radius: 0 10px 0 0;
 }
-.about .personal .personal-content {
+.about__personal-info-text {
   display: inline-block;
   width: 100%;
   text-align: center;
 }
-.about .personal .personal-content h1 {
+.about__personal-info-text-title {
   margin-top: 20px;
 }
 @media (max-width: 720px) {
-  .about .personal {
+  .about__personal-info {
     flex-direction: column;
   }
 }
-.about .education {
+.about__education-info {
   display: flex;
   flex-direction: column;
 }
-.about .education img {
+.about__education-info-text-title {
+  display: block;
+  text-align: center;
+  margin-top: 100px;
+}
+.about__education-info-photo {
   display: inline-block;
   margin: 20px auto 0 auto;
   width: 60vw;
   border-radius: 10px 0 10px 0;
 }
-.about .education h1 {
-  display: block;
-  text-align: center;
-  margin-top: 100px;
-}
-.about .hobby {
+.about__hobby-info {
   display: flex;
   flex-direction: column;
 }
-.about .hobby .hobby-content {
+.about__hobby-info-text {
   display: block;
   width: 70%;
   margin: 0 auto;
 }
-.about .hobby .hobby-content h1 {
+.about__hobby-info-text-title {
   display: block;
   text-align: center;
   margin-top: 100px;
 }
-.about .hobby .hobby-content img {
-  display: inline-block;
-  width: min(50px, 10vw);
-}
-.about .hobby .hobby-content span {
-  display: inline-block;
-}
-.about .hobby .hobby-content div {
+.about__hobby-info-text-content {
   display: flex;
+  flex-direction: column;
+}
+.about__hobby-info-text-content-ballgame {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
-.about .hobby .hobby-content .soccer {
+.about__hobby-info-text-content-ballgame-soccer {
   display: inline-block;
   transform: rotate(-5deg);
 }
-.about .hobby .hobby-content .basketball {
+.about__hobby-info-text-content-ballgame-basketball {
   display: inline-block;
   transform: rotate(3deg);
   text-align: end;
 }
-.about .hobby .hobby-content .any-ball {
+.about__hobby-info-text-content-any-ball {
   display: block;
   text-align: center;
   transform: rotate(-1eg);
 }
-.about .hobby .hobby-content .love-sport {
+.about__hobby-info-text-content-love-sport {
   display: block;
   margin-top: 100px;
   text-align: center;
   font-size: max(70px, 4.5vw);
 }
-.about .hobby .hobby-content .love-sport img {
-  width: 120px;
+.about__hobby-info-text-content-love-sport-text {
+  display: inline-block;
 }
-.about .hobby .hobby-content .any {
+.about__hobby-info-text-content-love-sport-icon {
+  width: 120px !important;
+}
+.about__hobby-info-text-content-any {
   display: block;
   margin-top: 100px;
   text-align: center;
 }
-.about .hobby .hobby-content .any .any-icons {
+.about__hobby-info-text-content-any-icons {
   display: flex;
   justify-content: space-between;
   max-width: 300px;
   margin: 0 auto;
 }
-.about .hobby .hobby-content .any .any-icons img {
+.about__hobby-info-text-content-any-icons img {
   display: inline-block;
 }
-.about .hobby .hobby-photos {
+.about__hobby-info-text img {
+  display: inline-block;
+  width: min(50px, 10vw);
+}
+.about__hobby-info-photos {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
   text-align: center;
 }
-.about .hobby .hobby-photos img {
+.about__hobby-info-photos img {
   display: block;
   width: 510px;
 }
-.about .hobby .hobby-photos .sport {
+.about__hobby-info-photos-sport {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 @media (max-width: 1420px) {
-  .about .hobby .hobby-photos .sport {
+  .about__hobby-info-photos-sport {
     flex-direction: column;
     align-items: center;
   }
 }
-.about .hobby .hobby-photos .any {
+.about__hobby-info-photos-any {
   margin: 0 auto;
 }
 

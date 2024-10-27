@@ -1,69 +1,94 @@
 <main class="about">
-    <section class="personal">
-        <img id="photo" src="../images/about/my-avatar.jpg" alt="My avatar" translate-alt-key="myAvatar" loading="lazy">
-        <div class="personal-content">
-            <h1 translate-key="startTitle">I`am Kirill Labut, Hi!</h1>
-            <p translate-key="startText">
+    <section class="about__personal-info">
+        <img id="photo" class="about__personal-info-photo" src="../images/about/my-avatar.jpg" alt="My avatar"
+            translate-alt-key="myAvatar" loading="lazy">
+        <div class="about__personal-info-text">
+            <h1 class="about__personal-info-text-title" translate-key="startTitle">
+                I`am Kirill Labut, Hi!
+            </h1>
+            <p class="about__personal-info-text-content" translate-key="startText">
                 Lorem ipsum dolor sit amet
             </p>
         </div>
     </section>
-    <section class="education">
-        <div class="education-content">
-            <h1 translate-key="educationTitle">Education</h1>
-            <p translate-key="educationText">
+    <section class="about__education-info">
+        <div class="about__education-info-text">
+            <h1 class="about__education-info-text-title" translate-key="educationTitle">
+                Education
+            </h1>
+            <p class="about__education-info-text-content" translate-key="educationText">
                 Lorem ipsum dolor sit amet
             </p>
         </div>
-        <img id="photo" src="../images/about/college-photo.jpg" alt="College photo" translate-alt-key="collegePhoto"
-            loading="lazy">
+        <img class="about__education-info-photo" id="photo" src="../images/about/college-photo.jpg" alt="College photo"
+            translate-alt-key="collegePhoto" loading="lazy">
     </section>
-    <section class="hobby">
-        <div class="hobby-content">
-            <h1 translate-key="hobbyTitle">Hobby</h1>
-            <div>
-                <p class="soccer">
-                    <span translate-key="hobbySoccer">i play in soccer</span>
-                    <img src="../icons/hobby/football.svg">
-                </p>
-                <p class="basketball">
-                    <span translate-key="hobbyBasketball">and basketball</span>
-                    <img src="../icons/hobby/basketball.svg">
-                </p>
-            </div>
-            <p class="any-ball" translate-key="hobbyAnyBall">any ball game...</p>
-            <p class="love-sport">
-                <span translate-key="hobbyLoveSport">i love the <strong>sport!</strong></span>
-                <img src="../icons/hobby/runner.svg">
-            </p>
-            <p class="any">
-                <span translate-key="hobbyAny">I am actively trying to make books and cook delicious</span>
-                <span class="any-icons">
-                    <img src="../icons/hobby/book.svg">
-                    <img src="../icons/hobby/cookie.svg">
+    <section class="about__hobby-info">
+        <div class="about__hobby-info-text">
+            <h1 class="about__hobby-info-text-title" translate-key="hobbyTitle">
+                Hobby
+            </h1>
+            <div class="about__hobby-info-text-content">
+                <span class="about__hobby-info-text-content-ballgame">
+                    <div class="about__hobby-info-text-content-ballgame-soccer">
+                        <span translate-key="hobbySoccer">
+                            i play in soccer
+                        </span>
+                        <img src="../icons/hobby/football.svg">
+                    </div>
+                    <div class="about__hobby-info-text-content-ballgame-basketball">
+                        <span translate-key="hobbyBasketball">
+                            and basketball
+                        </span>
+                        <img src="../icons/hobby/basketball.svg">
+                    </div>
                 </span>
-            </p>
+                <span class="about__hobby-info-text-content-any-ball" translate-key="hobbyAnyBall">
+                    any ball game...
+                </span>
+                <span class="about__hobby-info-text-content-love-sport">
+                    <p class="about__hobby-info-text-content-love-sport-text" translate-key="hobbyLoveSport">
+                        i love the <strong>sport!</strong>
+                    </p>
+                    <img class="about__hobby-info-text-content-love-sport-icon" src="../icons/hobby/runner.svg">
+                </span>
+                <span class="about__hobby-info-text-content-any">
+                    <p translate-key="hobbyAny">
+                        I am actively trying to make books and cook delicious
+                    </p>
+                    <div class="about__hobby-info-text-content-any-icons">
+                        <img src="../icons/hobby/book.svg">
+                        <img src="../icons/hobby/cookie.svg">
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="hobby-photos">
-            <div class="sport">
-                <div class="sport-1">
-                    <img id="photo" src="../images/about/me-and-my-football-team.jpg" alt="Photo with me and my football team"
-                        translate-alt-key="meAndFootballTeam" loading="lazy">
-                    <span translate-key="hobbyMe">it`s me</span>
+        <div class="about__hobby-info-photos">
+            <div class="about__hobby-info-photos-sport">
+                <div class="about__hobby-info-photos-sport-football">
+                    <img id="photo" src="../images/about/me-and-my-football-team.jpg"
+                        alt="Photo with me and my football team" translate-alt-key="meAndFootballTeam" loading="lazy">
+                    <span translate-key="hobbyMe">
+                        it`s me
+                    </span>
                     <!-- arrow -->
                 </div>
-                <div class="sport-2">
+                <div class="about__hobby-info-photos-ping-pong">
                     <img id="photo" src="../images/about/me-and-friend-in-ping-pong.jpg"
                         alt="Photo of me and my friend playing ping-pong" translate-alt-key="meAndFriendInPingPong"
                         loading="lazy">
-                    <span translate-key="hobbyMe">it`s me</span>
+                    <span translate-key="hobbyMe">
+                        it`s me
+                    </span>
                     <!-- arrow -->
                 </div>
             </div>
-            <div class="any">
+            <div class="about__hobby-info-photos-any">
                 <img id="photo" src="../images/about/me-and-girlfriend.jpg" alt="Photo with me and my girlfriend" ,
                     translate-alt-key="meAndMyGirlfriend" loading="lazy">
-                <span translate-key="hobbyMe">it`s me</span>
+                <span translate-key="hobbyMe">
+                    it`s me
+                </span>
                 <!-- arrow -->
             </div>
         </div>
