@@ -1,22 +1,25 @@
-.exp {
-    h1 {
-        text-align: center;
-        margin-top: 0px;
-    }
-
-    img {
-        margin: 30px auto 0 auto;
-    }
-
-    .skills {
+.exp { 
+    &__skills {
         display: flex;
         flex-direction: column;
+        text-align: center;
 
-        .chart-box {
+        &-chart-list {
             display: flex;
             align-items: top;
             width: 95%;
             justify-content: space-between;
+
+            &-item {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                align-items: end;
+    
+                @media (max-width:1366px) {
+                    align-items: center;
+                }
+            }
 
             @media (max-width:1366px) {
                 flex-direction: column;
@@ -24,18 +27,7 @@
             }
         }
 
-        .chart-column {
-            display: flex;
-            flex: 1;
-            flex-direction: column;
-            align-items: end;
-
-            @media (max-width:1366px) {
-                align-items: center;
-            }
-        }
-
-        .chart {
+        &-chart {
             display: flex;
             width: 30vw;
             flex-direction: column;
@@ -43,10 +35,10 @@
             align-items: center;
             text-align: center;
 
-            h2 {
-                font-size: 14px;
-                font-weight: 400;
-                opacity: .6;
+            &-title {
+                font-size: 14px!important;
+                font-weight: 400!important;
+                opacity: .6!important;
             }
 
             @media (max-width:1366px) {
@@ -54,73 +46,73 @@
             }
         }
 
-        .any-skills {
+        &-any {
             display: block;
             width: max(270px, 40vw);
             margin: 130px auto 0 auto;
             text-align: center;
 
-            .and-also {
-                font-size: 20px;
-                font-weight: 500;
+            &-title {
+                font-size: 20px!important;
             }
 
-            p {
+            &-list {
                 display: block;
-            }
 
-            .skills-el {
-                display: inline-flex;
-                width: max(130px, 8vw);
-                padding: 5px;
-                margin: 2px 0;
-                border: 1px #434343 solid;
-                border-radius: 5px;
-                font-size: max(16px, 1vw);
-                justify-content: center;
-
-                &[title] {
-                    cursor: help;
-                }
-
-                &:hover {
-                    opacity: .1;
-                    transition: opacity .2s;
-                }
-
-                img {
-                    width: min(40px, 10vw);
-                    margin: 0;
-                    padding-right: 10px;
+                &-item {
+                    display: inline-flex;
+                    width: max(130px, 8vw);
+                    padding: 5px;
+                    margin: 2px 0;
+                    border: 1px #434343 solid;
+                    border-radius: 5px;
+                    font-size: max(16px, 1vw);
+                    justify-content: center;
+    
+                    &[title] {
+                        cursor: help;
+                    }
+    
+                    &:hover {
+                        opacity: .1;
+                        transition: opacity .2s;
+                    }
+    
+                    img {
+                        width: min(40px, 10vw);
+                        margin: 0;
+                        padding-right: 10px;
+                    }
                 }
             }
         }
     }
 
-    .practice {
+    &__practice {
         display: flex;
         flex-direction: column;
         text-align: center;
 
         h1 {
-            margin-top: 100px;
+            margin-top: 100px!important;
         }
 
-        ul {
-            text-align: left;
-            margin: 20px auto 0 auto;
-        }
-
-        .practice-place {
+        &-place {
             display: flex;
             flex-direction: column;
 
-            .date {
+            &-date {
                 font-size: 18px;
             }
 
-            img {
-                margin-top: 20px;
+            &-achievements {
+                text-align: left;
+                margin: 20px auto 0 auto;
+                list-style-type:square;
+            }
+
+            &-photo {
+                margin: 20px auto 0 auto;
                 max-width: 50%;
             }
         }
