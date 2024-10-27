@@ -6,7 +6,7 @@ class ImgModal {
     constructor() {
         this.imgModal = document.querySelector(".image-modal");
         this.imgModalContent = this.imgModal.querySelector(".image-modal__content");
-        this.overlay = document.querySelector("#overlay");
+        this.overlay = document.querySelector(".overlay");
     }
 
     setOpenModalOnClick() {
