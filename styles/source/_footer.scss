@@ -1,29 +1,24 @@
-footer {
+.footer {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    .footer-line {
+    &__line {
         width: max(270px, 40vw);
     }
 
-    .footer-ctrl {
+    &__control {
         display: flex;
         width: 200px;
         justify-content: space-between;
 
-        button {
-            border: none;
-            background: none;
-        }
-
-        .language-select-box {
+        &-language-button {
             border: 1px #333 solid;
             border-radius: 2px;
             font-size: 14px;
             margin: 0 20px;
-
-            select {
+            
+            &-select-list {
                 background: none;
                 border: none;
                 cursor: pointer;
@@ -31,7 +26,7 @@ footer {
         }
     }
 
-    a {
+    &__copyright-link {
         font-weight: 200;
         font-size: 20px;
         color: var(--color-dark);
