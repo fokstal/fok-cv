@@ -1,8 +1,6 @@
 .about {
     &__personal-info {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        @include flex-row;
 
         &-photo {
             display: inline-block;
@@ -26,14 +24,11 @@
     }
 
     &__education-info {
-        display: flex;
-        flex-direction: column;
+        @include flex-column(none);
 
         &-text {
             &-title {
-                display: block;
-                text-align: center;
-                margin-top: 100px;
+                @include title-center;
             }
         }
 
@@ -46,8 +41,7 @@
     }
 
     &__hobby-info {
-        display: flex;
-        flex-direction: column;
+        @include flex-column(none);
 
         &-text {
             display: block;
@@ -55,25 +49,20 @@
             margin: 0 auto;
 
             &-title {
-                display: block;
-                text-align: center;
-                margin-top: 100px
+                @include title-center
             }
 
             &-content {
-                display: flex;
-                flex-direction: column;
+                @include flex-column(none);
 
                 &-ballgame {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                
+                    @include flex-row-justify-space;
+
                     &-soccer {
                         display: inline-block;
                         transform: rotate(-5deg);
                     }
-        
+
                     &-basketball {
                         display: inline-block;
                         transform: rotate(3deg);
@@ -92,13 +81,13 @@
                     margin-top: 100px;
                     text-align: center;
                     font-size: max(70px, 4.5vw);
-                    
+
                     &-text {
                         display: inline-block;
                     }
 
                     &-icon {
-                        width: 120px!important;
+                        width: 120px !important;
                     }
                 }
 
@@ -106,13 +95,12 @@
                     display: block;
                     margin-top: 100px;
                     text-align: center;
-    
+
                     &-icons {
-                        display: flex;
-                        justify-content: space-between;
+                        @include flex-row-justify-space;
                         max-width: 300px;
                         margin: 0 auto;
-    
+
                         img {
                             display: inline-block;
                         }
@@ -127,8 +115,7 @@
         }
 
         &-photos {
-            display: flex;
-            flex-direction: column;
+            @include flex-column(none);
             margin-top: 50px;
             text-align: center;
 
@@ -138,8 +125,7 @@
             }
 
             &-sport {
-                display: flex;
-                flex-direction: row;
+                @include flex-row;
                 justify-content: space-between;
 
                 @media (max-width: 1420px) {

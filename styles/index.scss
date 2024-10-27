@@ -1,9 +1,16 @@
-@import "source/about";
-@import "source/base";
-@import "source/contact";
-@import "source/exp";
-@import "source/footer";
-@import "source/header";
-@import "source/home";
-@import "source/imgModal";
-@import "source/overlay";
+@import 
+    "source/fonts",
+    "source/mixins",
+    "source/globals",
+    "source/resets",
+    "source/variables";
+
+@import 
+    "source/components/about",
+    "source/components/contact",
+    "source/components/exp",
+    "source/components/footer",
+    "source/components/header",
+    "source/components/home",
+    "source/components/imgModal",
+    "source/components/overlay";

@@ -1,7 +1,6 @@
 .home {
-    display: flex;
+    @include flex-row(end);
     justify-content: center;
-    align-items: flex-end;
 
     &__title {
         font-size: max(28px, 4.5vw)!important;

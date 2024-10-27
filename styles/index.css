@@ -1,133 +1,3 @@
-.about__personal-info {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.about__personal-info-photo {
-  display: inline-block;
-  width: min(550px, 40vw);
-  border-radius: 0 10px 0 0;
-}
-.about__personal-info-text {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-}
-.about__personal-info-text-title {
-  margin-top: 20px;
-}
-@media (max-width: 720px) {
-  .about__personal-info {
-    flex-direction: column;
-  }
-}
-.about__education-info {
-  display: flex;
-  flex-direction: column;
-}
-.about__education-info-text-title {
-  display: block;
-  text-align: center;
-  margin-top: 100px;
-}
-.about__education-info-photo {
-  display: inline-block;
-  margin: 20px auto 0 auto;
-  width: 60vw;
-  border-radius: 10px 0 10px 0;
-}
-.about__hobby-info {
-  display: flex;
-  flex-direction: column;
-}
-.about__hobby-info-text {
-  display: block;
-  width: 70%;
-  margin: 0 auto;
-}
-.about__hobby-info-text-title {
-  display: block;
-  text-align: center;
-  margin-top: 100px;
-}
-.about__hobby-info-text-content {
-  display: flex;
-  flex-direction: column;
-}
-.about__hobby-info-text-content-ballgame {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.about__hobby-info-text-content-ballgame-soccer {
-  display: inline-block;
-  transform: rotate(-5deg);
-}
-.about__hobby-info-text-content-ballgame-basketball {
-  display: inline-block;
-  transform: rotate(3deg);
-  text-align: end;
-}
-.about__hobby-info-text-content-any-ball {
-  display: block;
-  text-align: center;
-  transform: rotate(-1eg);
-}
-.about__hobby-info-text-content-love-sport {
-  display: block;
-  margin-top: 100px;
-  text-align: center;
-  font-size: max(70px, 4.5vw);
-}
-.about__hobby-info-text-content-love-sport-text {
-  display: inline-block;
-}
-.about__hobby-info-text-content-love-sport-icon {
-  width: 120px !important;
-}
-.about__hobby-info-text-content-any {
-  display: block;
-  margin-top: 100px;
-  text-align: center;
-}
-.about__hobby-info-text-content-any-icons {
-  display: flex;
-  justify-content: space-between;
-  max-width: 300px;
-  margin: 0 auto;
-}
-.about__hobby-info-text-content-any-icons img {
-  display: inline-block;
-}
-.about__hobby-info-text img {
-  display: inline-block;
-  width: min(50px, 10vw);
-}
-.about__hobby-info-photos {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  text-align: center;
-}
-.about__hobby-info-photos img {
-  display: block;
-  width: 510px;
-}
-.about__hobby-info-photos-sport {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-@media (max-width: 1420px) {
-  .about__hobby-info-photos-sport {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-.about__hobby-info-photos-any {
-  margin: 0 auto;
-}
-
 @font-face {
   font-family: Inter;
   src: url("../fonts/Inter28pt-ExtraLight.woff2") format("woff2");
@@ -156,6 +26,120 @@
   font-style: normal;
   font-display: swap;
 }
+html,
+body {
+  height: 100%;
+  font-family: var(--font-family-base);
+  font-weight: 200;
+  font-size: max(20px, 2vw);
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  scrollbar-width: thin;
+}
+html .container,
+body .container {
+  margin-inline: auto;
+  min-height: 115%;
+  display: flex;
+  flex-direction: column;
+  /* ANIMATION */
+}
+@media (min-width: 1366px) {
+  html .container,
+  body .container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    padding-inline: var(--container-padding-x);
+  }
+}
+@media (max-width: 1366px) {
+  html .container,
+  body .container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) / 2 * 2);
+    padding-inline: calc(var(--container-padding-x) / 2);
+  }
+}
+@media (max-width: 720px) {
+  html .container,
+  body .container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) / 4 * 2);
+    padding-inline: calc(var(--container-padding-x) / 4);
+  }
+}
+html .container .root,
+body .container .root {
+  flex: 1 1 auto;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+html .container .root main,
+body .container .root main {
+  animation: main-fade 1s;
+}
+html .container h1, html .container h2, html .container h3,
+body .container h1,
+body .container h2,
+body .container h3 {
+  margin: 0;
+}
+html .container h1,
+body .container h1 {
+  font-weight: 400;
+  font-size: max(28px, 3vw);
+  margin-bottom: 40px;
+}
+html .container h2,
+body .container h2 {
+  font-weight: 300;
+  font-size: max(24px, 2.5vw);
+}
+html .container h3,
+body .container h3 {
+  font-weight: 200;
+  font-size: max(24px, 2.5vw);
+}
+html .container a,
+body .container a {
+  cursor: pointer;
+  text-decoration: none;
+}
+html .container a:hover,
+body .container a:hover {
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+html .container button,
+body .container button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+html .container button:hover,
+body .container button:hover {
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+html .container .fade,
+body .container .fade {
+  transition: opacity 0.1s ease-in-out;
+  opacity: 1;
+}
+html .container .fade-out,
+body .container .fade-out {
+  opacity: 0;
+}
+html .container .rotate,
+body .container .rotate {
+  transform: rotateY(360deg);
+}
+@keyframes main-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 *,
 ::before,
 ::after {
@@ -206,7 +190,6 @@ p {
   --paragraphMarginBottom: 24px;
   margin-block: 0;
 }
-
 p:where(:not([class]):not(:last-child)) {
   margin-bottom: var(--paragraphMarginBottom);
 }
@@ -272,120 +255,148 @@ svg * {
   --transition-duration: .2s;
 }
 
-html,
-body {
-  height: 100%;
-  font-family: var(--font-family-base);
-  font-weight: 200;
-  font-size: max(20px, 2vw);
-  color: var(--color-dark);
-  background-color: var(--color-light);
-  scrollbar-width: thin;
-}
-html .container,
-body .container {
-  margin-inline: auto;
-  min-height: 115%;
+.about__personal-info {
   display: flex;
-  flex-direction: column;
-  /* ANIMATION */
+  flex-direction: row;
+  align-items: center;
 }
-@media (min-width: 1366px) {
-  html .container,
-  body .container {
-    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
-    padding-inline: var(--container-padding-x);
-  }
+.about__personal-info-photo {
+  display: inline-block;
+  width: min(550px, 40vw);
+  border-radius: 0 10px 0 0;
 }
-@media (max-width: 1366px) {
-  html .container,
-  body .container {
-    max-width: calc(var(--container-width) + var(--container-padding-x) / 2 * 2);
-    padding-inline: calc(var(--container-padding-x) / 2);
-  }
+.about__personal-info-text {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.about__personal-info-text-title {
+  margin-top: 20px;
 }
 @media (max-width: 720px) {
-  html .container,
-  body .container {
-    max-width: calc(var(--container-width) + var(--container-padding-x) / 4 * 2);
-    padding-inline: calc(var(--container-padding-x) / 4);
+  .about__personal-info {
+    flex-direction: column;
   }
 }
-html .container .root,
-body .container .root {
-  flex: 1 1 auto;
-  transition: all 0.5s ease-in-out;
-  opacity: 1;
+.about__education-info {
+  display: flex;
+  flex-direction: column;
+  align-items: none;
 }
-html .container .root main,
-body .container .root main {
-  animation: main-fade 1s;
+.about__education-info-text-title {
+  display: block !important;
+  text-align: center !important;
+  margin-top: 100px !important;
 }
-html .container h1,
-body .container h1 {
-  font-weight: 400;
-  font-size: max(28px, 3vw);
-  margin: 0;
-  margin-bottom: 40px;
+.about__education-info-photo {
+  display: inline-block;
+  margin: 20px auto 0 auto;
+  width: 60vw;
+  border-radius: 10px 0 10px 0;
 }
-html .container h2,
-body .container h2 {
-  font-weight: 300;
-  font-size: max(24px, 2.5vw);
-  margin: 0;
+.about__hobby-info {
+  display: flex;
+  flex-direction: column;
+  align-items: none;
 }
-html .container h3,
-body .container h3 {
-  font-weight: 200;
-  font-size: max(24px, 2.5vw);
-  margin: 0;
+.about__hobby-info-text {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
 }
-html .container a,
-body .container a {
-  cursor: pointer;
-  text-decoration: none;
+.about__hobby-info-text-title {
+  display: block !important;
+  text-align: center !important;
+  margin-top: 100px !important;
 }
-html .container button,
-body .container button {
-  cursor: pointer;
-  border: none;
-  background: none;
+.about__hobby-info-text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: none;
 }
-html .container a:hover,
-body .container a:hover {
-  opacity: 0.7;
-  transition: all 0.2s;
+.about__hobby-info-text-content-ballgame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-html .container button:hover,
-body .container button:hover {
-  opacity: 0.7;
-  transition: all 0.2s;
+.about__hobby-info-text-content-ballgame-soccer {
+  display: inline-block;
+  transform: rotate(-5deg);
 }
-html .container .fade,
-body .container .fade {
-  transition: opacity 0.1s ease-in-out;
-  opacity: 1;
+.about__hobby-info-text-content-ballgame-basketball {
+  display: inline-block;
+  transform: rotate(3deg);
+  text-align: end;
 }
-html .container .fade-out,
-body .container .fade-out {
-  opacity: 0;
+.about__hobby-info-text-content-any-ball {
+  display: block;
+  text-align: center;
+  transform: rotate(-1eg);
 }
-html .container .rotate,
-body .container .rotate {
-  transform: rotateY(360deg);
+.about__hobby-info-text-content-love-sport {
+  display: block;
+  margin-top: 100px;
+  text-align: center;
+  font-size: max(70px, 4.5vw);
 }
-@keyframes main-fade {
-  from {
-    opacity: 0;
+.about__hobby-info-text-content-love-sport-text {
+  display: inline-block;
+}
+.about__hobby-info-text-content-love-sport-icon {
+  width: 120px !important;
+}
+.about__hobby-info-text-content-any {
+  display: block;
+  margin-top: 100px;
+  text-align: center;
+}
+.about__hobby-info-text-content-any-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.about__hobby-info-text-content-any-icons img {
+  display: inline-block;
+}
+.about__hobby-info-text img {
+  display: inline-block;
+  width: min(50px, 10vw);
+}
+.about__hobby-info-photos {
+  display: flex;
+  flex-direction: column;
+  align-items: none;
+  margin-top: 50px;
+  text-align: center;
+}
+.about__hobby-info-photos img {
+  display: block;
+  width: 510px;
+}
+.about__hobby-info-photos-sport {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 1420px) {
+  .about__hobby-info-photos-sport {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    opacity: 1;
-  }
+}
+.about__hobby-info-photos-any {
+  margin: 0 auto;
 }
 
-/* WRITE ME BOX */
 .contact__write-message-block {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   flex: 1 1 auto;
 }
@@ -393,20 +404,16 @@ body .container .rotate {
   height: 100%;
   margin-right: 10px;
 }
-.contact__write-message-block-form-title {
-  margin: 0;
-}
 .contact__write-message-block-form-item {
   display: flex;
-  width: max(275px, 25vw);
   flex-direction: column;
+  align-items: end;
+  width: max(275px, 25vw);
   margin: 0 auto;
   margin-bottom: 10px;
-  align-items: end;
 }
 .contact__write-message-block-form-item-label {
   font-size: 20px;
-  color: #000;
   opacity: 0.6;
 }
 .contact__write-message-block-form-item-text-box {
@@ -442,8 +449,8 @@ body .container .rotate {
   .contact__write-message-block {
     display: flex;
     flex-direction: column;
-    text-align: center;
     align-items: center;
+    text-align: center;
   }
 }
 .contact__more-links-helper {
@@ -467,9 +474,11 @@ body .container .rotate {
 }
 .contact__network-list {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   width: 40vw;
   margin: 5% auto;
-  justify-content: space-between;
 }
 .contact__network-link-icon {
   display: block;
@@ -479,17 +488,22 @@ body .container .rotate {
 .exp__skills {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
+}
+.exp__skills-title {
+  display: block !important;
+  text-align: center !important;
+  margin-top: 0 !important;
 }
 .exp__skills-chart-list {
   display: flex;
+  flex-direction: row;
   align-items: top;
-  width: 95%;
   justify-content: space-between;
+  width: 95%;
 }
 .exp__skills-chart-list-item {
   display: flex;
-  flex: 1;
   flex-direction: column;
   align-items: end;
 }
@@ -500,16 +514,16 @@ body .container .rotate {
 }
 @media (max-width: 1366px) {
   .exp__skills-chart-list {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
 .exp__skills-chart {
   display: flex;
-  width: 30vw;
   flex-direction: column;
-  flex: 1;
   align-items: center;
+  width: 33vw;
   text-align: center;
 }
 .exp__skills-chart-title {
@@ -559,14 +573,18 @@ body .container .rotate {
 .exp__practice {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 .exp__practice h1 {
+  display: block !important;
+  text-align: center !important;
   margin-top: 100px !important;
 }
 .exp__practice-place {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .exp__practice-place-date {
   font-size: 18px;
@@ -591,8 +609,10 @@ body .container .rotate {
 }
 .footer__control {
   display: flex;
-  width: 200px;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  width: 200px;
 }
 .footer__control-language-button {
   border: 1px #333 solid;
@@ -615,8 +635,8 @@ body .container .rotate {
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 .header__logo-link {
   font-family: var(--font-family-logo);
@@ -635,6 +655,7 @@ body .container .rotate {
 .header__nav-list {
   display: flex;
   flex-direction: row;
+  align-items: center;
   text-align: center;
 }
 .header__nav-link {
@@ -695,14 +716,15 @@ body .container .rotate {
   transform: rotate(-45deg);
 }
 .header__burger-nav-button-icon {
-  z-index: 1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 3px 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  padding: 3px 0;
 }
 .header__burger-nav-button-icon-line {
   width: 100%;
@@ -724,6 +746,7 @@ body .container .rotate {
 .header__burger-nav-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -731,7 +754,6 @@ body .container .rotate {
   opacity: 0;
   transition: all 1s;
   visibility: hidden;
-  align-items: center;
 }
 @media (max-width: 720px) {
   .header__burger-nav {
@@ -741,8 +763,9 @@ body .container .rotate {
 
 .home {
   display: flex;
+  flex-direction: row;
+  align-items: end;
   justify-content: center;
-  align-items: flex-end;
 }
 .home__title {
   font-size: max(28px, 4.5vw) !important;

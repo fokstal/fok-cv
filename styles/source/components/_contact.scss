@@ -1,29 +1,20 @@
-/* WRITE ME BOX */
 .contact {
     &__write-message-block {
-        display: flex;
-        justify-content: space-between;
+        @include flex-row-justify-space;
         flex: 1 1 auto;
 
         &-form {
             height: 100%;
             margin-right: 10px;
 
-            &-title {
-                margin: 0;
-            }
-
             &-item {
-                display: flex;
+                @include flex-column(end);
                 width: max(275px, 25vw);
-                flex-direction: column;
                 margin: 0 auto;
                 margin-bottom: 10px;
-                align-items: end;
 
                 &-label {
                     font-size: 20px;
-                    color: #000;
                     opacity: .6;
                 }
 
@@ -62,10 +53,8 @@
         }
 
         @media (max-width: 720px) {
-            display: flex;
-            flex-direction: column;
+            @include flex-column;
             text-align: center;
-            align-items: center;
         }
     }
 
@@ -91,10 +80,9 @@
 
     &__network {
         &-list {
-            display: flex;
+            @include flex-row-justify-space;
             width: 40vw;
             margin: 5% auto;
-            justify-content: space-between;
         }
 
         &-link {
