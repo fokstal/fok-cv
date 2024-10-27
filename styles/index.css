@@ -746,19 +746,18 @@ body .container .home {
   justify-content: center;
   align-items: flex-end;
 }
-body .container .home h1 {
-  display: block;
+body .container .home__title {
   font-size: max(28px, 4.5vw);
   text-align: left;
   font-weight: 100;
 }
-
 @media (max-width: 720px) {
-  .home .hello-text {
+  body .container .home {
     margin-top: 30%;
     text-align: center;
   }
 }
+
 .image-modal {
   position: fixed;
   display: none;
