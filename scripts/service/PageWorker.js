@@ -24,7 +24,7 @@ class PageWorker {
         this.languageWorker = languageWorker;
         this.imgModal = new ImgModal();
         this.currentPage = sessionStorage.getItem(StorageKey.session.currentPage) || basePageName;
-        this.burgerCheckbox = document.querySelector("#isViewBurgerCheckbox");
+        this.burgerCheckbox = document.querySelector("#viewBurgerNavCheckbox");
     }
 
     init() {
@@ -85,25 +85,29 @@ class PageWorker {
         const currentPage = this.currentPage;
 
         this.indexLayout.container
-            .querySelectorAll("nav")
+            .querySelectorAll(".header__nav")
             .forEach(navEl => {
-                navEl.querySelectorAll("a")
-                    .forEach(aEl => {
-                        if (aEl.id.includes(currentPage))
-                            aEl.classList.add("selected");
+                navEl.querySelectorAll(".header__nav-link")
+                    .forEach(linkEl => {
+                        if (linkEl.id.includes(currentPage))
+                            linkEl.classList.add("header__nav-link_selected");
                         else
-                            aEl.classList.remove("selected");
+                            linkEl.classList.remove("header__nav-link_selected");
                     });
-            })
+            });
     }
 
     #transformLogo() {
         const currentPage = this.currentPage;
 
-        if (currentPage === PageName.home)
-            this.indexLayout.container.querySelector(".logo").classList.add("home");
-        else
-            this.indexLayout.container.querySelector(".logo").classList.remove("home");
+        if (currentPage === PageName.home) {
+            this.indexLayout.container.querySelector(".header__logo-link").classList.add("header__logo-link_home-page-active");
+            this.indexLayout.container.querySelector(".header__logo-link").classList.remove("header__logo-link_home-page-inactive");
+        }
+        else {
+            this.indexLayout.container.querySelector(".header__logo-link").classList.add("header__logo-link_home-page-inactive");
+            this.indexLayout.container.querySelector(".header__logo-link").classList.remove("header__logo-link_home-page-active");
+        }
     }
 }
 

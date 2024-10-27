@@ -616,29 +616,32 @@ footer a {
   margin-top: 20px;
 }
 
-header {
+.header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-header .logo {
+.header__logo-link {
   font-family: var(--font-family-logo);
   font-weight: 500;
-  font-size: 80px;
   transition: font-size 0.3s ease;
 }
-header .logo.home {
-  font-family: var(--font-family-logo);
-  font-weight: 500;
+.header__logo-link_home-page-active {
   font-size: 200px;
 }
-header nav {
-  display: flex;
-  text-align: center;
+.header__logo-link_home-page-inactive {
+  font-size: 80px;
+}
+.header__nav {
   width: auto;
 }
-header nav a {
+.header__nav-list {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.header__nav-link {
   font-weight: 500;
   font-size: 26px;
   color: #434343;
@@ -646,24 +649,26 @@ header nav a {
   border-bottom: 1px solid transparent;
   transition: all 0.2s ease;
 }
-header nav a:hover {
+.header__nav-link:hover {
   border-bottom: 1px solid #434343;
 }
-header nav a.selected {
+.header__nav-link_selected {
   border-bottom: 2px solid #434343;
 }
-header .burger {
+@media (max-width: 720px) {
+  .header__nav {
+    display: none;
+  }
+}
+.header__burger-nav {
   display: none;
 }
-header .burger .burger-btn {
+.header__burger-nav-button {
   position: relative;
   width: 30px;
   height: 30px;
-  background: none;
-  border: none;
-  border-radius: 5px;
 }
-header .burger .burger-btn input {
+.header__burger-nav-button-check-box {
   position: absolute;
   display: block;
   width: 100%;
@@ -673,23 +678,27 @@ header .burger .burger-btn input {
   opacity: 0;
   cursor: pointer;
 }
-header .burger .burger-btn input:checked ~ .burger-linked-list {
+.header__burger-nav-button-check-box:checked ~ .header__burger-nav-list {
   visibility: visible;
   opacity: 1;
 }
-header .burger .burger-btn input:checked .burger {
+.header__burger-nav-button-check-box:checked .header__burger-nav {
   transform: translateX(-81.5%);
 }
-header .burger .burger-btn input:checked ~ .burger-lines .line1 {
+.header__burger-nav-button-check-box:hover ~ .header__burger-nav-button-icon {
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.header__burger-nav-button-check-box:checked ~ .header__burger-nav-button-icon .header__burger-nav-button-icon-line_first {
   transform: rotate(45deg);
 }
-header .burger .burger-btn input:checked ~ .burger-lines .line2 {
+.header__burger-nav-button-check-box:checked ~ .header__burger-nav-button-icon .header__burger-nav-button-icon-line_second {
   transform: scaleY(0);
 }
-header .burger .burger-btn input:checked ~ .burger-lines .line3 {
+.header__burger-nav-button-check-box:checked ~ .header__burger-nav-button-icon .header__burger-nav-button-icon-line_last {
   transform: rotate(-45deg);
 }
-header .burger .burger-btn .burger-lines {
+.header__burger-nav-button-icon {
   z-index: 1;
   position: absolute;
   width: 100%;
@@ -699,24 +708,24 @@ header .burger .burger-btn .burger-lines {
   flex-direction: column;
   justify-content: space-between;
 }
-header .burger .burger-btn .burger-lines span {
+.header__burger-nav-button-icon-line {
   width: 100%;
   height: 3px;
   border-radius: 5px;
   background: #434343;
 }
-header .burger .burger-btn .burger-lines .line1 {
+.header__burger-nav-button-icon-line_first {
   transform-origin: 0% 0%;
   transition: transform 0.3s ease-in-out;
 }
-header .burger .burger-btn .burger-lines .line2 {
+.header__burger-nav-button-icon-line_second {
   transition: transform 0.1s ease-in-out;
 }
-header .burger .burger-btn .burger-lines .line3 {
+.header__burger-nav-button-icon-line_last {
   transform-origin: 0% 100%;
   transition: transform 0.3s ease-in-out;
 }
-header .burger .burger-btn .burger-linked-list {
+.header__burger-nav-list {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -726,15 +735,11 @@ header .burger .burger-btn .burger-linked-list {
   opacity: 0;
   transition: all 1s;
   visibility: hidden;
+  align-items: center;
 }
 @media (max-width: 720px) {
-  header .burger {
+  .header__burger-nav {
     display: block;
-  }
-}
-@media (max-width: 720px) {
-  header nav[class=linked-list] {
-    display: none;
   }
 }
 

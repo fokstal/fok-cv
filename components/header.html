@@ -1,24 +1,59 @@
-<header>
-    <a class="logo" onclick="changePageByLink('home')">f</a>
-    <nav class="linked-list">
-        <a id="expLink" onclick="changePageByLink('exp', this)" translate-key="exp">exp</a>
-        <a id="aboutLink" onclick="changePageByLink('about', this)" translate-key="about">about</a>
-        <a id="contactLink" onclick="changePageByLink('contact', this)" translate-key="contact">contact</a>
-    </nav>
-    <div class="burger" nav-type="burger">
-        <button class="burger-btn">
-            <input type="checkbox" id="isViewBurgerCheckbox">
-            <div class="burger-lines">
-                <span class="line1"></span>
-                <span class="line2"></span>
-                <span class="line3"></span>
-            </div>
-            <nav class="burger-linked-list">
-                <a id="expLink" onclick="changePageByLink('exp', this)" translate-key="exp">exp</a>
-                <a id="aboutLink" onclick="changePageByLink('about', this)" translate-key="about">about</a>
-                <a id="contactLink" onclick="changePageByLink('contact', this)"
-                    translate-key="contact">contact</a>
-            </nav>
-        </button>
+<header class="header">
+    <div class="header__logo">
+        <a class="header__logo-link" onclick="changePageByLink('home')">
+            f
+        </a>
     </div>
+    <nav class="header__nav">
+        <ul class="header__nav-list">
+            <li class="header__nav-list-item">
+                <a id="expLink" class="header__nav-link header__nav-link_selected"
+                    onclick="changePageByLink('exp', this)" translate-key="exp">
+                    exp
+                </a>
+            </li>
+            <li class="header__nav-list-item">
+                <a id="aboutLink" class="header__nav-link" onclick="changePageByLink('about', this)"
+                    translate-key="about">
+                    about
+                </a>
+            </li>
+            <li class="header__nav-list-item">
+                <a id="contactLink" class="header__nav-link" onclick="changePageByLink('contact', this)"
+                    translate-key="contact">
+                    contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="header__nav header__burger-nav">
+        <div class="header__burger-nav-button">
+            <input class="header__burger-nav-button-check-box" type="checkbox" id="viewBurgerNavCheckbox">
+            <div class="header__burger-nav-button-icon">
+                <span class="header__burger-nav-button-icon-line header__burger-nav-button-icon-line_first"></span>
+                <span class="header__burger-nav-button-icon-line header__burger-nav-button-icon-line_second"></span>
+                <span class="header__burger-nav-button-icon-line header__burger-nav-button-icon-line_last"></span>
+            </div>
+            <ul class="header__burger-nav-list">
+                <li class="header__burger-nav-list-item">
+                    <a id="expLink" class="header__nav-link" onclick="changePageByLink('exp', this)"
+                        translate-key="exp">
+                        exp
+                    </a>
+                </li>
+                <li class="header__burger-nav-list-item">
+                    <a id="aboutLink" class="header__nav-link" onclick="changePageByLink('about', this)"
+                        translate-key="about">
+                        about
+                    </a>
+                </li>
+                <li class="header__burger-nav-list-item">
+                    <a id="contactLink" class="header__nav-link" onclick="changePageByLink('contact', this)"
+                        translate-key="contact">
+                        contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </header>
