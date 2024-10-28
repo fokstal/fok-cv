@@ -57,8 +57,7 @@
                     width: max(130px, 8vw);
                     padding: 5px;
                     margin: 2px 0;
-                    border: 1px $color-dark-gray solid;
-                    border-radius: 5px;
+                    @include border;
                     font-size: max(16px, 1vw);
                     justify-content: center;
 
@@ -68,7 +67,7 @@
 
                     &:hover {
                         opacity: .1;
-                        transition: opacity .2s;
+                        transition: opacity $_transition-duration;
                     }
 
                     img {

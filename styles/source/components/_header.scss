@@ -12,18 +12,18 @@
         &-link {
             font-weight: 500;
             font-size: 26px;
-            color: $color-dark-gray;
+            color: $_color-dark-gray;
             margin: 0 .65rem;
 
             border-bottom: 1px solid transparent;
-            transition: all .2s ease;
+            transition: all $_transition-duration ease;
 
             &:hover {
-                border-bottom: 1px solid $color-dark-gray
+                border-bottom: 1px solid $_color-dark-gray
             }
 
             &--selected {
-                border-bottom: 2px solid $color-dark-gray
+                border-bottom: 2px solid $_color-dark-gray
             }
         }
 
@@ -61,7 +61,7 @@
 
                 &:hover~.header__burger-nav-button-icon {
                     opacity: .7;
-                    transition: opacity .2s;
+                    transition: opacity $_transition-duration;
                 }
 
                 &:checked~.header__burger-nav-button-icon .header__burger-nav-button-icon-line_first {
@@ -90,7 +90,7 @@
                     width: 100%;
                     height: 3px;
                     border-radius: 5px;
-                    background: $color-dark-gray;
+                    background: $_color-dark-gray;
                 }
 
                 &-line_first {

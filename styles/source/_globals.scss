@@ -1,11 +1,11 @@
 html,
 body {
     height: 100%;
-    font-family: $font-family-base;
+    font-family: $_font-family-base;
     font-weight: 200;
     font-size: max(20px, 2vw);
-    color: $color-dark;
-    background-color: $color-light;
+    color: $_color-dark;
+    background-color: $_color-light;
     scrollbar-width: thin;
 
     .container {
@@ -15,18 +15,18 @@ body {
         flex-direction: column;
 
         @media (min-width: 1366px) {
-            max-width: $container-width + $container-padding-x * 2;
-            padding-inline: $container-padding-x;
+            max-width: $_container-width + $_container-padding-x * 2;
+            padding-inline: $_container-padding-x;
         }
 
         @media (max-width: 1366px) {
-            max-width: $container-width + $container-padding-x;
-            padding-inline: $container-padding-x / 2;
+            max-width: $_container-width + $_container-padding-x;
+            padding-inline: $_container-padding-x / 2;
         }
 
         @media (max-width: 720px) {
-            max-width: $container-width + $container-padding-x / 2;
-            padding-inline: $container-padding-x / 4;
+            max-width: $_container-width + $_container-padding-x / 2;
+            padding-inline: $_container-padding-x / 4;
         }
 
         .root {
@@ -65,11 +65,7 @@ body {
             cursor: pointer;
             text-decoration: none;
 
-            &:hover {
-                opacity: .7;
-
-                transition: all .2s;
-            }
+            @include hover-opacity;
         }
 
         button {
@@ -78,19 +74,15 @@ body {
             background: none;
             padding: 0;
 
-            &:hover {
-                opacity: .7;
-
-                transition: all .2s;
-            }
+            @include hover-opacity;
         }
 
 
         /* ANIMATION */
 
         .fade {
-            transition: opacity .1s ease-in-out;
             opacity: 1;
+            transition: opacity $_transition-duration ease-in-out;
         }
 
         .fade-out {

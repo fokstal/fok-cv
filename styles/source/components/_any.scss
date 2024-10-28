@@ -4,8 +4,7 @@
 }
 
 .language-button {
-    border: 1px #333 solid;
-    border-radius: 2px;
+    @include border;
     font-size: 14px;
     margin: 0 20px;
     
@@ -24,12 +23,12 @@
 .copyright-link {
     font-weight: 200;
     font-size: 20px;
-    color: $color-dark-gray;
+    color: $_color-dark-gray;
 }
 
 .logo {
     &-link {
-        font-family: $font-family-logo;
+        font-family: $_font-family-logo;
         font-weight: 500;
         transition: font-size .3s ease;
     }

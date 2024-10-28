@@ -107,7 +107,7 @@ body .container a {
 html .container a:hover,
 body .container a:hover {
   opacity: 0.7;
-  transition: all 0.2s;
+  transition: opacity 0.2s;
 }
 html .container button,
 body .container button {
@@ -119,12 +119,12 @@ body .container button {
 html .container button:hover,
 body .container button:hover {
   opacity: 0.7;
-  transition: all 0.2s;
+  transition: opacity 0.2s;
 }
 html .container .fade,
 body .container .fade {
-  transition: opacity 0.1s ease-in-out;
   opacity: 1;
+  transition: opacity 0.2s ease-in-out;
 }
 html .container .fade-out,
 body .container .fade-out {
@@ -240,7 +240,7 @@ svg * {
   ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    _transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
@@ -250,8 +250,8 @@ svg * {
 }
 
 .language-button {
-  border: 1px #333 solid;
-  border-radius: 2px;
+  border: 1px #434343 solid;
+  border-radius: 5px;
   font-size: 14px;
   margin: 0 20px;
 }

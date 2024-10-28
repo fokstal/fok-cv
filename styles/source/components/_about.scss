@@ -5,7 +5,7 @@
         &-photo {
             display: inline-block;
             width: min(550px, 40vw);
-            border-radius: 0 10px 0 0;
+            border-radius: 0 $_border-radius-img 0 0;
         }
 
         &-text {
@@ -36,7 +36,7 @@
             display: inline-block;
             margin: 20px auto 0 auto;
             width: 60vw;
-            border-radius: 10px 0 10px 0;
+            border-radius: $_border-radius-img 0 $_border-radius-img 0;
         }
     }
 
