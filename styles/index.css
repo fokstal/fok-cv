@@ -275,13 +275,11 @@ svg * {
 .logo-link {
   font-family: "Mountainsof-Christmas", sans-serif;
   font-weight: 500;
-  transition: font-size 0.3s ease;
+  font-size: 80px;
+  transition: font-size 0.5s;
 }
 .logo-link--big {
   font-size: 200px;
-}
-.logo-link--small {
-  font-size: 80px;
 }
 
 .about__personal-info {

@@ -103,10 +103,8 @@ class PageWorker {
 
         if (currentPage === PageName.home) {
             logoLinkEl.classList.add("logo-link--big");
-            logoLinkEl.classList.remove("logo-link--small");
         }
         else {
-            logoLinkEl.classList.add("logo-link--small");
             logoLinkEl.classList.remove("logo-link--big");
         }
     }

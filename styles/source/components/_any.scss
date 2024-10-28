@@ -30,14 +30,12 @@
     &-link {
         font-family: $_font-family-logo;
         font-weight: 500;
-        transition: font-size .3s ease;
+        font-size: 80px;
+
+        transition: font-size .5s;
     }
 
     &-link--big {
         font-size: 200px;
-    }
-
-    &-link--small {
-        font-size: 80px;
     }
 }
