@@ -45,11 +45,11 @@ body,
 }
 
 p {
-    --paragraphMarginBottom: 24px;
+    $paragraphMarginBottom: 24px;
     margin-block: 0;
 
     &:where(:not([class]):not(:last-child)) {
-        margin-bottom: var(--paragraphMarginBottom);
+        margin-bottom: $paragraphMarginBottom;
     }
 }
 

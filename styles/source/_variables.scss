@@ -1,16 +1,14 @@
-:root {
-    --color-dark: #000;
-    --color-light: #fff;
-    --color-dark-gray: #333;
+$color-dark: #000;
+$color-light: #fff;
+$color-dark-gray: #434343;
 
-    --border-radius-img: 20px;
-    --border-radius-form: 10px;
+$border-radius-img: 20px;
+$border-radius-form: 10px;
 
-    --font-family-base: "Inter", sans-serif;
-    --font-family-logo: "Mountainsof-Christmas", sans-serif;
+$font-family-base: "Inter", sans-serif;
+$font-family-logo: "Mountainsof-Christmas", sans-serif;
 
-    --container-width: 1500px;
-    --container-padding-x: 200px;
+$container-width: 1500px;
+$container-padding-x: 200px;
 
-    --transition-duration: .2s;
-}
+$transition-duration: .2s;

@@ -29,11 +29,11 @@
 html,
 body {
   height: 100%;
-  font-family: var(--font-family-base);
+  font-family: "Inter", sans-serif;
   font-weight: 200;
   font-size: max(20px, 2vw);
-  color: var(--color-dark);
-  background-color: var(--color-light);
+  color: #000;
+  background-color: #fff;
   scrollbar-width: thin;
 }
 html .container,
@@ -47,22 +47,22 @@ body .container {
 @media (min-width: 1366px) {
   html .container,
   body .container {
-    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
-    padding-inline: var(--container-padding-x);
+    max-width: 1900px;
+    padding-inline: 200px;
   }
 }
 @media (max-width: 1366px) {
   html .container,
   body .container {
-    max-width: calc(var(--container-width) + var(--container-padding-x) / 2 * 2);
-    padding-inline: calc(var(--container-padding-x) / 2);
+    max-width: 1700px;
+    padding-inline: 100px;
   }
 }
 @media (max-width: 720px) {
   html .container,
   body .container {
-    max-width: calc(var(--container-width) + var(--container-padding-x) / 4 * 2);
-    padding-inline: calc(var(--container-padding-x) / 4);
+    max-width: 1600px;
+    padding-inline: 50px;
   }
 }
 html .container .root,
@@ -190,11 +190,10 @@ dl):where([class]) {
 }
 
 p {
-  --paragraphMarginBottom: 24px;
   margin-block: 0;
 }
 p:where(:not([class]):not(:last-child)) {
-  margin-bottom: var(--paragraphMarginBottom);
+  margin-bottom: 24px;
 }
 
 img {
@@ -245,19 +244,6 @@ svg * {
     scroll-behavior: auto !important;
   }
 }
-:root {
-  --color-dark: #000;
-  --color-light: #fff;
-  --color-dark-gray: #333;
-  --border-radius-img: 20px;
-  --border-radius-form: 10px;
-  --font-family-base: "Inter", sans-serif;
-  --font-family-logo: "Mountainsof-Christmas", sans-serif;
-  --container-width: 1500px;
-  --container-padding-x: 200px;
-  --transition-duration: .2s;
-}
-
 .share-button {
   width: 24px;
   height: 24px;
@@ -283,11 +269,11 @@ svg * {
 .copyright-link {
   font-weight: 200;
   font-size: 20px;
-  color: var(--color-dark);
+  color: #434343;
 }
 
 .logo-link {
-  font-family: var(--font-family-logo);
+  font-family: "Mountainsof-Christmas", sans-serif;
   font-weight: 500;
   transition: font-size 0.3s ease;
 }

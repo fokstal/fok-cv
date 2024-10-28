@@ -1,11 +1,11 @@
 html,
 body {
     height: 100%;
-    font-family: var(--font-family-base);
+    font-family: $font-family-base;
     font-weight: 200;
     font-size: max(20px, 2vw);
-    color: var(--color-dark);
-    background-color: var(--color-light);
+    color: $color-dark;
+    background-color: $color-light;
     scrollbar-width: thin;
 
     .container {
@@ -15,18 +15,18 @@ body {
         flex-direction: column;
 
         @media (min-width: 1366px) {
-            max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
-            padding-inline: var(--container-padding-x);
+            max-width: $container-width + $container-padding-x * 2;
+            padding-inline: $container-padding-x;
         }
 
         @media (max-width: 1366px) {
-            max-width: calc(var(--container-width) + var(--container-padding-x) / 2 * 2);
-            padding-inline: calc(var(--container-padding-x) / 2);
+            max-width: $container-width + $container-padding-x;
+            padding-inline: $container-padding-x / 2;
         }
 
         @media (max-width: 720px) {
-            max-width: calc(var(--container-width) + var(--container-padding-x) / 4 * 2);
-            padding-inline: calc(var(--container-padding-x) / 4);
+            max-width: $container-width + $container-padding-x / 2;
+            padding-inline: $container-padding-x / 4;
         }
 
         .root {
