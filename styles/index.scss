@@ -1,0 +1,17 @@
+@import 
+    "source/fonts",
+    "source/variables",
+    "source/mixins",
+    "source/globals",
+    "source/resets";
+
+@import 
+    "source/components//any",
+    "source/components/about",
+    "source/components/contact",
+    "source/components/exp",
+    "source/components/footer",
+    "source/components/header",
+    "source/components/home",
+    "source/components/imgModal",
+    "source/components/overlay";

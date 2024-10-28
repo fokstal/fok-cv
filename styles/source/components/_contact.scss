@@ -1,0 +1,93 @@
+.contact {
+    &__write-message-block {
+        @include flex-row-justify-space;
+        flex: 1 1 auto;
+
+        &-form {
+            height: 100%;
+            margin-right: 10px;
+
+            &-item {
+                @include flex-column(end);
+                width: max(275px, 25vw);
+                margin: 0 auto;
+                margin-bottom: 10px;
+
+                &-label {
+                    font-size: 20px;
+                    opacity: .6;
+                }
+
+                &-text-box {
+                    width: 100%;
+                    font-size: 20px;
+                }
+
+                &-text-box-area {
+                    width: 100%;
+                    font-size: 20px;
+                    resize: vertical;
+                }
+            }
+
+            &-send-button {
+                display: block;
+                background-color: #F9EDDF!important;
+                width: 120px;
+                height: 40px;
+                margin: 0 auto;
+                font-size: 18px;
+            }
+
+            @media (max-width: 720px) {
+                margin-right: 0;
+                margin-bottom: 50px;
+            }
+        }
+
+        &-image {
+            width: max(200px, 40vw);
+            height: 100%;
+        }
+
+        @media (max-width: 720px) {
+            @include flex-column;
+            text-align: center;
+        }
+    }
+
+    &__more-links-helper {
+        display: inline-flex;
+        width: 100%;
+        margin-top: 50px;
+        font-size: 20px;
+        font-weight: 500;
+        justify-content: end;
+
+        &-icon {
+            display: block;
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 720px) {
+            margin-right: auto;
+        }
+    }
+
+    &__network {
+        &-list {
+            @include flex-row-justify-space;
+            width: 40vw;
+            margin: 5% auto;
+        }
+
+        &-link {
+            &-icon {
+                display: block;
+                width: min(70px, 5vw);
+            }
+        }
+    }
+}

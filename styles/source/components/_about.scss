@@ -1,0 +1,142 @@
+.about {
+    &__personal-info {
+        @include flex-row;
+
+        &-photo {
+            display: inline-block;
+            width: min(550px, 40vw);
+            border-radius: 0 $_border-radius-img 0 0;
+        }
+
+        &-text {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+
+            &-title {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 720px) {
+            flex-direction: column;
+        }
+    }
+
+    &__education-info {
+        @include flex-column(none);
+
+        &-text {
+            &-title {
+                @include title-center;
+            }
+        }
+
+        &-photo {
+            display: inline-block;
+            margin: 20px auto 0 auto;
+            width: 60vw;
+            border-radius: $_border-radius-img 0 $_border-radius-img 0;
+        }
+    }
+
+    &__hobby-info {
+        @include flex-column(none);
+
+        &-text {
+            display: block;
+            width: 70%;
+            margin: 0 auto;
+
+            &-title {
+                @include title-center
+            }
+
+            &-content {
+                @include flex-column(none);
+
+                &-ballgame {
+                    @include flex-row-justify-space;
+
+                    &-soccer {
+                        display: inline-block;
+                        transform: rotate(-5deg);
+                    }
+
+                    &-basketball {
+                        display: inline-block;
+                        transform: rotate(3deg);
+                        text-align: end;
+                    }
+                }
+
+                &-any-ball {
+                    display: block;
+                    text-align: center;
+                    transform: rotate(-1eg);
+                }
+
+                &-love-sport {
+                    display: block;
+                    margin-top: 100px;
+                    text-align: center;
+                    font-size: max(70px, 4.5vw);
+
+                    &-text {
+                        display: inline-block;
+                    }
+
+                    &-icon {
+                        width: 120px !important;
+                    }
+                }
+
+                &-any {
+                    display: block;
+                    margin-top: 100px;
+                    text-align: center;
+
+                    &-icons {
+                        @include flex-row-justify-space;
+                        max-width: 300px;
+                        margin: 0 auto;
+
+                        img {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+
+            img {
+                display: inline-block;
+                width: min(50px, 10vw);
+            }
+        }
+
+        &-photos {
+            @include flex-column(none);
+            margin-top: 50px;
+            text-align: center;
+
+            img {
+                display: block;
+                width: 510px;
+            }
+
+            &-sport {
+                @include flex-row;
+                justify-content: space-between;
+
+                @media (max-width: 1420px) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
+            &-any {
+                margin: 0 auto;
+            }
+        }
+    }
+}

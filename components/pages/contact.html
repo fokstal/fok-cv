@@ -1,0 +1,64 @@
+<main class="contact">
+    <section class="contact__write-message-block">
+        <form class="contact__write-message-block-form">
+            <h1 class="contact__write-message-block-form-title" translate-key="writeMe">Write me</h1>
+            <div class="contact__write-message-block-form-item">
+                <label class="contact__write-message-block-form-item-label" for="nameBox"
+                    translate-key="nameForm">name</label>
+                <input class="contact__write-message-block-form-item-text-box" type="text" name="" id="nameBox">
+            </div>
+            <div class="contact__write-message-block-form-item" style="margin-bottom: 35px;">
+                <label class="contact__write-message-block-form-item-label" for="emailBox"
+                    translate-key="emailForm">email</label>
+                <input class="contact__write-message-block-form-item-text-box" type="text" name="" id="emailBox">
+            </div>
+            <div class="contact__write-message-block-form-item">
+                <label class="contact__write-message-block-form-item-label" for="messageBox"
+                    translate-key="messageForm">message</label>
+                <textarea class="contact__write-message-block-form-item-text-box-area" name="" id="messageBox"
+                    rows="5"></textarea>
+            </div>
+            <button class="contact__write-message-block-form-send-button" type="button" onclick="sendMessageToEmail()"
+                translate-key="btnForm">
+                <span class="contact__write-message-block-form-send-button-text">
+                    send
+                </span>
+            </button>
+        </form>
+        <img class="contact__write-message-block-image" src="../images/contact/pigeon-img.jpg"
+            alt="Image with pigeons" translate-alt-key="pigeonImg" loading="lazy">
+    </section>
+    <span class="contact__more-links-helper">
+        <p class="contact__more-links-helper-text" translate-key="moreLinks">
+            take more links
+        </p>
+        <img class="contact__more-links-helper-icon" src="icons/any/arrow-down.svg" alt="\/">
+    </span>
+    <section class="contact__network">
+        <ul class="contact__network-list">
+            <li class="contact__network-list-item">
+                <a class="contact__network-link" href="https://t.me/Fokstal" target="_blank" rel="noopener noreferrer">
+                    <img class="contact__network-link-icon" src="./icons/site/telegram.svg" alt="Telegram">
+                </a>
+            </li>
+            <li class="contact__network-list-item">
+                <a class="contact__network-link" href="https://instagram.com/fokstal" target="_blank"
+                    rel="noopener noreferrer">
+                    <img class="contact__network-link-icon" src="./icons/site/instagram.svg" alt="Instagram">
+                </a>
+            </li>
+            <li class="contact__network-list-item">
+                <a class="contact__network-link" href="https://github.com/Fokstal" target="_blank"
+                    rel="noopener noreferrer">
+                    <img class="contact__network-link-icon" src="./icons/site/github.svg" alt="GitHub">
+                </a>
+            </li>
+            <li class="contact__network-list-item">
+                <a class="contact__network-link" href="https://www.linkedin.com/in/fokstal/" target="_blank"
+                    rel="noopener noreferrer">
+                    <img class="contact__network-link-icon" src="./icons/site/linkedin.svg" alt="LinkedIn">
+                </a>
+            </li>
+        </ul>
+    </section>
+</main>
