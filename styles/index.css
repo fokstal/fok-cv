@@ -687,7 +687,7 @@ svg * {
 .header__nav-link:hover {
   border-bottom: 1px solid #434343;
 }
-.header__nav-link_selected {
+.header__nav-link--selected {
   border-bottom: 2px solid #434343;
 }
 @media (max-width: 720px) {

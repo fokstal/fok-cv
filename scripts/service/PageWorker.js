@@ -90,9 +90,9 @@ class PageWorker {
                 navEl.querySelectorAll(".header__nav-link")
                     .forEach(linkEl => {
                         if (linkEl.id.includes(currentPage))
-                            linkEl.classList.add("header__nav-link_selected");
+                            linkEl.classList.add("header__nav-link--selected");
                         else
-                            linkEl.classList.remove("header__nav-link_selected");
+                            linkEl.classList.remove("header__nav-link--selected");
                     });
             });
     }
