@@ -118,9 +118,11 @@ body .container button:hover {
   opacity: 0.7;
   transition: opacity 0.2s;
 }
-html .container .rotate,
-body .container .rotate {
+html .container .element-rotate,
+body .container .element-rotate {
+  transform-origin: center;
   transform: rotateY(360deg);
+  transition: transform 1s;
 }
 @keyframes fade {
   from {
@@ -457,8 +459,6 @@ svg * {
 .contact__write-message-block-image {
   width: max(200px, 40vw);
   height: 100%;
-  transition: transform 1s;
-  transform-origin: center;
 }
 @media (max-width: 720px) {
   .contact__write-message-block {

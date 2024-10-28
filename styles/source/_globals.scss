@@ -75,8 +75,10 @@ body {
             @include hover-opacity;
         }
 
-        .rotate {
+        .element-rotate {
+            transform-origin: center;
             transform: rotateY(360deg);
+            transition: transform 1s;
         }
 
         @keyframes fade {
