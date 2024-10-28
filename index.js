@@ -10,8 +10,8 @@ async function initialize() {
 
     const pageWorkerConfig = new ConfigPageWorker(
         indexLayout,
-        ".footer__control-language-button-select-list",
-        ".footer__control-access-mode-button-icon",
+        ".language-button-select-list",
+        ".access-mode-button-icon",
         PageName.home,
         LanguageEnum.EN
     );

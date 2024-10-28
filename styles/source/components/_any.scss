@@ -1,0 +1,44 @@
+.share-button {
+    width: 24px;
+    height: 24px;
+}
+
+.language-button {
+    border: 1px #333 solid;
+    border-radius: 2px;
+    font-size: 14px;
+    margin: 0 20px;
+    
+    &-select-list {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.access-mode-button {
+    width: 24px;
+    height: 24px;
+}
+
+.copyright-link {
+    font-weight: 200;
+    font-size: 20px;
+    color: var(--color-dark);
+}
+
+.logo {
+    &-link {
+        font-family: var(--font-family-logo);
+        font-weight: 500;
+        transition: font-size .3s ease;
+    }
+
+    &-link--big {
+        font-size: 200px;
+    }
+
+    &-link--small {
+        font-size: 80px;
+    }
+}

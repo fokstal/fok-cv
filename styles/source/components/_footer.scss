@@ -8,25 +8,9 @@
     &__control {
         @include flex-row-justify-space;
         width: 200px;
-
-        &-language-button {
-            border: 1px #333 solid;
-            border-radius: 2px;
-            font-size: 14px;
-            margin: 0 20px;
-            
-            &-select-list {
-                background: none;
-                border: none;
-                cursor: pointer;
-            }
-        }
     }
 
     &__copyright-link {
-        font-weight: 200;
-        font-size: 20px;
-        color: var(--color-dark);
         margin-top: 20px;
     }
 }

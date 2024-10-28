@@ -75,7 +75,9 @@ html .container .root main,
 body .container .root main {
   animation: main-fade 1s;
 }
-html .container h1, html .container h2, html .container h3,
+html .container h1,
+html .container h2,
+html .container h3,
 body .container h1,
 body .container h2,
 body .container h3 {
@@ -112,6 +114,7 @@ body .container button {
   cursor: pointer;
   border: none;
   background: none;
+  padding: 0;
 }
 html .container button:hover,
 body .container button:hover {
@@ -253,6 +256,46 @@ svg * {
   --container-width: 1500px;
   --container-padding-x: 200px;
   --transition-duration: .2s;
+}
+
+.share-button {
+  width: 24px;
+  height: 24px;
+}
+
+.language-button {
+  border: 1px #333 solid;
+  border-radius: 2px;
+  font-size: 14px;
+  margin: 0 20px;
+}
+.language-button-select-list {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.access-mode-button {
+  width: 24px;
+  height: 24px;
+}
+
+.copyright-link {
+  font-weight: 200;
+  font-size: 20px;
+  color: var(--color-dark);
+}
+
+.logo-link {
+  font-family: var(--font-family-logo);
+  font-weight: 500;
+  transition: font-size 0.3s ease;
+}
+.logo-link--big {
+  font-size: 200px;
+}
+.logo-link--small {
+  font-size: 80px;
 }
 
 .about__personal-info {
@@ -614,21 +657,7 @@ svg * {
   justify-content: space-between;
   width: 200px;
 }
-.footer__control-language-button {
-  border: 1px #333 solid;
-  border-radius: 2px;
-  font-size: 14px;
-  margin: 0 20px;
-}
-.footer__control-language-button-select-list {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
 .footer__copyright-link {
-  font-weight: 200;
-  font-size: 20px;
-  color: var(--color-dark);
   margin-top: 20px;
 }
 
@@ -637,17 +666,6 @@ svg * {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
-.header__logo-link {
-  font-family: var(--font-family-logo);
-  font-weight: 500;
-  transition: font-size 0.3s ease;
-}
-.header__logo-link_home-page-active {
-  font-size: 200px;
-}
-.header__logo-link_home-page-inactive {
-  font-size: 80px;
 }
 .header__nav {
   width: auto;

@@ -39,7 +39,9 @@ body {
             }
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             margin: 0;
         }
 
@@ -65,7 +67,7 @@ body {
 
             &:hover {
                 opacity: .7;
-    
+
                 transition: all .2s;
             }
         }
@@ -74,10 +76,11 @@ body {
             cursor: pointer;
             border: none;
             background: none;
+            padding: 0;
 
             &:hover {
                 opacity: .7;
-    
+
                 transition: all .2s;
             }
         }

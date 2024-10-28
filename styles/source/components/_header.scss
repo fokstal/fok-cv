@@ -1,22 +1,6 @@
 .header {
     @include flex-row-justify-space;
 
-    &__logo {
-        &-link {
-            font-family: var(--font-family-logo);
-            font-weight: 500;
-            transition: font-size .3s ease;
-        }
-
-        &-link_home-page-active {
-            font-size: 200px;
-        }
-
-        &-link_home-page-inactive {
-            font-size: 80px;
-        }
-    }
-
     &__nav {
         width: auto;
 

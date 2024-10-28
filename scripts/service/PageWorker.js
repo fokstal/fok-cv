@@ -99,14 +99,15 @@ class PageWorker {
 
     #transformLogo() {
         const currentPage = this.currentPage;
+        const logoLinkEl = this.indexLayout.container.querySelector(".logo-link");
 
         if (currentPage === PageName.home) {
-            this.indexLayout.container.querySelector(".header__logo-link").classList.add("header__logo-link_home-page-active");
-            this.indexLayout.container.querySelector(".header__logo-link").classList.remove("header__logo-link_home-page-inactive");
+            logoLinkEl.classList.add("logo-link--big");
+            logoLinkEl.classList.remove("logo-link--small");
         }
         else {
-            this.indexLayout.container.querySelector(".header__logo-link").classList.add("header__logo-link_home-page-inactive");
-            this.indexLayout.container.querySelector(".header__logo-link").classList.remove("header__logo-link_home-page-active");
+            logoLinkEl.classList.add("logo-link--small");
+            logoLinkEl.classList.remove("logo-link--big");
         }
     }
 }
