@@ -42,7 +42,6 @@ body .container {
   min-height: 115%;
   display: flex;
   flex-direction: column;
-  /* ANIMATION */
 }
 @media (min-width: 1366px) {
   html .container,
@@ -68,12 +67,10 @@ body .container {
 html .container .root,
 body .container .root {
   flex: 1 1 auto;
-  transition: all 0.5s ease-in-out;
-  opacity: 1;
 }
 html .container .root main,
 body .container .root main {
-  animation: main-fade 1s;
+  animation: fade 1s;
 }
 html .container h1,
 html .container h2,
@@ -121,20 +118,11 @@ body .container button:hover {
   opacity: 0.7;
   transition: opacity 0.2s;
 }
-html .container .fade,
-body .container .fade {
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out;
-}
-html .container .fade-out,
-body .container .fade-out {
-  opacity: 0;
-}
 html .container .rotate,
 body .container .rotate {
   transform: rotateY(360deg);
 }
-@keyframes main-fade {
+@keyframes fade {
   from {
     opacity: 0;
   }

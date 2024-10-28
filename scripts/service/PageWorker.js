@@ -48,29 +48,22 @@ class PageWorker {
         const root = this.indexLayout.root;
 
         this.currentPage = pageNameToSelect;
+        this.burgerCheckbox.checked = false;
+        root.style.visibility = "visible";
+        root.style.opacity = 1;
 
-        root.classList.add("fade-out");
+        this.#setPage(pageNameToSelect);
 
-        setTimeout(() => {
-            root.classList.remove("fade-out");
+        if (pageNameToSelect == PageName.exp) {
+            new Chart(document.getElementById("it-language-chart"), itLanguageConfig);
+            new Chart(document.getElementById("lib-fw-chart"), libAndFwConfig);
+            new Chart(document.getElementById("commit-freq-chart"), commitFreqConfig);
+        }
 
-            this.burgerCheckbox.checked = false;
-            root.style.visibility = "visible";
-            root.style.opacity = 1;
-
-            this.#setPage(pageNameToSelect);
-
-            if (pageNameToSelect == PageName.exp) {
-                new Chart(document.getElementById("it-language-chart"), itLanguageConfig);
-                new Chart(document.getElementById("lib-fw-chart"), libAndFwConfig);
-                new Chart(document.getElementById("commit-freq-chart"), commitFreqConfig);
-            }
-
-            this.#showSelectedLink(pageNameToSelect);
-            this.#transformLogo(pageNameToSelect);
-            this.languageWorker.translateSite();
-            this.imgModal.setOpenModalOnClick();
-        }, 200);
+        this.#showSelectedLink(pageNameToSelect);
+        this.#transformLogo(pageNameToSelect);
+        this.languageWorker.translateSite();
+        this.imgModal.setOpenModalOnClick();
     }
 
     #setPage() {

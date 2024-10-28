@@ -31,11 +31,9 @@ body {
 
         .root {
             flex: 1 1 auto;
-            transition: all .5s ease-in-out;
-            opacity: 1;
 
             main {
-                animation: main-fade 1s;
+                animation: fade 1s;
             }
         }
 
@@ -77,23 +75,11 @@ body {
             @include hover-opacity;
         }
 
-
-        /* ANIMATION */
-
-        .fade {
-            opacity: 1;
-            transition: opacity $_transition-duration ease-in-out;
-        }
-
-        .fade-out {
-            opacity: 0;
-        }
-
         .rotate {
             transform: rotateY(360deg);
         }
 
-        @keyframes main-fade {
+        @keyframes fade {
             from {
                 opacity: 0;
             }
