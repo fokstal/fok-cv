@@ -25,7 +25,6 @@ class LanguageWorker {
         const selectedLanguage = this.languageSelectEl.options[this.languageSelectEl.selectedIndex].text;
 
         if (LanguageEnum[selectedLanguage]) {
-            document.documentElement.setAttribute("lang", selectedLanguage);
             this.currentLanguage = selectedLanguage;
             this.translateSite(selectedLanguage);
             return;

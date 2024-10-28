@@ -1,14 +1,10 @@
 const sendMessageToEmail = () => {
-    document.querySelector(".contact__write-message-block-image").classList.add("element-rotate");
+    document.querySelector("#pigeonImg").classList.toggle("rotate");
 
-    document.querySelectorAll(".contact__write-message-block-form-item-text-box").forEach(textBox => {
-        textBox.value = null;
+    document.querySelectorAll("input").forEach(inputBox => {
+        inputBox.value = null;
     });
-    document.querySelector(".contact__write-message-block-form-item-text-box-area").value = null;
-
-    setTimeout(() => {
-        document.querySelector(".contact__write-message-block-image").classList.remove("element-rotate");
-    }, 1000);
+    document.querySelector("textarea").value = null;
 }
 
 export default sendMessageToEmail;

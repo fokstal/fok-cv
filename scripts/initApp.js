@@ -1,24 +1,25 @@
-import PageWorker from "./service/PageWorker.js";
+import Layout from "./service/Layout.js";
 import sendMessageToEmail from "./service/email.js";
 import LanguageWorker from "./service/LanguageWorker.js";
 import AccessModeWorker from "./service/AccessModeWorker.js";
-import ConfigPageWorker from "./models/ConfigPageWorker.js";
+import ConfigApp from "./models/ConfigApp.js";
 
-const initPageWorker = (config) => {
-    if (!config instanceof ConfigPageWorker)
+const initApp = async (config) => {
+    if (!config instanceof ConfigApp)
         throw new Error("CONFIG_TYPE is incorrect!");
+
+    const root = config.elementList.root;
 
     const languageWorker = new LanguageWorker(config.elementList.languageSelect, config.baseLanguage)
     const accessModeWorker = new AccessModeWorker(config.elementList.accessModeImg);
 
-    const pageWorker = new PageWorker(config.indexLayout, config.startPageName, languageWorker);
-    
-    pageWorker.init();
+    const layout = new Layout(root, config.startPageName, languageWorker);
+    await layout.init();
 
-    window.changePageByLink = pageWorker.changePageByLink.bind(pageWorker);
+    window.changePageByLink = layout.changePageByLink.bind(layout);
     window.sendMessageToEmail = sendMessageToEmail;
     window.toggleAccessMode = accessModeWorker.toggleAccessMode;
     window.changeLanguage = languageWorker.changeLanguage;
 }
 
-export default initPageWorker;
+export default initApp;

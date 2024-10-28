@@ -1,17 +1,73 @@
 <!DOCTYPE html>
-<html lang="EN">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fok ∙ home</title>
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/exp.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/imgModal.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="./index.js" defer></script>
 </head>
 
 <body>
-    <div class="container"></div>
+    <div class="container">
+        <header>
+            <a class="logo" onclick="changePageByLink('home')">f</a>
+            <nav class="linked-list">
+                <a id="expLink" onclick="changePageByLink('exp', this)" translate-key="exp">exp</a>
+                <a id="aboutLink" onclick="changePageByLink('about', this)" translate-key="about">about</a>
+                <a id="contactLink" onclick="changePageByLink('contact', this)" translate-key="contact">contact</a>
+            </nav>
+            <div class="burger" nav-type="burger">
+                <button class="burger-btn">
+                    <input type="checkbox" id="isViewBurgerCheckbox">
+                    <div class="burger-lines">
+                        <span class="line1"></span>
+                        <span class="line2"></span>
+                        <span class="line3"></span>
+                    </div>
+                    <nav class="burger-linked-list">
+                        <a id="expLink" onclick="changePageByLink('exp', this)" translate-key="exp">exp</a>
+                        <a id="aboutLink" onclick="changePageByLink('about', this)" translate-key="about">about</a>
+                        <a id="contactLink" onclick="changePageByLink('contact', this)"
+                            translate-key="contact">contact</a>
+                    </nav>
+                </button>
+            </div>
+        </header>
+        <div class="root"></div>
+        <footer>
+            <hr class="footer-line">
+            <div class="footer-ctrl">
+                <button translate-title-key="shareLink" title="Share link on site">
+                    <img src="icons/share-one.svg">
+                </button>
+                <div class="language-select-box" translate-title-key="changeLanguage" title="Change language">
+                    <select onchange="changeLanguage()" id="languageSelect">
+                        <option value="BY">BY</option>
+                        <option value="RU">RU</option>
+                        <option value="EN">EN</option>
+                    </select>
+                </div>
+                <button onclick="toggleAccessMode()" translate-title-key="accessMode" title="Accessibility mode toggle">
+                    <img class="fade" id="accessModeImg" src="icons/eye-closed.svg" width="24">
+                </button>
+            </div>
+            <a href="https://github.com/Fokstal" target="_blank" rel="noopener noreferrer">© 2024 Fokstal</a>
+        </footer>
+    </div>
+    <div id="overlay" style="display: none;"></div>
+    <div class="img-modal">
+        <img class="content" src="" alt="Image in view modal">
+    </div>
 </body>
 
 </html>
