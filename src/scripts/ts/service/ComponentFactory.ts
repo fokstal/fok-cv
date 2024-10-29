@@ -1,4 +1,5 @@
 import { FOLDERS, COMPONENT_NAMES } from "../const/const.js";
+import { getElementFromDocument } from "../helpers/elements.js";
 import { ComponentsModel } from "../models/models.js";
 
 class ComponentFactory {
@@ -6,11 +7,8 @@ class ComponentFactory {
     root: HTMLDivElement = document.createElement("div");
     components?: ComponentsModel;
 
-    constructor(container?: HTMLDivElement) {
-        if (container == null)
-            throw new Error("CONTAINER element is null!")
-
-        this.container = container;
+    constructor(containerElSelector: string) {
+        this.container = getElementFromDocument<HTMLDivElement>(containerElSelector);
     }
 
     async initAsync() {
@@ -78,9 +76,7 @@ class ComponentFactory {
 }
 
 const initComponentFactoryAsync = async (containerElSelector: string = ".container"): Promise<ComponentFactory> => {
-    const containerEl = document.querySelector(containerElSelector) as HTMLDivElement;
-
-    const componentFactory = new ComponentFactory(containerEl);
+    const componentFactory = new ComponentFactory(containerElSelector);
 
     await componentFactory.initAsync();
 
