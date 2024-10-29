@@ -15,6 +15,7 @@ const StorageKey = {
 }
 
 const Folder = {
+    src: "/src/",
     icons: "/icons/",
     any: "/any/",
     components: "/components/",

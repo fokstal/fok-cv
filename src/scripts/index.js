@@ -1,7 +1,7 @@
-import IndexLayout from "./scripts/service/IndexLayout.js";
-import ConfigPageWorker from "./scripts/models/ConfigPageWorker.js";
-import { PageName, LanguageEnum } from "./scripts/const/const.js";
-import initPageWorker from "./scripts/initPageWorker.js";
+import IndexLayout from "./service/IndexLayout.js";
+import ConfigPageWorker from "./models/ConfigPageWorker.js";
+import { PageName, LanguageEnum } from "./const/const.js";
+import initPageWorker from "./initPageWorker.js";
 
 async function initialize() {
     const indexLayout = new IndexLayout(document.querySelector(".container"));

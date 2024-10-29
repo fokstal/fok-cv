@@ -17,14 +17,14 @@ class IndexLayout {
 
     async initAsync() {
         this.components = {
-            header: IndexLayout.getComponentFromLayout(await IndexLayout.getLayoutFromFile(`.${Folder.components}${ComponentsName.header}.html`)),
+            header: IndexLayout.getComponentFromLayout(await IndexLayout.getLayoutFromFile(`${Folder.src}${Folder.components}${ComponentsName.header}.html`)),
             pageList: await Promise.all(Object.values(ComponentsName.pages).map(async (pageName) => {
-                return { [`${pageName}`]: IndexLayout.getComponentFromLayout(await IndexLayout.getLayoutFromFile(`.${Folder.pages}${pageName}.html`)) };
+                return { [`${pageName}`]: IndexLayout.getComponentFromLayout(await IndexLayout.getLayoutFromFile(`${Folder.src}${Folder.pages}${pageName}.html`)) };
             })).then(results => Object.assign({}, ...results)),
 
-            footer: IndexLayout.getComponentFromLayout(await IndexLayout.getLayoutFromFile(`.${Folder.components}${ComponentsName.footer}.html`)),
-            overlay: IndexLayout.getComponentFromLayout(await IndexLayout.getLayoutFromFile(`.${Folder.components}${ComponentsName.overlay}.html`)),
-            imgModal: IndexLayout.getComponentFromLayout(await IndexLayout.getLayoutFromFile(`.${Folder.components}${ComponentsName.imgModal}.html`)),
+            footer: IndexLayout.getComponentFromLayout(await IndexLayout.getLayoutFromFile(`${Folder.src}${Folder.components}${ComponentsName.footer}.html`)),
+            overlay: IndexLayout.getComponentFromLayout(await IndexLayout.getLayoutFromFile(`${Folder.src}${Folder.components}${ComponentsName.overlay}.html`)),
+            imgModal: IndexLayout.getComponentFromLayout(await IndexLayout.getLayoutFromFile(`${Folder.src}${Folder.components}${ComponentsName.imgModal}.html`)),
         }
 
         this.root = document.createElement("div");
