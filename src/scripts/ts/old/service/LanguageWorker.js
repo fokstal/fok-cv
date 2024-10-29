@@ -1,5 +1,5 @@
-import { LanguageEnum, StorageKey } from "../const/const.js";
-import translation from "../const/translation.js";
+import { LanguageEnum, StorageKey } from "../../const/const.js";
+import translation from "../../const/translation.js";
 
 class LanguageWorker {
     languageSelectEl = null;

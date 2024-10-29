@@ -2,7 +2,7 @@ import PageWorker from "./service/PageWorker.js";
 import sendMessageToEmail from "./service/email.js";
 import LanguageWorker from "./service/LanguageWorker.js";
 import AccessModeWorker from "./service/AccessModeWorker.js";
-import ConfigPageWorker from "./models/ConfigPageWorker.js";
+import ConfigPageWorker from "../models/ConfigPageWorker.js";
 
 const initPageWorker = (config) => {
     if (!config instanceof ConfigPageWorker)

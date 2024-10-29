@@ -1,6 +1,6 @@
 import IndexLayout from "./service/IndexLayout.js";
-import ConfigPageWorker from "./models/ConfigPageWorker.js";
-import { PageName, LanguageEnum } from "./const/const.js";
+import ConfigPageWorker from "../models/ConfigPageWorker.js";
+import { PageName, LanguageEnum } from "../const/const.js";
 import initPageWorker from "./initPageWorker.js";
 
 async function initialize() {

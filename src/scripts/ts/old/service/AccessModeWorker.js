@@ -1,4 +1,4 @@
-import { StorageKey, Folder, IconFullName } from "../const/const.js";
+import { StorageKey, Folder, IconFullName } from "../../const/const.js";
 
 class AccessModeWorker {
     accessModeImgEl = null;
