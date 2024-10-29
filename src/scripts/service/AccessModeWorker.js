@@ -29,10 +29,10 @@ class AccessModeWorker {
     toggleAccessMode = () => {
         this.currentIsAccessMode = !this.currentIsAccessMode;
 
-        this.accessModeImgEl.classList.add("fade-out");
+        this.accessModeImgEl.classList.add("access-mode-button-icon--fade-out");
         this.accessModeImgEl.addEventListener("transitionend", () => {
             this.accessModeImgEl.src = this.currentIconPath;
-            this.accessModeImgEl.classList.remove("fade-out");
+            this.accessModeImgEl.classList.remove("access-mode-button-icon--fade-out");
         }, { once: true });
     };
 }

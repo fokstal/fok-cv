@@ -255,6 +255,13 @@ svg * {
   width: 24px;
   height: 24px;
 }
+.access-mode-button-icon {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+.access-mode-button-icon--fade-out {
+  opacity: 0;
+}
 
 .copyright-link {
   font-weight: 200;
