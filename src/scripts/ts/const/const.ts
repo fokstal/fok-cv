@@ -4,6 +4,13 @@ enum LANGUAGE_ENUM {
     RU = "RU",
 }
 
+enum PAGE_NAME_ENUM {
+    home = "home",
+    exp = "exp",
+    about = "about",
+    contact = "contact",
+}
+
 const STORAGE_KEYS = {
     local: {
         currentLanguage: "currentLanguage",
@@ -44,11 +51,4 @@ const COMPONENT_NAMES = {
     imgModal: "imgModal",
 }
 
-const PAGE_NAMES = {
-    home: "home",
-    exp: "exp",
-    about: "about",
-    contact: "contact",
-}
-
-export { LANGUAGE_ENUM, STORAGE_KEYS, FOLDERS, ICON_FULLNAMES, PAGE_NAMES, COMPONENT_NAMES }
+export { LANGUAGE_ENUM, PAGE_NAME_ENUM, STORAGE_KEYS, FOLDERS, ICON_FULLNAMES, COMPONENT_NAMES }
