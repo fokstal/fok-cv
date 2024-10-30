@@ -1,8 +1,8 @@
-const LANGUAGE_ENUMS = Object.freeze({
-    BY: 'BY',
-    EN: 'EN',
-    RU: 'RU',
-});
+enum LANGUAGE_ENUM {
+    BY = "BY",
+    EN = "EN",
+    RU = "RU",
+}
 
 const STORAGE_KEYS = {
     local: {
@@ -51,4 +51,4 @@ const PAGE_NAMES = {
     contact: "contact",
 }
 
-export { LANGUAGE_ENUMS, STORAGE_KEYS, FOLDERS, ICON_FULLNAMES, PAGE_NAMES, COMPONENT_NAMES }
+export { LANGUAGE_ENUM, STORAGE_KEYS, FOLDERS, ICON_FULLNAMES, PAGE_NAMES, COMPONENT_NAMES }
