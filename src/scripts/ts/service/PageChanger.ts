@@ -59,10 +59,10 @@ class PageChanger {
         })
     }
 
-    changePageByLink(pageNameToSelect: PAGE_NAME_ENUM) {
+    changePageByLink(pageNameToSelect: string) {
         const root = this.componentFactory.root;
 
-        this.currentPage = pageNameToSelect;
+        this.currentPage = convertStringToPageNameEnum(pageNameToSelect);
         this.burgerCheckbox.checked = false;
         root.style.visibility = "visible";
         root.style.opacity = "1";
