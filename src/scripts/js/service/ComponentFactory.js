@@ -1,12 +1,11 @@
 import { FOLDERS, COMPONENT_NAMES } from "../const/const.js";
+import { getElementFromDocument } from "../helpers/elements.js";
 class ComponentFactory {
     container;
     root = document.createElement("div");
     components;
-    constructor(container) {
-        if (container == null)
-            throw new Error("CONTAINER element is null!");
-        this.container = container;
+    constructor(containerElSelector) {
+        this.container = getElementFromDocument(containerElSelector);
     }
     async initAsync() {
         this.components = {
@@ -48,11 +47,4 @@ class ComponentFactory {
         });
     }
 }
-const initComponentFactoryAsync = async (containerElSelector = ".container") => {
-    const containerEl = document.querySelector(containerElSelector);
-    const componentFactory = new ComponentFactory(containerEl);
-    await componentFactory.initAsync();
-    return componentFactory;
-};
 export default ComponentFactory;
-export { initComponentFactoryAsync };

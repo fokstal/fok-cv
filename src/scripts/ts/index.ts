@@ -1,3 +1,12 @@
-import ComponentFactory, { initComponentFactoryAsync } from "./service/ComponentFactory.js";
+import App from "./service/App"
 
-const componentFactory: ComponentFactory = await initComponentFactoryAsync();
+const app: App = new App({
+    componentElSelector: ".component",
+    languageSelectElSelector: ".language-button-select-list",
+    accessModeImgElSelector: ".access-mode-button-icon",
+    imageModalElSelector: ".image-modal",
+    imageModalContentElSelector: ".image-modal__content",
+    overlayElSelector: "overlay",
+});
+
+await app.startAsync();
