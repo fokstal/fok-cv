@@ -1,6 +1,6 @@
 import App from "./service/App.js";
 const app = new App({
-    componentElSelector: ".component",
+    componentElSelector: ".container",
     languageSelectElSelector: ".language-button-select-list",
     accessModeImgElSelector: ".access-mode-button-icon",
     imageModalElSelector: ".image-modal",
