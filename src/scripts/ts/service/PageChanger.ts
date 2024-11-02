@@ -9,7 +9,7 @@ import Chart from "chart.js";
 
 interface PageChangerProps {
     componentFactory: ComponentFactory,
-    Translator: Translator,
+    translator: Translator,
     imageModalViewer: ImageModalViewer,
     basePageName: PAGE_NAME_ENUM,
 }
@@ -33,7 +33,7 @@ class PageChanger {
 
     constructor(props: PageChangerProps) {
         this.componentFactory = props.componentFactory;
-        this.translator = props.Translator;
+        this.translator = props.translator;
         this.imageModalViewer = props.imageModalViewer;
         this.basePageName = props.basePageName;
         this._currentPage = this.basePageName;
