@@ -12,4 +12,8 @@ type ComponentsModel = {
     imgModal: HTMLElement,
 };
 
-export { ComponentsModel }
+type YearToCommitCount = {
+    [key: string]: number
+}
+
+export { ComponentsModel, YearToCommitCount };
