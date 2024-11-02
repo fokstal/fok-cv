@@ -75,14 +75,4 @@ class ComponentFactory {
     }
 }
 
-const initComponentFactoryAsync = async (containerElSelector: string = ".container"): Promise<ComponentFactory> => {
-    const componentFactory = new ComponentFactory(containerElSelector);
-
-    await componentFactory.initAsync();
-
-    return componentFactory;
-}
-
-
 export default ComponentFactory
-export { initComponentFactoryAsync }
