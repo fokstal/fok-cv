@@ -6,6 +6,14 @@ function getElementFromDocument<T extends HTMLElement>(selector: string): T {
     return element;
 }
 
+function getElementListFromDocument<T extends HTMLElement>(selector: string): NodeListOf<T> {
+    const element = document.querySelectorAll(selector) as NodeListOf<T>;
+    if (!element) {
+        throw new Error(`${selector} is null!`);
+    }
+    return element;
+}
+
 function convertElement<T extends HTMLElement>(el: any): T {
     const convertedEl = el as T;
 
@@ -16,4 +24,4 @@ function convertElement<T extends HTMLElement>(el: any): T {
     return convertedEl;
 }
 
-export { getElementFromDocument, convertElement };
+export { getElementFromDocument, getElementListFromDocument, convertElement };
