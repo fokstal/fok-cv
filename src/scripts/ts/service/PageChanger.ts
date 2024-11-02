@@ -42,9 +42,7 @@ class PageChanger {
             sessionStorage.getItem(STORAGE_KEYS.session.currentPage) || props.basePageName);
 
         this.burgerCheckbox = getElementFromDocument<HTMLInputElement>("#viewBurgerNavCheckbox");
-    }
 
-    init() {
         this.changePageByLink(this.currentPage)
 
         this.burgerCheckbox.addEventListener("click", (el) => {
