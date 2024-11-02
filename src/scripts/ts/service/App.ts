@@ -16,41 +16,35 @@ interface AppConfig {
 }
 
 class App {
-    componentFactory: ComponentFactory;
-    translator: Translator;
-    accessModeWorker: AccessModeWorker;
-    imageModalViewer: ImageModalViewer;
-    pageChanger?: PageChanger;
-
     static startPageName = PAGE_NAME_ENUM.home;
     static baseLanguage = LANGUAGE_ENUM.EN;
     static isAccessModeBaseValue = false;
 
-    constructor(config: AppConfig) {
-        this.componentFactory = new ComponentFactory(config.componentElSelector);
-        this.translator = new Translator(config.languageSelectElSelector, App.baseLanguage);
-        this.accessModeWorker = new AccessModeWorker(config.accessModeImgElSelector, App.isAccessModeBaseValue);
-        this.imageModalViewer = new ImageModalViewer(
+    static async startAsync(config: AppConfig) {
+
+        const componentFactory = new ComponentFactory(config.componentElSelector);
+        await componentFactory.initAsync();
+
+        const translator = new Translator(config.languageSelectElSelector, App.baseLanguage);
+        const accessModeWorker = new AccessModeWorker(config.accessModeImgElSelector, App.isAccessModeBaseValue);
+        const imageModalViewer = new ImageModalViewer(
             config.imageModalElSelector,
             config.imageModalContentElSelector,
             config.overlayElSelector,
         );
-    }
 
-    async startAsync() {
-        await this.componentFactory.initAsync();
 
-        this.pageChanger = new PageChanger({
-            componentFactory: this.componentFactory,
-            translator: this.translator,
-            imageModalViewer: this.imageModalViewer,
+        const pageChanger = new PageChanger({
+            componentFactory: componentFactory,
+            translator: translator,
+            imageModalViewer: imageModalViewer,
             basePageName: App.startPageName
         });
 
-        window.changePageByLink = this.pageChanger.changePageByLink.bind(this.pageChanger);
+        window.changePageByLink = pageChanger.changePageByLink.bind(pageChanger);
         window.sendMessageToEmail = sendMessageToEmail;
-        window.toggleAccessMode = this.accessModeWorker.toggleAccessMode;
-        window.changeLanguage = this.translator.changeLanguage;
+        window.toggleAccessMode = accessModeWorker.toggleAccessMode;
+        window.changeLanguage = translator.changeLanguage;
     }
 }
 

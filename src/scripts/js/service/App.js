@@ -6,32 +6,25 @@ import PageChanger from "./PageChanger.js";
 import { LANGUAGE_ENUM, PAGE_NAME_ENUM } from "../const/const.js";
 import sendMessageToEmail from "./functions/sendMessageToEmail.js";
 class App {
-    componentFactory;
-    translator;
-    accessModeWorker;
-    imageModalViewer;
-    pageChanger;
     static startPageName = PAGE_NAME_ENUM.home;
     static baseLanguage = LANGUAGE_ENUM.EN;
     static isAccessModeBaseValue = false;
-    constructor(config) {
-        this.componentFactory = new ComponentFactory(config.componentElSelector);
-        this.translator = new Translator(config.languageSelectElSelector, App.baseLanguage);
-        this.accessModeWorker = new AccessModeWorker(config.accessModeImgElSelector, App.isAccessModeBaseValue);
-        this.imageModalViewer = new ImageModalViewer(config.imageModalElSelector, config.imageModalContentElSelector, config.overlayElSelector);
-    }
-    async startAsync() {
-        await this.componentFactory.initAsync();
-        this.pageChanger = new PageChanger({
-            componentFactory: this.componentFactory,
-            translator: this.translator,
-            imageModalViewer: this.imageModalViewer,
+    static async startAsync(config) {
+        const componentFactory = new ComponentFactory(config.componentElSelector);
+        await componentFactory.initAsync();
+        const translator = new Translator(config.languageSelectElSelector, App.baseLanguage);
+        const accessModeWorker = new AccessModeWorker(config.accessModeImgElSelector, App.isAccessModeBaseValue);
+        const imageModalViewer = new ImageModalViewer(config.imageModalElSelector, config.imageModalContentElSelector, config.overlayElSelector);
+        const pageChanger = new PageChanger({
+            componentFactory: componentFactory,
+            translator: translator,
+            imageModalViewer: imageModalViewer,
             basePageName: App.startPageName
         });
-        window.changePageByLink = this.pageChanger.changePageByLink.bind(this.pageChanger);
+        window.changePageByLink = pageChanger.changePageByLink.bind(pageChanger);
         window.sendMessageToEmail = sendMessageToEmail;
-        window.toggleAccessMode = this.accessModeWorker.toggleAccessMode;
-        window.changeLanguage = this.translator.changeLanguage;
+        window.toggleAccessMode = accessModeWorker.toggleAccessMode;
+        window.changeLanguage = translator.changeLanguage;
     }
 }
 export default App;

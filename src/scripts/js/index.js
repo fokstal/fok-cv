@@ -1,5 +1,5 @@
 import App from "./service/App.js";
-const app = new App({
+await App.startAsync({
     componentElSelector: ".container",
     languageSelectElSelector: ".language-button-select-list",
     accessModeImgElSelector: ".access-mode-button-icon",
@@ -7,4 +7,3 @@ const app = new App({
     imageModalContentElSelector: ".image-modal__content",
     overlayElSelector: "overlay",
 });
-await app.startAsync();
