@@ -6,7 +6,6 @@
 //     })
 // });
 
-import { ChartConfiguration } from "chart.js";
 import takeRGBA from "../helpers/takeRandomRGBA.js";
 
 // IT LANGUAGE chart
@@ -24,7 +23,7 @@ const itLanguageData = {
     ]
 };
 
-const itLanguageConfig: ChartConfiguration = {
+const itLanguageConfig = {
     type: "radar",
     data: itLanguageData,
     options: {
@@ -48,7 +47,7 @@ const itLanguageConfig: ChartConfiguration = {
                 },
             },
         }
-    },
+    }
 };
 
 // LIBRARY and FRAMEWORK chart
@@ -76,7 +75,7 @@ const libAndFwData = {
     ]
 };
 
-const libAndFwConfig: ChartConfiguration = {
+const libAndFwConfig = {
     type: "bar",
     data: libAndFwData,
     options: {
@@ -150,7 +149,7 @@ const commitFreqData = {
     ]
 };
 
-const commitFreqConfig: ChartConfiguration = {
+const commitFreqConfig = {
     type: "bar",
     data: commitFreqData,
     options: {
