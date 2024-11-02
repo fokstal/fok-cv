@@ -1,4 +1,4 @@
-import { getElementFromDocument, getElementListFromDocument } from "../../helpers/elements";
+import { getElementFromDocument, getElementListFromDocument } from "../../helpers/elements.js";
 const sendMessageToEmail = () => {
     const writeMessageBlockImg = getElementFromDocument(".contact__write-message-block-image");
     writeMessageBlockImg.classList.add("element-rotate");

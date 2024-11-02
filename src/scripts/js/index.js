@@ -1,4 +1,4 @@
-import App from "./service/App";
+import App from "./service/App.js";
 const app = new App({
     componentElSelector: ".component",
     languageSelectElSelector: ".language-button-select-list",

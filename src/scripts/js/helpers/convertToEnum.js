@@ -1,4 +1,4 @@
-import { LANGUAGE_ENUM, PAGE_NAME_ENUM } from "../const/const";
+import { LANGUAGE_ENUM, PAGE_NAME_ENUM } from "../const/const.js";
 const convertStringToLanguageEnum = (line) => {
     if (line in LANGUAGE_ENUM)
         return LANGUAGE_ENUM[line];

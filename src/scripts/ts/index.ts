@@ -1,4 +1,4 @@
-import App from "./service/App"
+import App from "./service/App.js"
 
 const app: App = new App({
     componentElSelector: ".component",

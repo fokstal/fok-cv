@@ -1,4 +1,4 @@
-import TranslationModel from "../models/TranslationModel";
+import TranslationModel from "../models/TranslationModel.js";
 
 const translation: TranslationModel = {
     BY: {
