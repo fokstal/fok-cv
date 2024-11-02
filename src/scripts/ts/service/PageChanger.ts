@@ -5,7 +5,7 @@ import ComponentFactory from "./ComponentFactory.js";
 import Translator from "./Translator.js";
 import { convertStringToPageNameEnum } from "../helpers/convertToEnum.js";
 import { convertElement, getElementFromDocument } from "../helpers/elements.js";
-import Chart from "chart.js";
+import Chart, { ChartConfiguration } from "chart.js";
 
 interface PageChangerProps {
     componentFactory: ComponentFactory,
@@ -70,9 +70,9 @@ class PageChanger {
         this.setPageByCurrentPage();
 
         if (pageNameToSelect == PAGE_NAME_ENUM.exp) {
-            new Chart(convertElement<HTMLCanvasElement>(document.getElementById("it-language-chart")), itLanguageConfig);
-            new Chart(convertElement<HTMLCanvasElement>(document.getElementById("lib-fw-chart")), libAndFwConfig);
-            new Chart(convertElement<HTMLCanvasElement>(document.getElementById("commit-freq-chart")), commitFreqConfig);
+            new Chart(convertElement<HTMLCanvasElement>(document.getElementById("it-language-chart")), itLanguageConfig as ChartConfiguration);
+            new Chart(convertElement<HTMLCanvasElement>(document.getElementById("lib-fw-chart")), libAndFwConfig as ChartConfiguration);
+            new Chart(convertElement<HTMLCanvasElement>(document.getElementById("commit-freq-chart")), commitFreqConfig as ChartConfiguration);
         }
 
         this.showSelectedLinkByCurrentPage();
