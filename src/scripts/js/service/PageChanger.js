@@ -46,9 +46,9 @@ class PageChanger {
         root.style.opacity = "1";
         this.setPageByCurrentPage();
         if (pageNameToSelect == PAGE_NAME_ENUM.exp) {
-            new Chart(convertElement(document.getElementById("it-language-chart")), itLanguageConfig);
-            new Chart(convertElement(document.getElementById("lib-fw-chart")), libAndFwConfig);
-            new Chart(convertElement(document.getElementById("commit-freq-chart")), commitFreqConfig);
+            new Chart(getElementFromDocument("#it-language-chart"), itLanguageConfig);
+            new Chart(getElementFromDocument("lib-fw-chart"), libAndFwConfig);
+            new Chart(getElementFromDocument("commit-freq-chart"), commitFreqConfig);
         }
         this.showSelectedLinkByCurrentPage();
         this.transformLogoByCurrentPage();

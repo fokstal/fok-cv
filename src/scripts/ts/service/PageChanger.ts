@@ -70,9 +70,9 @@ class PageChanger {
         this.setPageByCurrentPage();
 
         if (pageNameToSelect == PAGE_NAME_ENUM.exp) {
-            new Chart(convertElement<HTMLCanvasElement>(document.getElementById("it-language-chart")), itLanguageConfig as ChartConfiguration);
-            new Chart(convertElement<HTMLCanvasElement>(document.getElementById("lib-fw-chart")), libAndFwConfig as ChartConfiguration);
-            new Chart(convertElement<HTMLCanvasElement>(document.getElementById("commit-freq-chart")), commitFreqConfig as ChartConfiguration);
+            new Chart(getElementFromDocument<HTMLCanvasElement>("#it-language-chart"), itLanguageConfig as ChartConfiguration);
+            new Chart(getElementFromDocument<HTMLCanvasElement>("lib-fw-chart"), libAndFwConfig as ChartConfiguration);
+            new Chart(getElementFromDocument<HTMLCanvasElement>("commit-freq-chart"), commitFreqConfig as ChartConfiguration);
         }
 
         this.showSelectedLinkByCurrentPage();
