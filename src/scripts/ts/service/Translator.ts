@@ -23,7 +23,7 @@ class Translator {
     }
 
     constructor(languageSelectElSelector: string, baseLanguage: LANGUAGE_ENUM) {
-        this.languageSelectEl = getElementFromDocument<HTMLSelectElement>(languageSelectElSelector); // .language-button-select-list
+        this.languageSelectEl = getElementFromDocument<HTMLSelectElement>(languageSelectElSelector);
         this.baseLanguage = baseLanguage;
         this._currentLanguage =
             convertStringToLanguageEnum(
