@@ -6,6 +6,15 @@ import PageChanger from "./PageChanger.js";
 import { LANGUAGE_ENUM, PAGE_NAME_ENUM } from "../const/const.js";
 import sendMessageToEmail from "./functions/sendMessageToEmail.js";
 
+interface AppConfig {
+    componentElSelector: string,
+    languageSelectElSelector: string,
+    accessModeImgElSelector: string,
+    imageModalElSelector: string,
+    imageModalContentElSelector: string,
+    overlayElSelector: string,
+}
+
 class App {
     componentFactory: ComponentFactory;
     translator: Translator;
@@ -17,18 +26,15 @@ class App {
     static baseLanguage = LANGUAGE_ENUM.EN;
     static isAccessModeBaseValue = false;
 
-    constructor(
-        componentElSelector: string,
-        languageSelectElSelector: string,
-        accessModeImgElSelector: string,
-        imageModalElSelector: string,
-        imageModalContentElSelector: string,
-        overlayElSelector: string
-    ) {
-        this.componentFactory = new ComponentFactory(componentElSelector);
-        this.translator = new Translator(languageSelectElSelector, App.baseLanguage);
-        this.accessModeWorker = new AccessModeWorker(accessModeImgElSelector, App.isAccessModeBaseValue);
-        this.imageModalViewer = new ImageModalViewer(imageModalElSelector, imageModalContentElSelector, overlayElSelector);
+    constructor(config: AppConfig) {
+        this.componentFactory = new ComponentFactory(config.componentElSelector);
+        this.translator = new Translator(config.languageSelectElSelector, App.baseLanguage);
+        this.accessModeWorker = new AccessModeWorker(config.accessModeImgElSelector, App.isAccessModeBaseValue);
+        this.imageModalViewer = new ImageModalViewer(
+            config.imageModalElSelector,
+            config.imageModalContentElSelector,
+            config.overlayElSelector,
+        );
     }
 
     async startAsync() {
