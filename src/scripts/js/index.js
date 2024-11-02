@@ -5,5 +5,5 @@ await App.startAsync({
     accessModeImgElSelector: ".access-mode-button-icon",
     imageModalElSelector: ".image-modal",
     imageModalContentElSelector: ".image-modal__content",
-    overlayElSelector: "overlay",
+    overlayElSelector: ".overlay",
 });
