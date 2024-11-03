@@ -1,11 +1,11 @@
 import { STORAGE_KEYS, PAGE_NAME_ENUM } from "../const/const.js";
-import { itLanguageConfig, libAndFwConfig, commitFreqConfig } from "../const/chartConfigs.js";
 import ImageModalViewer from "./ImageModalViewer.js";
 import ComponentFactory from "./ComponentFactory.js";
 import Translator from "./Translator.js";
 import { convertStringToPageNameEnum } from "../helpers/convertToEnum.js";
 import { convertElement, getElementFromDocument } from "../helpers/elements.js";
-import Chart, { ChartConfiguration } from "chart.js";
+import { Chart } from "chart.js";
+import ChartConfigs from "../const/chartConfigs/ChartOptions.js";
 
 interface PageChangerProps {
     componentFactory: ComponentFactory,
@@ -70,9 +70,9 @@ class PageChanger {
         this.setPageByCurrentPage();
 
         if (pageNameToSelect == PAGE_NAME_ENUM.exp) {
-            // new Chart(getElementFromDocument<HTMLCanvasElement>("#it-language-chart"), itLanguageConfig as ChartConfiguration);
-            // new Chart(getElementFromDocument<HTMLCanvasElement>("lib-fw-chart"), libAndFwConfig as ChartConfiguration);
-            // new Chart(getElementFromDocument<HTMLCanvasElement>("commit-freq-chart"), commitFreqConfig as ChartConfiguration);
+            new Chart(getElementFromDocument<HTMLCanvasElement>("#it-language-chart"), ChartConfigs.itLanguage);
+            new Chart(getElementFromDocument<HTMLCanvasElement>("lib-fw-chart"), ChartConfigs.libraryAndFramework);
+            new Chart(getElementFromDocument<HTMLCanvasElement>("commit-freq-chart"), ChartConfigs.commitFrequency);
         }
 
         this.showSelectedLinkByCurrentPage();

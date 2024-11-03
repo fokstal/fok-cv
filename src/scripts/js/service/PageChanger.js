@@ -1,6 +1,8 @@
 import { STORAGE_KEYS, PAGE_NAME_ENUM } from "../const/const.js";
 import { convertStringToPageNameEnum } from "../helpers/convertToEnum.js";
 import { convertElement, getElementFromDocument } from "../helpers/elements.js";
+import { Chart } from "chart.js";
+import ChartConfigs from "../const/chartConfigs/ChartOptions.js";
 class PageChanger {
     componentFactory;
     translator;
@@ -44,9 +46,9 @@ class PageChanger {
         root.style.opacity = "1";
         this.setPageByCurrentPage();
         if (pageNameToSelect == PAGE_NAME_ENUM.exp) {
-            // new Chart(getElementFromDocument<HTMLCanvasElement>("#it-language-chart"), itLanguageConfig as ChartConfiguration);
-            // new Chart(getElementFromDocument<HTMLCanvasElement>("lib-fw-chart"), libAndFwConfig as ChartConfiguration);
-            // new Chart(getElementFromDocument<HTMLCanvasElement>("commit-freq-chart"), commitFreqConfig as ChartConfiguration);
+            new Chart(getElementFromDocument("#it-language-chart"), ChartConfigs.itLanguage);
+            new Chart(getElementFromDocument("lib-fw-chart"), ChartConfigs.libraryAndFramework);
+            new Chart(getElementFromDocument("commit-freq-chart"), ChartConfigs.commitFrequency);
         }
         this.showSelectedLinkByCurrentPage();
         this.transformLogoByCurrentPage();
