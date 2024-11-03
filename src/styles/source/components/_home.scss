@@ -1,0 +1,15 @@
+.home {
+    @include flex-row(end);
+    justify-content: center;
+
+    &__title {
+        font-size: max(28px, 4.5vw)!important;
+        text-align: left!important;
+        font-weight: 100!important;
+    }
+
+    @media (max-width: 720px) {
+        margin-top: 30%;
+        text-align: center;
+    }
+}

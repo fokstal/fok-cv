@@ -1,0 +1,38 @@
+@mixin flex-row($align-items-value: center) {
+    display: flex;
+    flex-direction: row;
+    align-items: $align-items-value;
+}
+
+@mixin flex-row-justify-space($align-items-value: center) {
+    display: flex;
+    flex-direction: row;
+    align-items: $align-items-value;
+    justify-content: space-between;
+}
+
+@mixin flex-column($align-items-value: center) {
+    display: flex;
+    flex-direction: column;
+    align-items: $align-items-value;
+}
+
+@mixin title-center($m-top-value: 100px) {
+    display: block !important;
+    text-align: center !important;
+    margin-top: $m-top-value !important;
+}
+
+
+@mixin border($borderWidth:1px) {
+    border: $borderWidth $_color-dark-gray solid;
+    border-radius: 5px;
+}
+
+
+@mixin hover-opacity() {
+    &:hover {
+        opacity: .7;
+        transition: opacity $_transition-duration;
+    }
+}
