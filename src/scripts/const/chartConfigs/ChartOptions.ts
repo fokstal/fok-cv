@@ -1,0 +1,16 @@
+import { ChartConfiguration } from "chart.js";
+import itLang_ChartConfig from "@scripts/const/chartConfigs/itLang_ChartConfig";
+import libAndFw_ChartConfig from "@scripts/const/chartConfigs/libAndFw_ChartConfig";
+import commitFreq_ChartConfig from "@scripts/const/chartConfigs/commitFreq_ChartConfig";
+
+type ChartConfigModel = {
+    [key: string]: ChartConfiguration
+}
+
+const ChartConfigs: ChartConfigModel = {
+    itLanguage: itLang_ChartConfig,
+    libraryAndFramework: libAndFw_ChartConfig,
+    commitFrequency: commitFreq_ChartConfig,
+}
+
+export default ChartConfigs;
