@@ -1,5 +1,5 @@
 import { ChartConfiguration, ChartData, ChartOptions } from "chart.js";
-import takeRGBA from "../../helpers/takeRandomRGBA.js";
+import takeRGBA from "../../helpers/takeRandomRGBA";
 
 let commitFreqYear: any = [];
 let commitFreqCommitCount: number[] = [];
@@ -13,7 +13,7 @@ const commitCountToYear: Record<string, number> = {
     "2025": 0
 }
 
-// import getCommitFrequency from "../service/getCommitFrequency.js";
+// import getCommitFrequency from "../service/getCommitFrequency";
 // getCommitFrequency("Fokstal").then(commitCountsToYear => {
 //     Object.keys(commitCountsToYear).forEach(year => {
 //         commitFreqYear = [...year];

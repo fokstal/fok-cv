@@ -1,11 +1,11 @@
-import { STORAGE_KEYS, PAGE_NAME_ENUM } from "../const/const.js";
-import ImageModalViewer from "./ImageModalViewer.js";
-import ComponentFactory from "./ComponentFactory.js";
-import Translator from "./Translator.js";
-import { convertStringToPageNameEnum } from "../helpers/convertToEnum.js";
-import { convertElement, getElementFromDocument } from "../helpers/elements.js";
+import { STORAGE_KEYS, PAGE_NAME_ENUM } from "../const/const";
+import ImageModalViewer from "./ImageModalViewer";
+import ComponentFactory from "./ComponentFactory";
+import Translator from "./Translator";
+import { convertStringToPageNameEnum } from "../helpers/convertToEnum";
+import { convertElement, getElementFromDocument } from "../helpers/elements";
 import { Chart } from "chart.js";
-import ChartConfigs from "../const/chartConfigs/ChartOptions.js";
+import ChartConfigs from "../const/chartConfigs/ChartOptions";
 
 interface PageChangerProps {
     componentFactory: ComponentFactory,

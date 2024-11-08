@@ -1,4 +1,4 @@
-import App from "./service/App.js"
+import App from "./service/App";
 
 await App.startAsync({
     componentElSelector: ".container",

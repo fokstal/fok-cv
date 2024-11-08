@@ -1,5 +1,5 @@
 import { ChartConfiguration, ChartData, ChartOptions } from "chart.js";
-import takeRGBA from "../../helpers/takeRandomRGBA.js";
+import takeRGBA from "../../helpers/takeRandomRGBA";
 
 const itLangLabels = ["C#", "JS", "XAML", "HTML&CSS", "SQL"];
 const itLangRGBA = takeRGBA();

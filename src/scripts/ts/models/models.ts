@@ -1,4 +1,4 @@
-import { PAGE_NAME_ENUM } from "../const/const.js"
+import { PAGE_NAME_ENUM } from "../const/const"
 
 type PageListModel = {
     [key in PAGE_NAME_ENUM]: HTMLElement;

@@ -1,4 +1,4 @@
-import { LANGUAGE_ENUM } from "../const/const.js";
+import { LANGUAGE_ENUM } from "../const/const";
 
 type TranslationModel = {
     [key in LANGUAGE_ENUM]: {

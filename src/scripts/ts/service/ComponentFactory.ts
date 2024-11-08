@@ -1,6 +1,6 @@
-import { FOLDERS, COMPONENT_NAMES } from "../const/const.js";
-import { getElementFromDocument } from "../helpers/elements.js";
-import { ComponentsModel } from "../models/models.js";
+import { FOLDERS, COMPONENT_NAMES } from "../const/const";
+import { getElementFromDocument } from "../helpers/elements";
+import { ComponentsModel } from "../models/models";
 
 class ComponentFactory {
     container: HTMLDivElement;

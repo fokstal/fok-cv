@@ -1,5 +1,5 @@
-import { STORAGE_KEYS, FOLDERS, ICON_FULLNAMES } from "../const/const.js";
-import { getElementFromDocument } from "../helpers/elements.js";
+import { STORAGE_KEYS, FOLDERS, ICON_FULLNAMES } from "../const/const";
+import { getElementFromDocument } from "../helpers/elements";
 
 class AccessModeWorker {
     accessModeImgEl: HTMLImageElement;

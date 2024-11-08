@@ -1,5 +1,5 @@
 import { ChartConfiguration, ChartData, ChartOptions } from "chart.js";
-import takeRGBA from "../../helpers/takeRandomRGBA.js";
+import takeRGBA from "../../helpers/takeRandomRGBA";
 
 const libAndFwLabels = ["ASP.NET Core", "EF Core", "WPF", "React", "TypeScript"];
 const libAndFwRGBABorderList: any = [];

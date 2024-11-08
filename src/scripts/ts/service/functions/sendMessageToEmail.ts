@@ -1,4 +1,4 @@
-import { getElementFromDocument, getElementListFromDocument } from "../../helpers/elements.js";
+import { getElementFromDocument, getElementListFromDocument } from "../../helpers/elements";
 
 const sendMessageToEmail = () => {
     const writeMessageBlockImg: HTMLImageElement = getElementFromDocument<HTMLImageElement>(".contact__write-message-block-image");

@@ -1,4 +1,4 @@
-import { getElementFromDocument, convertElement } from "../helpers/elements.js";
+import { getElementFromDocument, convertElement } from "../helpers/elements";
 
 class ImageModalViewer {
     imageModal: HTMLDivElement;
