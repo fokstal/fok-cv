@@ -39,6 +39,7 @@ export default {
       "@styles": path.resolve(__dirname, "src/styles/"),
       "@icons": path.resolve(__dirname, "public/assets/icons/"),
       "@images": path.resolve(__dirname, "public/assets/images/"),
+      "@fonts": path.resolve(__dirname, "public/assets/fonts/"),
     }
   },
   output: {
