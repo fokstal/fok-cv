@@ -28,8 +28,8 @@ const FOLDERS = {
         any: "/public/assets/icons/any/"
     },
     components: {
-        index: "/src/components/",
-        pages: "/src/components/pages/",
+        index: "/public/components/",
+        pages: "/public/components/pages/",
     },
 }
 
