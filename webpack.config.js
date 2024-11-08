@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default {
-  entry: './src/scripts/index.ts', // Укажите ваш основной файл
+  entry: './src/scripts/ts/index.ts', // Укажите ваш основной файл
   module: {
     rules: [
       {
