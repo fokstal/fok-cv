@@ -24,8 +24,8 @@ const STORAGE_KEYS = {
 const FOLDERS = {
     src: "/src/",
     icons: {
-        index: "/src/icons/",
-        any: "/src/icons/any/"
+        index: "/public/assets/icons/",
+        any: "/public/assets/icons/any/"
     },
     components: {
         index: "/src/components/",
