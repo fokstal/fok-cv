@@ -19,13 +19,27 @@ export default {
         use: [
           "style-loader", // Вставляет CSS в DOM
           "css-loader",   // Преобразует CSS в CommonJS
-          "sass-loader",  // Компилирует SASS в CSS
+          {
+            loader: "sass-loader", // Компилирует SASS в CSS
+            options: {
+              sassOptions: {
+                includePaths: [path.resolve(__dirname, "src/styles")], // Укажите путь к стилям
+              },
+            },
+          },
         ],
       },
     ],
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".scss"], // Добавьте .scss
+    alias: {
+      "@components": path.resolve(__dirname, "src/components/"),
+      "@scripts": path.resolve(__dirname, "src/scripts/"),
+      "@styles": path.resolve(__dirname, "src/styles/"),
+      "@icons": path.resolve(__dirname, "public/assets/icons/"),
+      "@images": path.resolve(__dirname, "public/assets/images/"),
+    }
   },
   output: {
     filename: "scripts.js",
