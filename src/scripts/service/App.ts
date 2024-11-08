@@ -1,10 +1,10 @@
-import ComponentFactory from "./ComponentFactory";
-import Translator from "./Translator";
-import AccessModeWorker from "./AccessModeWorker";
-import ImageModalViewer from "./ImageModalViewer";
-import PageChanger from "./PageChanger";
-import { LANGUAGE_ENUM, PAGE_NAME_ENUM } from "../const/const";
-import sendMessageToEmail from "./functions/sendMessageToEmail";
+import ComponentFactory from "@scripts/service/ComponentFactory";
+import Translator from "@scripts/service/Translator";
+import AccessModeWorker from "@scripts/service/AccessModeWorker";
+import ImageModalViewer from "@scripts/service/ImageModalViewer";
+import PageChanger from "@scripts/service/PageChanger";
+import { LANGUAGE_ENUM, PAGE_NAME_ENUM } from "@scripts/const/const";
+import sendMessageToEmail from "@scripts/service/functions/sendMessageToEmail";
 
 interface AppConfig {
     componentElSelector: string,

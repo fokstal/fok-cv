@@ -7,7 +7,16 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
 
-    "outDir": "./public/dist/"
+    "outDir": "./public/dist/",
+
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@scripts/*": ["./src/scripts/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@icons/*": ["./public/assets/icons/*"],
+      "@images/*": ["./public/assets/images/*"],
+      "@fonts/*": ["./public/assets/fonts/*"],
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]

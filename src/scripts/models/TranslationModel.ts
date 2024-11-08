@@ -1,4 +1,4 @@
-import { LANGUAGE_ENUM } from "../const/const";
+import { LANGUAGE_ENUM } from "@scripts/const/const";
 
 type TranslationModel = {
     [key in LANGUAGE_ENUM]: {

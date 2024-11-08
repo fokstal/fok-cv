@@ -1,13 +1,13 @@
-import { LANGUAGE_ENUM, STORAGE_KEYS } from "../const/const";
-import { convertStringToLanguageEnum } from "../helpers/convertToEnum";
-import { convertElement, getElementFromDocument } from "../helpers/elements";
-import translation from "../const/translation";
+import { LANGUAGE_ENUM, STORAGE_KEYS } from "@scripts/const/const";
+import { convertStringToLanguageEnum } from "@scripts/helpers/convertToEnum";
+import { convertElement, getElementFromDocument } from "@scripts/helpers/elements";
+import translation from "@scripts/const/translation";
 import {
     TranslationModel_ChartTitle,
     TranslationModel_ImageAlt,
     TranslationModel_InnerHtml,
     TranslationModel_Title
-} from "../models/TranslationModel";
+} from "@scripts/models/TranslationModel";
 
 class Translator {
     languageSelectEl: HTMLSelectElement;

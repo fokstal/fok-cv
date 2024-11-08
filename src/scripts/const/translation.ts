@@ -1,4 +1,4 @@
-import TranslationModel from "../models/TranslationModel";
+import TranslationModel from "@scripts/models/TranslationModel";
 
 const translation: TranslationModel = {
     BY: {

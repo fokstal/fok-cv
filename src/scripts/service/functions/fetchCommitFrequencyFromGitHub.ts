@@ -1,5 +1,5 @@
-import { YearToCommitCount } from "../../models/models";
-import GitHubFetcher from "../GitHubFetcher";
+import { YearToCommitCount } from "@scripts/models/models";
+import GitHubFetcher from "@scripts/service/GitHubFetcher";
 
 async function fetchCommitFrequencyFromGitHub(username: string): Promise<YearToCommitCount> {
     const yearToCommitCountList: YearToCommitCount = {};
