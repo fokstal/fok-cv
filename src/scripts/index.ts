@@ -1,4 +1,5 @@
 import App from "./service/App";
+import "../styles/index.scss";
 
 await App.startAsync({
     componentElSelector: ".container",
