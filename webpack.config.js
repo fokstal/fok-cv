@@ -31,6 +31,16 @@ export default {
       },
     ],
   },
+  ignoreWarnings: [
+    {
+      module: /sass-loader/,
+      message: /Deprecation Warning/,
+    },
+    {
+      module: /sass-loader/,
+      message: /repetitive deprecation warnings omitted/,
+    },
+  ],
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".scss"], // Добавьте .scss
     alias: {

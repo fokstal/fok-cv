@@ -15,18 +15,18 @@ body {
         flex-direction: column;
 
         @media (min-width: 1366px) {
-            max-width: $_container-width + $_container-padding-x * 2;
+            max-width: calc($_container-width + $_container-padding-x * 2);
             padding-inline: $_container-padding-x;
         }
 
         @media (max-width: 1366px) {
             max-width: $_container-width + $_container-padding-x;
-            padding-inline: $_container-padding-x / 2;
+            padding-inline: calc($_container-padding-x / 2);
         }
 
         @media (max-width: 720px) {
-            max-width: $_container-width + $_container-padding-x / 2;
-            padding-inline: $_container-padding-x / 4;
+            max-width: calc($_container-width + $_container-padding-x / 2);
+            padding-inline: calc($_container-padding-x / 4);
         }
 
         .root {

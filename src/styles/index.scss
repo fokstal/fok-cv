@@ -1,17 +1,17 @@
 @import 
-    "./fonts",
-    "./variables",
-    "./mixins",
-    "./globals",
-    "./resets";
+    "@styles/fonts",
+    "@styles/variables",
+    "@styles/mixins",
+    "@styles/globals",
+    "@styles/resets";
 
 @import 
-    "./components//any",
-    "./components/about",
-    "./components/contact",
-    "./components/exp",
-    "./components/footer",
-    "./components/header",
-    "./components/home",
-    "./components/imgModal",
-    "./components/overlay";
+    "@styles/components//any",
+    "@styles/components/about",
+    "@styles/components/contact",
+    "@styles/components/exp",
+    "@styles/components/footer",
+    "@styles/components/header",
+    "@styles/components/home",
+    "@styles/components/imgModal",
+    "@styles/components/overlay";
