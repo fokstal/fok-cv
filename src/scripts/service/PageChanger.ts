@@ -5,7 +5,7 @@ import Translator from "@scripts/service/Translator";
 import { convertStringToPageNameEnum } from "@scripts/helpers/convertToEnum";
 import { convertElement, getElementFromDocument } from "@scripts/helpers/elements";
 import * as echarts from "echarts";
-import ChartOptions from "@scripts/const/chartConfigs/ChartOptions";
+import ChartOptions from "@scripts/const/chartOptions/ChartOptions";
 
 interface PageChangerProps {
     componentFactory: ComponentFactory,
