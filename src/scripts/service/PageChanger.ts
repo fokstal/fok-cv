@@ -4,8 +4,8 @@ import ComponentFactory from "@scripts/service/ComponentFactory";
 import Translator from "@scripts/service/Translator";
 import { convertStringToPageNameEnum } from "@scripts/helpers/convertToEnum";
 import { convertElement, getElementFromDocument } from "@scripts/helpers/elements";
-import { Chart } from "chart.js";
-import ChartConfigs from "@scripts/const/chartConfigs/ChartOptions";
+import * as echarts from "echarts";
+import ChartOptions from "@scripts/const/chartConfigs/ChartOptions";
 
 interface PageChangerProps {
     componentFactory: ComponentFactory,
@@ -70,9 +70,19 @@ class PageChanger {
         this.setPageByCurrentPage();
 
         if (pageNameToSelect == PAGE_NAME_ENUM.exp) {
-            new Chart(getElementFromDocument<HTMLCanvasElement>("#it-language-chart"), ChartConfigs.itLanguage);
-            new Chart(getElementFromDocument<HTMLCanvasElement>("lib-fw-chart"), ChartConfigs.libraryAndFramework);
-            new Chart(getElementFromDocument<HTMLCanvasElement>("commit-freq-chart"), ChartConfigs.commitFrequency);
+            const itLanguageChart = echarts.init((getElementFromDocument<HTMLCanvasElement>("#it-language-chart")));
+            const libFwChart = echarts.init((getElementFromDocument<HTMLCanvasElement>("#lib-fw-chart")));
+            const commitFreqChart = echarts.init((getElementFromDocument<HTMLCanvasElement>("#commit-freq-chart")));
+
+            itLanguageChart.setOption(ChartOptions.itLanguage);
+            libFwChart.setOption(ChartOptions.libraryAndFramework);
+            commitFreqChart.setOption(ChartOptions.commitFrequency);
+
+            document.addEventListener("resize", () => {
+                itLanguageChart.resize();
+                libFwChart.resize();
+                commitFreqChart.resize();
+            });
         }
 
         this.showSelectedLinkByCurrentPage();

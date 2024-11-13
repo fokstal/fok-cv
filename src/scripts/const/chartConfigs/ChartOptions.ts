@@ -1,16 +1,16 @@
-import { ChartConfiguration } from "chart.js";
-import itLang_ChartConfig from "@scripts/const/chartConfigs/itLang_ChartConfig";
-import libAndFw_ChartConfig from "@scripts/const/chartConfigs/libAndFw_ChartConfig";
-import commitFreq_ChartConfig from "@scripts/const/chartConfigs/commitFreq_ChartConfig";
+import { EChartOption } from "echarts";
+import itLang_ChartOption from "@scripts/const/chartConfigs/itLang_ChartOption";
+import libAndFw_ChartOption from "@scripts/const/chartConfigs/libAndFw_ChartOption";
+import commitFreq_ChartOption from "@scripts/const/chartConfigs/commitFreq_ChartOption";
 
-type ChartConfigModel = {
-    [key: string]: ChartConfiguration
+type ChartOptionModel = {
+    [key: string]: EChartOption
 }
 
-const ChartConfigs: ChartConfigModel = {
-    itLanguage: itLang_ChartConfig,
-    libraryAndFramework: libAndFw_ChartConfig,
-    commitFrequency: commitFreq_ChartConfig,
+const ChartOptions: ChartOptionModel = {
+    itLanguage: itLang_ChartOption,
+    libraryAndFramework: libAndFw_ChartOption,
+    commitFrequency: commitFreq_ChartOption,
 }
 
-export default ChartConfigs;
+export default ChartOptions;
