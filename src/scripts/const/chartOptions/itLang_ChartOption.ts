@@ -1,6 +1,7 @@
 import { EChartOption } from "echarts";
 import getRandomHEXColor from "@scripts/helpers/getRandomHEXColor";
 import getAnimalByYear from "@scripts/helpers/getAnimalByYear";
+import Layout from "@scripts/service/Layout";
 
 const itLanguageIndicatorList = [
     { name: "C#", max: 10 },
@@ -22,8 +23,8 @@ const itLang_ChartOption: EChartOption = {
 
             for (let i = 0; i < params.value.length; i++)
                 formattedParamsValue += `${itLanguageIndicatorList[i].name}: <strong>${params.value[i]}</strong> <br>`;
-
-            return `<h2>${seriesName}. ${getAnimalByYear(seriesName)}</h2><br> ${formattedParamsValue}`;
+            
+            return Layout.getChartTooltip(formattedParamsValue, `${seriesName}. ${getAnimalByYear(seriesName)}`);
         }
     },
     radar: {

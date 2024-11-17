@@ -1,11 +1,12 @@
 import { EChartOption } from "echarts";
 import getRandomHEXColor from "@scripts/helpers/getRandomHEXColor";
+import Layout from "@scripts/service/Layout";
 
 const libAndFw_ChartOption: EChartOption = {
     tooltip: {
         trigger: "item",
         formatter: (params: any) => {
-            return `Skills is <strong>${params.value}</strong>`;
+            return Layout.getChartTooltip(`${params.name}: <strong>${params.value}</strong>`);
         }
     },
     xAxis: {
