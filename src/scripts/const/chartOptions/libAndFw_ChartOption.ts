@@ -1,22 +1,39 @@
 import { EChartOption } from "echarts";
+import getRandomHEXColor from "@scripts/helpers/getRandomHEXColor";
 
 const libAndFw_ChartOption: EChartOption = {
+    tooltip: {
+        trigger: "item",
+        formatter: (params: any) => {
+            return `Skills is <strong>${params.value}</strong>`;
+        }
+    },
     xAxis: {
         type: "value",
         max: 10,
     },
     yAxis: {
         type: "category",
-        data: ["ASP.NET Core", "EF Core", "WPF", "React", "TypeScript"],
+        nameTextStyle: {
+            fontSize: 20,
+        },
+        data: ["ASP.NET Core", "EF Core", "WPF", "React", "TypeScript",],
     },
     series: [
         {
-            data: [7, 4, 4, 3, 8],
-            type: "bar",
-            showBackground: true,
-            backgroundStyle: {
-                color: "rgba(180, 180, 180, 0.2)"
+            itemStyle: {
+                // color: "#C9686830",
+                color: () => {
+                    const color = getRandomHEXColor();
+
+                    return color + "30";
+                },
+                borderColor: "#B4B4B8",
+                borderWidth: 1,
+                borderRadius: [0, 5, 5, 0],
             },
+            type: "bar",
+            data: [7, 4, 4, 3, 8],
         }
     ]
 };
