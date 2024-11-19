@@ -8,10 +8,9 @@
 
         &-chart-list {
             @include flex-row-justify-space(top);
-            width: 95%;
 
             &-item {
-                @include flex-column(end);
+                @include flex-column;
 
                 @media (max-width:1366px) {
                     align-items: center;
@@ -25,8 +24,10 @@
 
         &-chart {
             @include flex-column;
-            width: 33vw;
+            width: 40vw;
+            height: 55vh;
             text-align: center;
+            justify-content: center;
 
             &-title {
                 font-size: 14px !important;
@@ -36,7 +37,7 @@
 
             &-element {
                 width: 100%;
-                height: 500px;
+                height: 100%;
             }
 
             @media (max-width:1366px) {
