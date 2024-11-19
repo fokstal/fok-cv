@@ -31,15 +31,17 @@ const libAndFw_ChartOption: EChartOption = {
             color: "#43434370",
         },
     },
+    visualMap: {
+        show: false,
+        min: 0,
+        max: 10,
+        inRange: {
+            color: [getRandomHEXColor() + "80", getRandomHEXColor() + "80", getRandomHEXColor() + "80"]
+        },
+    },
     series: [
         {
             itemStyle: {
-                // color: "#C9686830",
-                color: (params: any) => {
-                    return libAndFwColors[params.dataIndex] + "80";
-                },
-                borderColor: "#484848",
-                borderWidth: .5,
                 borderRadius: [0, 5, 5, 0],
             },
             type: "bar",

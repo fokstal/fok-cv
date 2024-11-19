@@ -1,17 +1,14 @@
 import getRandomHEXColor from "@scripts/helpers/getRandomHEXColor";
 import { EChartOption } from "echarts";
 
-const color = getRandomHEXColor();
-
 const itLangFreq_ChartOption: EChartOption = {
     tooltip: {
         trigger: "item"
     },
-
     visualMap: {
         show: false,
         min: 0,
-        max: 100,
+        max: 50,
         inRange: {
             colorLightness: [0, 1]
         }
@@ -41,7 +38,7 @@ const itLangFreq_ChartOption: EChartOption = {
                 length2: 20
             },
             itemStyle: {
-                color: color,
+                color: getRandomHEXColor() + "80",
             },
 
             animationType: "scale",
