@@ -5,14 +5,16 @@ const itLangFreq_ChartOption: EChartOption = {
     tooltip: {
         trigger: "item"
     },
-    visualMap: {
-        show: false,
-        min: 0,
-        max: 50,
-        inRange: {
-            colorLightness: [0, 1]
-        }
-    },
+    visualMap: [
+        {
+            show: false,
+            min: 0,
+            max: 50,
+            inRange: {
+                colorLightness: [0, 1]
+            }
+        },
+    ],
     series: [
         {
             type: "pie",

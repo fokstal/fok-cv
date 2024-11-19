@@ -31,14 +31,16 @@ const libAndFw_ChartOption: EChartOption = {
             color: "#43434370",
         },
     },
-    visualMap: {
-        show: false,
-        min: 0,
-        max: 10,
-        inRange: {
-            color: [getRandomHEXColor() + "80", getRandomHEXColor() + "80", getRandomHEXColor() + "80"]
+    visualMap: [
+        {
+            show: false,
+            min: 0,
+            max: 10,
+            inRange: {
+                color: [getRandomHEXColor() + "80", getRandomHEXColor() + "80", getRandomHEXColor() + "80"]
+            },
         },
-    },
+    ],
     series: [
         {
             itemStyle: {
