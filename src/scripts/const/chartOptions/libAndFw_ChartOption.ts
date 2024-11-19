@@ -15,6 +15,10 @@ const libAndFw_ChartOption: EChartOption = {
     xAxis: {
         type: "value",
         max: 10,
+        axisLabel: {
+            fontSize: 12,
+            color: "#43434370",
+        },
     },
     yAxis: {
         type: "category",
@@ -22,6 +26,10 @@ const libAndFw_ChartOption: EChartOption = {
             fontSize: 20,
         },
         data: libAndFwData,
+        axisLabel: {
+            fontSize: 12,
+            color: "#43434370",
+        },
     },
     series: [
         {

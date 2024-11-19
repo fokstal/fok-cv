@@ -20,10 +20,18 @@ const commitFreq_ChartOption: EChartOption = {
     xAxis: {
         type: "category",
         data: ["2021", "2022", "2023", "2024", "2025"],
+        axisLabel: {
+            fontSize: 12,
+            color: "#43434370",
+        },
     },
     yAxis: {
         type: "value",
         max: 200,
+        axisLabel: {
+            fontSize: 12,
+            color: "#43434370",
+        },
     },
     series: [
         {
