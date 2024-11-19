@@ -2,8 +2,18 @@ import { EChartOption } from "echarts";
 import getRandomHEXColor from "@scripts/helpers/getRandomHEXColor";
 import Layout from "@scripts/service/Layout";
 
-const libAndFwData = ["ASP.NET Core", "EF Core", "WPF", "React", "TypeScript",];
-const libAndFwColors = libAndFwData.map(() => getRandomHEXColor())
+const libAndFwNames = ["ASP.NET Core", "EF Core", "WPF", "React", "TypeScript",];
+const libAndFwValues = [7, 4, 4, 3, 8];
+
+const combinedData = libAndFwNames.map((name, index) => ({
+    name,
+    value: libAndFwValues[index],
+}));
+
+combinedData.sort((a, b) => a.value - b.value);
+
+const sortedNames = combinedData.map(item => item.name);
+const sortedValues = combinedData.map(item => item.value);
 
 const libAndFw_ChartOption: EChartOption = {
     tooltip: {
@@ -25,7 +35,7 @@ const libAndFw_ChartOption: EChartOption = {
         nameTextStyle: {
             fontSize: 20,
         },
-        data: libAndFwData,
+        data: sortedNames,
         axisLabel: {
             fontSize: 12,
             color: "#43434370",
@@ -47,7 +57,7 @@ const libAndFw_ChartOption: EChartOption = {
                 borderRadius: [0, 5, 5, 0],
             },
             type: "bar",
-            data: [7, 4, 4, 3, 8],
+            data: sortedValues,
         }
     ]
 };
