@@ -30,7 +30,8 @@ const itLang_ChartOption: EChartOption = {
     radar: {
         indicator: itLanguageIndicatorList,
         axisName: {
-            fontSize: 14,
+            fontSize: 12,
+            color: "#43434370",
         },
         splitNumber: 5,
         axisNameGap: 30,

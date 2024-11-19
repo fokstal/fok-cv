@@ -71,15 +71,18 @@ class PageChanger {
 
         if (pageNameToSelect == PAGE_NAME_ENUM.exp) {
             const itLanguageChart = echarts.init((getElementFromDocument<HTMLCanvasElement>("#it-language-chart")));
+            const itLanguageFreqChart = echarts.init((getElementFromDocument<HTMLCanvasElement>("#it-language-freq-chart")));
             const libFwChart = echarts.init((getElementFromDocument<HTMLCanvasElement>("#lib-fw-chart")));
             const commitFreqChart = echarts.init((getElementFromDocument<HTMLCanvasElement>("#commit-freq-chart")));
 
             itLanguageChart.setOption(ChartOptions.itLanguage);
+            itLanguageFreqChart.setOption(ChartOptions.itLanguageFreq);
             libFwChart.setOption(ChartOptions.libraryAndFramework);
             commitFreqChart.setOption(ChartOptions.commitFrequency);
 
             document.addEventListener("resize", () => {
                 itLanguageChart.resize();
+                itLanguageFreqChart.resize();
                 libFwChart.resize();
                 commitFreqChart.resize();
             });
