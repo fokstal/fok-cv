@@ -11,11 +11,11 @@
 
             &-item {
                 @include flex-row-justify-space(center);
-                width: 100%;
 
                 @media (max-width:1366px) {
                     @include flex-column;
                 }
+
             }
         }
 
