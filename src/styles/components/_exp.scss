@@ -7,27 +7,24 @@
         }
 
         &-chart-list {
-            @include flex-row-justify-space(top);
+            @include flex-column;
 
             &-item {
-                @include flex-column;
+                @include flex-row-justify-space(center);
+                width: 100%;
 
                 @media (max-width:1366px) {
-                    align-items: center;
+                    @include flex-column;
                 }
-            }
-
-            @media (max-width:1366px) {
-                @include flex-column;
             }
         }
 
         &-chart {
             @include flex-column;
-            width: 40vw;
-            height: 55vh;
             text-align: center;
             justify-content: center;
+            align-items: center;
+            
 
             &-title {
                 font-size: 14px !important;
@@ -36,13 +33,11 @@
             }
 
             &-element {
-                width: 100%;
-                height: 100%;
+                width: 40vw;
+                height: min(650px, 40vw);
             }
 
-            @media (max-width:1366px) {
-                width: max(300px, 50vw);
-            }
+            @media (max-width:1366px) {}
         }
 
         &-any {
