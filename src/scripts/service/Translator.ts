@@ -39,7 +39,7 @@ class Translator {
 
         document.documentElement.setAttribute("lang", selectedLanguage);
 
-        this._currentLanguage = selectedLanguage;
+        this.currentLanguage = selectedLanguage;
 
         this.translateSiteByCurrentLanguage();
     };
