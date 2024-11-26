@@ -81,6 +81,7 @@ type TranslationModel_ImageAlt = {
 
 type TranslationModel_ChartTitle = {
     itLanguage: string,
+    itLanguageFreq: string,
     libAndFw: string,
     commitFreq: string,
 }

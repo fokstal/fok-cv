@@ -10,7 +10,7 @@ const translation: TranslationModel = {
             helloText: `
         Прывітанне!<br>
         Мяне клічуць <strong>Кірыл</strong><br>
-        і я <strong>.NET разработчык!</strong><br>
+        і я <strong>Вэб разработчык!</strong><br>
     `,
 
             // exp page
@@ -38,10 +38,28 @@ const translation: TranslationModel = {
 
             // about page
             about: "пра мяне",
-            startTitle: "Мяне завуць Кірыл Лабуць, прывітанне!",
-            startText: "Lorem іpsum dolor sіt amet",
+            startTitle: "Поўнае імя - Лабуць Кірыл Анатольевіч",
+            startText: `
+                Мне <strong>19 гадоў</strong>, і я нарадзіўся і жыву ў крутой краіне - <strong>Беларусі</strong>.
+                Родам з вёскі, таму з прыродай у нас вельмі цесныя адносіны,
+                ганаруся сваімі каранямі. Я ўвесь час знаходжуся ў імкненні да новых ведаў і прыгод.
+                Вельмі шаную цішыню і спакой, што дапамагае атрымліваць асалоду ад кожным
+                момантам жыцця.
+            `,
             educationTitle: "Адукацыя",
-            educationText: "Lorem іpsum dolor sіt amet",
+            educationText: `
+                Упершыню наведаў я адукацыйную ўстанову ў 2011 годзе, а менавіта:
+                "Станіславаўская базавая школа", дзе скончыў <strong>9 класаў</strong> з <strong>выніковым балам 8.9</strong> :3 <br>
+                Затым маё навучанне працягнулася ў каледжы на аддзяленні ПОІТ
+                ў УА "Навапольскі дзяржаўны аграрна-эканамічны каледж" (<a href="http://www.ngaek.by/index.php/ru/">каледж</a>).
+                За час навучання, які доўжыўся <strong>4 гады</strong>, я актыўна спасцігаў свет IT
+                і нават паспеў папрацаваць у якасці сістэмнага адміністратара.
+                Напісаў мноства курсавых работ і міні-праектаў, а таксама ў камандзе
+                з аднагрупнікам абараніў дыплом на максімальную адзнаку - <strong>10 балаў</strong>.
+                У працэсе навучання я пазнаёміўся з выдатнымі людзьмі і, перш за ўсё,
+                вырас як асоба, і стаў хоць невялікім,
+                але ўсё ж спецыялістам і Вэб распрацоўшчыкам.
+            `,
             hobbyTitle: "Заняткі",
             hobbySoccer: "я гуляю ў футбол",
             hobbyBasketball: "таксама ў баскетбол",
@@ -78,6 +96,7 @@ const translation: TranslationModel = {
 
         chartTitle: {
             itLanguage: "Веды моў праграмавання",
+            itLanguageFreq: "Асноўныя языкі праектаў на GitHub",
             libAndFw: "Веды бібліятэк і фрэймворкаў",
             commitFreq: "Частата камітаў на GitHub",
         }
@@ -90,7 +109,7 @@ const translation: TranslationModel = {
             helloText: `
         Доброго дня!<br>
         Меня зовут <strong>Кирилл</strong><br>
-        и я <strong>.NET Разработчик!</strong><br>
+        и я <strong>Веб разработчик!</strong><br>
     `,
 
             // exp page
@@ -118,10 +137,28 @@ const translation: TranslationModel = {
 
             // about page
             about: "обо мне",
-            startTitle: "Меня зовут Кирилл Лабуть, привет!",
-            startText: "Lorem ipsum dolor sit amet",
+            startTitle: "Полное имя - Лабуть Кирилл Анатольевич",
+            startText: `
+                Мне <strong>19 лет</strong>, и я родился и живу в крутой стране - <strong>Беларуси</strong>. 
+                Родом из деревни, поэтому с природой у нас очень тесные отношения,
+                горжусь своими корнями. Я постоянно нахожусь в стремлении к новым знаниям и приключениям. 
+                Очень ценю тишину и спокойствие, что помогает наслаждаться каждым
+                моментом жизни.
+            `,
             educationTitle: "Образование",
-            educationText: "Lorem ipsum dolor sit amet",
+            educationText: `
+                В первый раз посетил я образовательное учреждение в 2011 году, а именно:
+                "Станиславовская базовая школа", где закончил <strong>9 классов</strong> с <strong>итоговым баллом 8.9</strong> :3 <br>
+                Затем мое обучение продолжилось в колледже на отделении ПОИТ 
+                в УО "Новопольский государственный аграрно-экономический колледж" (<a href="http://www.ngaek.by/index.php/ru/">колледж</a>). 
+                За время обучения, которое длилось <strong>4 года</strong>, я активно постигал мир IT 
+                и даже успел поработать в качестве системного администратора. 
+                Написал множество курсовых работ и мини-проектов, а также в команде 
+                с одногруппником защитил диплом на максимальную отметку - <strong>10 баллов</strong>. 
+                В процессе обучения я познакомился с замечательными людьми и, прежде всего, 
+                вырос как личность, ну и конечно стал хоть небольшим,
+                но все же специалистом и Веб разработчиком.
+            `,
             hobbyTitle: "Хобби",
             hobbySoccer: "я играю в футбол",
             hobbyBasketball: "и в баскетбол",
@@ -158,6 +195,7 @@ const translation: TranslationModel = {
 
         chartTitle: {
             itLanguage: "Знание языков программирования",
+            itLanguageFreq: "Основные языки проектов на GitHub",
             libAndFw: "Знание библиотек и фреймворков",
             commitFreq: "Частота коммитов на GitHub",
         }
@@ -169,7 +207,7 @@ const translation: TranslationModel = {
             helloText: `
             Hello world!<br>
             My name is <strong>Kirill</strong><br>
-            and I am a <strong>.NET Developer!</strong><br>
+            and I am a <strong>WEB Developer!</strong><br>
         `,
 
             // exp page
@@ -197,10 +235,28 @@ const translation: TranslationModel = {
 
             // about page
             about: "about",
-            startTitle: "I`am Kirill Labut, hi!",
-            startText: "Lorem ipsum dolor sit amet",
+            startTitle: "Full name - Labut Kirill Anatolyevich",
+            startText: `
+                I am <strong>19 years old</strong>, and I was born and live in a cool country - <strong>Belarus</strong>. 
+                From the village, so we have a very close relationship with nature,
+                Proud of my roots. I am always on the lookout for new knowledge and adventures. 
+                Very much appreciate the silence and peace that helps to enjoy each
+                moment of life.
+            `,
             educationTitle: "Education",
-            educationText: "Lorem ipsum dolor sit amet",
+            educationText: `
+                First time I visited an educational institution in 2011, namely:
+                "Stanislavsky Basic School" where he finished <strong>9 classes</strong> with a <strong>final score of 8.9</strong> :3.<br>
+                Then my training continued in college at the POIT department 
+                in the "New Polish State Agricultural and Economic College" (<a href="http://www.ngaek.by/index.php/ru/">college</a>). 
+                During the course, which lasted <strong>4 years</strong>, I actively explored the world of IT 
+                and even worked as a system administrator. 
+                Has written many coursework and mini-projects, as well as a team 
+                with a classmate defended the diploma to the maximum mark - <strong>10 points</strong>. 
+                During the course I met some wonderful people and, above all, 
+                grew as a person, well and of course became at least a little
+                but still a specialist and Web developer.
+            `,
             hobbyTitle: "Hobby",
             hobbySoccer: "i play in soccer",
             hobbyBasketball: "and basketball",
@@ -237,6 +293,7 @@ const translation: TranslationModel = {
 
         chartTitle: {
             itLanguage: "IT Languages skill",
+            itLanguageFreq: "Main IT languages of projects on GitHub",
             libAndFw: "Libraries and frameworks skill",
             commitFreq: "Commit frequency on GitHub",
         }
