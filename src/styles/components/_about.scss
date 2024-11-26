@@ -12,9 +12,14 @@
             display: inline-block;
             width: 100%;
             text-align: center;
+            margin-left: 40px;
 
             &-title {
                 margin-top: 20px;
+            }
+
+            @media (max-width: 720px) {
+                margin-left: 0;
             }
         }
 
