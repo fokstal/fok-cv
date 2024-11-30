@@ -1,5 +1,8 @@
 import TranslationModel from "@scripts/models/TranslationModel";
 
+// «
+// «
+
 const translation: TranslationModel = {
     BY: {
         // і
@@ -10,7 +13,7 @@ const translation: TranslationModel = {
             helloText: `
                 Прывітанне!<br>
                 Мяне клічуць <strong>Кірыл</strong><br>
-                і я <strong>Вэб разработчык!</strong><br>
+                і я <strong>Вэб-распрацоўшчык!</strong><br>
             `,
 
             // exp page
@@ -19,9 +22,9 @@ const translation: TranslationModel = {
             ngaekTitle: `
                 Установа адукацыі
                 <br>
-                "Навапольскі дзяржаўны аграрна-эканамічны каледж"
+                «Навапольскі дзяржаўны аграрна-эканамічны каледж»
             `,
-            ngaekPosition: "Тэхнік-праграміст",
+            ngaekPosition: "тэхнік-праграміст",
             ngaekExpMarkedList: `
                 <li>канфігураваў лакальную сетку</li>
                 <li>раманціраваў і ўсталёўваў камп'ютары</li>
@@ -31,9 +34,7 @@ const translation: TranslationModel = {
                 <li>выкладаў практыку аператара ЭВМ</li>
             `,
             tecTitle: `
-                РУП "Мінскэнерга"
-                <br>
-                філіял "Мінская ЦЭЦ-3"
+                РУП «Мінскэнерга» філіял «Мінская ЦЭЦ-3»
             `,
             tecPosition: "тэхнік-праграміст",
             tecExpMarkedList: `
@@ -60,16 +61,16 @@ const translation: TranslationModel = {
             educationTitle: "Адукацыя",
             educationText: `
                 Упершыню наведаў я адукацыйную ўстанову ў 2011 годзе, а менавіта:
-                "Станіславаўская базавая школа", дзе скончыў <strong>9 класаў</strong> з <strong>выніковым балам 8.9</strong> :3 <br>
+                «Станіславаўская базавая школа», дзе скончыў <strong>9 класаў</strong> з <strong>выніковым балам 8.9</strong> :3 <br>
                 Затым маё навучанне працягнулася ў каледжы на аддзяленні ПОІТ
-                ў УА "Навапольскі дзяржаўны аграрна-эканамічны каледж" (<a href="http://www.ngaek.by/index.php/ru/">каледж</a>).
+                ў УА «Навапольскі дзяржаўны аграрна-эканамічны каледж» (<a href="http://www.ngaek.by/index.php/ru/">каледж</a>).
                 За час навучання, які доўжыўся <strong>4 гады</strong>, я актыўна спасцігаў свет IT
                 і нават паспеў папрацаваць у якасці сістэмнага адміністратара.
                 Напісаў мноства курсавых работ і міні-праектаў, а таксама ў камандзе
                 з аднагрупнікам абараніў дыплом на максімальную адзнаку - <strong>10 балаў</strong>.
                 У працэсе навучання я пазнаёміўся з выдатнымі людзьмі і, перш за ўсё,
                 вырас як асоба, і стаў хоць невялікім,
-                але ўсё ж спецыялістам і Вэб распрацоўшчыкам.
+                але ўсё ж спецыялістам і Вэб-распрацоўшчыкам.
             `,
             hobbyTitle: "Заняткі",
             hobbySoccer: "я гуляю ў футбол",
@@ -120,7 +121,7 @@ const translation: TranslationModel = {
             helloText: `
                 Доброго дня!<br>
                 Меня зовут <strong>Кирилл</strong><br>
-                и я <strong>Веб разработчик!</strong><br>
+                и я <strong>Веб-разработчик!</strong><br>
             `,
 
             // exp page
@@ -129,9 +130,9 @@ const translation: TranslationModel = {
             ngaekTitle: `
                 Учреждение образования
                 <br>
-                "Новопольский государственный аграрно-экономический колледж"
+                «Новопольский государственный аграрно-экономический колледж»
             `,
-            ngaekPosition: "Техник-программист",
+            ngaekPosition: "техник-программист",
             ngaekExpMarkedList: `
                 <li>конфигурировал локальную сеть</li>
                 <li>ремонтировал и устанавливал компьютеры</li>
@@ -141,9 +142,7 @@ const translation: TranslationModel = {
                 <li>преподавал практику оператора ЭВМ</li>
             `,
             tecTitle: `
-                РУП "Минскэнерго"
-                <br>
-                филиал "Минская ТЭЦ-3"
+                РУП «Минскэнерго» филиал «Минская ТЭЦ-3»
             `,
             tecPosition: "техник-программист",
             tecExpMarkedList: `
@@ -170,16 +169,16 @@ const translation: TranslationModel = {
             educationTitle: "Образование",
             educationText: `
                 В первый раз посетил я образовательное учреждение в 2011 году, а именно:
-                "Станиславовская базовая школа", где закончил <strong>9 классов</strong> с <strong>итоговым баллом 8.9</strong> :3 <br>
+                «Станиславовская базовая школа», где закончил <strong>9 классов</strong> с <strong>итоговым баллом 8.9</strong> :3 <br>
                 Затем мое обучение продолжилось в колледже на отделении ПОИТ 
-                в УО "Новопольский государственный аграрно-экономический колледж" (<a href="http://www.ngaek.by/index.php/ru/">колледж</a>). 
+                в УО «Новопольский государственный аграрно-экономический колледж» (<a href="http://www.ngaek.by/index.php/ru/">колледж</a>). 
                 За время обучения, которое длилось <strong>4 года</strong>, я активно постигал мир IT 
                 и даже успел поработать в качестве системного администратора. 
                 Написал множество курсовых работ и мини-проектов, а также в команде 
                 с одногруппником защитил диплом на максимальную отметку - <strong>10 баллов</strong>. 
                 В процессе обучения я познакомился с замечательными людьми и, прежде всего, 
                 вырос как личность, ну и конечно стал хоть небольшим,
-                но все же специалистом и Веб разработчиком.
+                но все же специалистом и Веб-разработчиком.
             `,
             hobbyTitle: "Хобби",
             hobbySoccer: "я играю в футбол",
@@ -229,7 +228,7 @@ const translation: TranslationModel = {
             helloText: `
             Hello world!<br>
             My name is <strong>Kirill</strong><br>
-            and I am a <strong>WEB Developer!</strong><br>
+            and I am a <strong>Web developer!</strong><br>
         `,
 
             // exp page
@@ -238,9 +237,9 @@ const translation: TranslationModel = {
             ngaekTitle: `
                 Educational institution
                 <br>
-                "Novopolsky Agricultural and Economic College"
+                «Novopolsky State Agricultural and Economic College»
             `,
-            ngaekPosition: "Сomputer technician",
+            ngaekPosition: "Computer technician",
             ngaekExpMarkedList: `
                 <li>configured the local network</li>
                 <li>repaired and assembled PCs</li>
@@ -250,9 +249,7 @@ const translation: TranslationModel = {
                 <li>taught computer operator practice</li>
             `,
             tecTitle: `
-                ROP "Minskenergo"
-                <br>
-                Branch "Minsk CHP-3"
+                ROP «Minskenergo» Branch «Minsk CHP-3»
             `,
             tecPosition: "Computer technician",
             tecExpMarkedList: `
@@ -279,9 +276,9 @@ const translation: TranslationModel = {
             educationTitle: "Education",
             educationText: `
                 First time I visited an educational institution in 2011, namely:
-                "Stanislavsky Basic School" where he finished <strong>9 classes</strong> with a <strong>final score of 8.9</strong> :3.<br>
+                «Stanislavsky Basic School» where he finished <strong>9 classes</strong> with a <strong>final score of 8.9</strong> :3.<br>
                 Then my training continued in college at the POIT department 
-                in the "New Polish State Agricultural and Economic College" (<a href="http://www.ngaek.by/index.php/ru/">college</a>). 
+                in the «Novopolsky State Agricultural and Economic College» (<a href="http://www.ngaek.by/index.php/ru/">college</a>). 
                 During the course, which lasted <strong>4 years</strong>, I actively explored the world of IT 
                 and even worked as a system administrator. 
                 Has written many coursework and mini-projects, as well as a team 
