@@ -22,14 +22,13 @@ const STORAGE_KEYS = {
 }
 
 const FOLDERS = {
-    src: "/src/",
     icons: {
-        index: "/public/assets/icons/",
-        any: "/public/assets/icons/any/"
+        index: "/assets/icons/",
+        any: "/assets/icons/any/"
     },
     components: {
-        index: "/public/components/",
-        pages: "/public/components/pages/",
+        index: "/components/",
+        pages: "/components/pages/",
     },
 }
 

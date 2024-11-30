@@ -18,7 +18,7 @@ class AccessModeWorker {
     get currentIconPath() {
         let iconName = this.currentIsAccessMode ? ICON_FULLNAMES.eye : ICON_FULLNAMES.eyeClosed;
 
-        return window.location.origin + FOLDERS.icons.any + iconName;
+        return window.location.href + FOLDERS.icons.any + iconName;
     }
 
     constructor(accessModeImgElSelector: string, isAccessModeBaseValue: boolean = false) {

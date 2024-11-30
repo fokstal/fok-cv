@@ -43,7 +43,7 @@ class ComponentFactory {
 
     static async getLayoutFromFileAsync(pathToFile: string): Promise<string> {
         try {
-            const resp = await fetch(pathToFile)
+            const resp = await fetch(window.location.href + pathToFile)
 
             if (!resp.ok) {
                 throw new Error("Network drop: " + resp.statusText);
