@@ -30,6 +30,7 @@
 
     &__education-info {
         @include flex-column(none);
+        text-align: center;
 
         &-text {
             &-title {

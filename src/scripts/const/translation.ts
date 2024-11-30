@@ -59,13 +59,15 @@ const translation: TranslationModel = {
                 момантам жыцця.
             `,
             educationTitle: "Адукацыя",
-            educationText: `
+            educationText1: `
                 Упершыню наведаў я адукацыйную ўстанову ў 2011 годзе, а менавіта:
                 «Станіславаўская базавая школа», дзе скончыў <strong>9 класаў</strong> з <strong>выніковым балам 8.9</strong> :3 <br>
                 Затым маё навучанне працягнулася ў каледжы на аддзяленні ПОІТ
                 ў УА «Навапольскі дзяржаўны аграрна-эканамічны каледж» (<a href="http://www.ngaek.by/index.php/ru/">каледж</a>).
                 За час навучання, які доўжыўся <strong>4 гады</strong>, я актыўна спасцігаў свет IT
                 і нават паспеў папрацаваць у якасці сістэмнага адміністратара.
+            `,
+            educationText2: `
                 Напісаў мноства курсавых работ і міні-праектаў, а таксама ў камандзе
                 з аднагрупнікам абараніў дыплом на максімальную адзнаку - <strong>10 балаў</strong>.
                 У працэсе навучання я пазнаёміўся з выдатнымі людзьмі і, перш за ўсё,
@@ -167,13 +169,15 @@ const translation: TranslationModel = {
                 моментом жизни.
             `,
             educationTitle: "Образование",
-            educationText: `
+            educationText1: `
                 В первый раз посетил я образовательное учреждение в 2011 году, а именно:
                 «Станиславовская базовая школа», где закончил <strong>9 классов</strong> с <strong>итоговым баллом 8.9</strong> :3 <br>
                 Затем мое обучение продолжилось в колледже на отделении ПОИТ 
                 в УО «Новопольский государственный аграрно-экономический колледж» (<a href="http://www.ngaek.by/index.php/ru/">колледж</a>). 
                 За время обучения, которое длилось <strong>4 года</strong>, я активно постигал мир IT 
                 и даже успел поработать в качестве системного администратора. 
+            `,
+            educationText2: `
                 Написал множество курсовых работ и мини-проектов, а также в команде 
                 с одногруппником защитил диплом на максимальную отметку - <strong>10 баллов</strong>. 
                 В процессе обучения я познакомился с замечательными людьми и, прежде всего, 
@@ -274,13 +278,15 @@ const translation: TranslationModel = {
                 moment of life.
             `,
             educationTitle: "Education",
-            educationText: `
+            educationText1: `
                 First time I visited an educational institution in 2011, namely:
                 «Stanislavsky Basic School» where he finished <strong>9 classes</strong> with a <strong>final score of 8.9</strong> :3.<br>
                 Then my training continued in college at the POIT department 
                 in the «Novopolsky State Agricultural and Economic College» (<a href="http://www.ngaek.by/index.php/ru/">college</a>). 
                 During the course, which lasted <strong>4 years</strong>, I actively explored the world of IT 
                 and even worked as a system administrator. 
+            `,
+            educationText2: `
                 Has written many coursework and mini-projects, as well as a team 
                 with a classmate defended the diploma to the maximum mark - <strong>10 points</strong>. 
                 During the course I met some wonderful people and, above all, 
