@@ -20,7 +20,10 @@ type TranslationModel_InnerHtml = {
     workListTitle: string,
     ngaekTitle: string,
     ngaekPosition: string,
-    ngaekExpMarkedList: string
+    ngaekExpMarkedList: string,
+    tecTitle: string,
+    tecPosition: string,
+    tecExpMarkedList: string,
     courseListTitle: string,
     udemyTitle: string,
     udemyCourseName: string,

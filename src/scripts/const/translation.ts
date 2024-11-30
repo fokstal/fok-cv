@@ -8,28 +8,39 @@ const translation: TranslationModel = {
         innerHtml: {
             // home page
             helloText: `
-        Прывітанне!<br>
-        Мяне клічуць <strong>Кірыл</strong><br>
-        і я <strong>Вэб разработчык!</strong><br>
-    `,
+                Прывітанне!<br>
+                Мяне клічуць <strong>Кірыл</strong><br>
+                і я <strong>Вэб разработчык!</strong><br>
+            `,
 
             // exp page
             exp: "вопыт",
             workListTitle: "Вопыт працы",
             ngaekTitle: `
-        Установа адукацыі
-        <br>
-        "Навапольскі дзяржаўны аграрна-эканамічны каледж"
-    `,
+                Установа адукацыі
+                <br>
+                "Навапольскі дзяржаўны аграрна-эканамічны каледж"
+            `,
             ngaekPosition: "Тэхнік-праграміст",
             ngaekExpMarkedList: `
-        <li>канфігураваў лакальную сетку</li>
-        <li>раманціраваў і ўсталёўваў камп'ютары</li>
-        <li>падтрымліваў базу даных студэнтаў</li>
-        <li>суправаджаў відэаканферэнцыі</li>
-        <li>распрацоўваў міні-прыкладанні</li>
-        <li>выкладаў практыку аператара ЭВМ</li>
-    `,
+                <li>канфігураваў лакальную сетку</li>
+                <li>раманціраваў і ўсталёўваў камп'ютары</li>
+                <li>падтрымліваў базу даных студэнтаў</li>
+                <li>суправаджаў відэаканферэнцыі</li>
+                <li>распрацоўваў міні-прыкладанні</li>
+                <li>выкладаў практыку аператара ЭВМ</li>
+            `,
+            tecTitle: `
+                РУП "Мінскэнерга"
+                <br>
+                філіял "Мінская ЦЭЦ-3"
+            `,
+            tecPosition: "тэхнік-праграміст",
+            tecExpMarkedList: `
+                <li>распрацоўваў міні-інструменты</li>
+                <li>канфігураваў і настрайваў ПТК</li>
+                <li>рыхтаваў тэхналагічную дакументацыю</li>
+            `,
             courseListTitle: "Курсы",
             udemyTitle: "Udemy.com",
             udemyCourseName: "ASP.NET Core MVC. Частка 1",
@@ -107,28 +118,39 @@ const translation: TranslationModel = {
         innerHtml: {
             // home page
             helloText: `
-        Доброго дня!<br>
-        Меня зовут <strong>Кирилл</strong><br>
-        и я <strong>Веб разработчик!</strong><br>
-    `,
+                Доброго дня!<br>
+                Меня зовут <strong>Кирилл</strong><br>
+                и я <strong>Веб разработчик!</strong><br>
+            `,
 
             // exp page
             exp: "опыт",
             workListTitle: "Опыт работы",
             ngaekTitle: `
-        Учреждение образования
-        <br>
-        "Новопольский государственный аграрно-экономический колледж"
-    `,
+                Учреждение образования
+                <br>
+                "Новопольский государственный аграрно-экономический колледж"
+            `,
             ngaekPosition: "Техник-программист",
             ngaekExpMarkedList: `
-        <li>конфигурировал локальную сеть</li>
-        <li>ремонтировал и устанавливал компьютеры</li>
-        <li>поддерживал базу данных студентов</li>
-        <li>сопровождал видеоконференции</li>
-        <li>разрабатывал мини-приложения</li>
-        <li>преподавал практику оператора ЭВМ</li>
-    `,
+                <li>конфигурировал локальную сеть</li>
+                <li>ремонтировал и устанавливал компьютеры</li>
+                <li>поддерживал базу данных студентов</li>
+                <li>сопровождал видеоконференции</li>
+                <li>разрабатывал мини-приложения</li>
+                <li>преподавал практику оператора ЭВМ</li>
+            `,
+            tecTitle: `
+                РУП "Минскэнерго"
+                <br>
+                филиал "Минская ТЭЦ-3"
+            `,
+            tecPosition: "техник-программист",
+            tecExpMarkedList: `
+                <li>разрабатывал мини-инструменты</li>
+                <li>конфигурировал и настраивал ПТК</li>
+                <li>подготавливал технологическую документацию</li>
+            `,
             courseListTitle: "Курсы",
             udemyTitle: "Udemy.com",
             udemyCourseName: "ASP.NET Core MVC. Часть 1",
@@ -214,19 +236,30 @@ const translation: TranslationModel = {
             exp: "exp",
             workListTitle: "Works",
             ngaekTitle: `
-            Educational institution
-            <br>
-            "Novopolsky Agricultural and Economic College"
-        `,
+                Educational institution
+                <br>
+                "Novopolsky Agricultural and Economic College"
+            `,
             ngaekPosition: "Сomputer technician",
             ngaekExpMarkedList: `
-            <li>configured the local network</li>
-            <li>repaired and assembled PCs</li>
-            <li>supported the database of students</li>
-            <li>video conference</li>
-            <li>developed mini-applications</li>
-            <li>taught computer operator practice</li>
-        `,
+                <li>configured the local network</li>
+                <li>repaired and assembled PCs</li>
+                <li>supported the database of students</li>
+                <li>video conference</li>
+                <li>developed mini-applications</li>
+                <li>taught computer operator practice</li>
+            `,
+            tecTitle: `
+                ROP "Minskenergo"
+                <br>
+                Branch "Minsk CHP-3"
+            `,
+            tecPosition: "Computer technician",
+            tecExpMarkedList: `
+                <li>developed mini-tools</li>
+                <li>configured and configured PTC</li>
+                <li>prepared the process documentation</li>
+            `,
             courseListTitle: "Courses",
             udemyTitle: "Udemy.com",
             udemyCourseName: "ASP.NET Core MVC. Part 1",

@@ -89,6 +89,10 @@
             @include title-center;
         }
 
+        &-works-list-item {
+            margin-top: 100px;
+        }
+
         &-place {
             @include flex-column;
 
