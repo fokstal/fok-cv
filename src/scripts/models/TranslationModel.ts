@@ -75,7 +75,7 @@ type TranslationModel_ImageAlt = {
     collegePhoto: string,
     meAndFootballTeam: string,
     meAndFiendInPingPong: string,
-    meAndMyGirlfriend: string,
+    meAndBelaz: string,
     pigeonImg: string,
 }
 

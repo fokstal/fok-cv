@@ -104,7 +104,7 @@ const translation: TranslationModel = {
             collegePhoto: "Фота каледжа",
             meAndFootballTeam: "Фота са мной і маёй футбольнай камандай",
             meAndFiendInPingPong: "Фотаздымак мяне і майго сябра, якія гуляюць у настольны тэніс",
-            meAndMyGirlfriend: "Фота са мной і маёй дзяўчынай",
+            meAndBelaz: "Фота са мной і машынай БЕЛаЗ",
             pigeonImg: "Малюнак з галубамі",
         },
 
@@ -214,7 +214,7 @@ const translation: TranslationModel = {
             collegePhoto: "Фото колледжа",
             meAndFootballTeam: "Фото со мной и моей футбольной командой",
             meAndFiendInPingPong: "Фото меня и моего друга на теннисе",
-            meAndMyGirlfriend: "Фото меня и моей девушки",
+            meAndBelaz: "Фото меня и машины БЕЛаЗ",
             pigeonImg: "Рисунок с голубями",
         },
 
@@ -323,7 +323,7 @@ const translation: TranslationModel = {
             collegePhoto: "College photo",
             meAndFootballTeam: "Photo with me and my football team",
             meAndFiendInPingPong: "Photo of me and my friend playing ping-pong",
-            meAndMyGirlfriend: "Photo with me and my girlfriend",
+            meAndBelaz: "Photo with me and BELAZ",
             pigeonImg: "Image with pigeons",
         },
 
