@@ -6,12 +6,14 @@ import { convertStringToPageNameEnum } from "@scripts/helpers/convertToEnum";
 import { convertElement, getElementFromDocument } from "@scripts/helpers/elements";
 import * as echarts from "echarts";
 import ChartOptions from "@scripts/const/chartOptions/ChartOptions";
+import ContactForm, { IContactFormProps } from "@scripts/service/ContactForm";
 
 interface PageChangerProps {
     componentFactory: ComponentFactory,
     translator: Translator,
     imageModalViewer: ImageModalViewer,
     basePageName: PAGE_NAME_ENUM,
+    contactFormProps: IContactFormProps,
 }
 
 class PageChanger {
@@ -20,6 +22,7 @@ class PageChanger {
     imageModalViewer: ImageModalViewer;
     basePageName: PAGE_NAME_ENUM;
     burgerCheckbox: HTMLInputElement;
+    contactFormProps: IContactFormProps;
 
     private _currentPage: PAGE_NAME_ENUM;
 
@@ -37,6 +40,7 @@ class PageChanger {
         this.imageModalViewer = props.imageModalViewer;
         this.basePageName = props.basePageName;
         this._currentPage = this.basePageName;
+        this.contactFormProps = props.contactFormProps;
 
         this.currentPage = convertStringToPageNameEnum(
             sessionStorage.getItem(STORAGE_KEYS.session.currentPage) || props.basePageName);
@@ -86,6 +90,12 @@ class PageChanger {
                 libFwChart.resize();
                 commitFreqChart.resize();
             });
+        }
+
+        if (pageNameToSelect == PAGE_NAME_ENUM.contact) {
+            const contactForm = new ContactForm(this.contactFormProps);
+
+            window.sendContactToAdminEmail = contactForm.sendEmail;
         }
 
         this.showSelectedLinkByCurrentPage();

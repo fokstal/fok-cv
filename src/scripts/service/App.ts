@@ -4,8 +4,7 @@ import AccessModeWorker from "@scripts/service/AccessModeWorker";
 import ImageModalViewer from "@scripts/service/ImageModalViewer";
 import PageChanger from "@scripts/service/PageChanger";
 import { LANGUAGE_ENUM, PAGE_NAME_ENUM } from "@scripts/const/const";
-import sendContactToAdminEmail, { IContactFormProps } from "@scripts/service/ContactForm";
-import ContactForm from "@scripts/service/ContactForm";
+import { IContactFormProps } from "@scripts/service/ContactForm";
 
 interface AppConfig {
     componentElSelector: string,
@@ -14,7 +13,7 @@ interface AppConfig {
     imageModalElSelector: string,
     imageModalContentElSelector: string,
     overlayElSelector: string,
-    contactFromProps: IContactFormProps,
+    contactFormProps: IContactFormProps,
 }
 
 class App {
@@ -39,13 +38,11 @@ class App {
             componentFactory: componentFactory,
             translator: translator,
             imageModalViewer: imageModalViewer,
-            basePageName: App.startPageName
+            basePageName: App.startPageName,
+            contactFormProps: config.contactFormProps
         });
-        
-        const contactForm = new ContactForm(config.contactFromProps);
 
         window.changePageByLink = pageChanger.changePageByLink.bind(pageChanger);
-        window.sendContactToAdminEmail = contactForm.sendEmail;
         window.toggleAccessMode = accessModeWorker.toggleAccessMode;
         window.changeLanguage = translator.changeLanguage;
     }

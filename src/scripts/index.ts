@@ -8,7 +8,7 @@ await App.startAsync({
     imageModalElSelector: ".image-modal",
     imageModalContentElSelector: ".image-modal__content",
     overlayElSelector: ".overlay",
-    contactFromProps: {
+    contactFormProps: {
         nameBoxSelector: "#contactFormNameBox",
         emailBoxSelector: "#contactFormEmailBox",
         messageBoxSelector: "#contactFormMessageBox",
