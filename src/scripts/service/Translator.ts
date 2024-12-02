@@ -22,6 +22,10 @@ class Translator {
         localStorage.setItem(STORAGE_KEYS.local.currentLanguage, language);
     }
 
+    static get CurrentLanguage(): LANGUAGE_ENUM {
+        return convertStringToLanguageEnum(localStorage.getItem(STORAGE_KEYS.local.currentLanguage) || "EN");
+    }
+
     constructor(languageSelectElSelector: string, baseLanguage: LANGUAGE_ENUM) {
         this.languageSelectEl = getElementFromDocument<HTMLSelectElement>(languageSelectElSelector);
         this.baseLanguage = baseLanguage;

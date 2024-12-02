@@ -4,7 +4,6 @@ import AccessModeWorker from "@scripts/service/AccessModeWorker";
 import ImageModalViewer from "@scripts/service/ImageModalViewer";
 import PageChanger from "@scripts/service/PageChanger";
 import { LANGUAGE_ENUM, PAGE_NAME_ENUM } from "@scripts/const/const";
-import { IContactFormProps } from "@scripts/service/ContactForm";
 
 interface AppConfig {
     componentElSelector: string,
@@ -13,7 +12,6 @@ interface AppConfig {
     imageModalElSelector: string,
     imageModalContentElSelector: string,
     overlayElSelector: string,
-    contactFormProps: IContactFormProps,
 }
 
 class App {
@@ -39,7 +37,6 @@ class App {
             translator: translator,
             imageModalViewer: imageModalViewer,
             basePageName: App.startPageName,
-            contactFormProps: config.contactFormProps
         });
 
         window.changePageByLink = pageChanger.changePageByLink.bind(pageChanger);

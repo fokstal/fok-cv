@@ -6,6 +6,7 @@ type TranslationModel = {
         title: TranslationModel_Title,
         imageAlt: TranslationModel_ImageAlt,
         chartTitle: TranslationModel_ChartTitle,
+        contactFormErrorMessage: TranslationModel_ContactFormErrorMessage,
     }
 }
 
@@ -90,5 +91,15 @@ type TranslationModel_ChartTitle = {
     commitFreq: string,
 }
 
+
+
+// ErrorMessage
+
+type TranslationModel_ContactFormErrorMessage = {
+    nameFieldLength: string,
+    emailFieldFormat: string,
+    messageFieldLength: string,
+}
+
 export default TranslationModel;
-export { TranslationModel_InnerHtml, TranslationModel_Title, TranslationModel_ImageAlt, TranslationModel_ChartTitle };
+export { TranslationModel_InnerHtml, TranslationModel_Title, TranslationModel_ImageAlt, TranslationModel_ChartTitle, TranslationModel_ContactFormErrorMessage };

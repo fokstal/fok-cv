@@ -113,7 +113,13 @@ const translation: TranslationModel = {
             itLanguageFreq: "Асноўныя языкі праектаў на GitHub",
             libAndFw: "Веды бібліятэк і фрэймворкаў",
             commitFreq: "Частата камітаў на GitHub",
-        }
+        },
+
+        contactFormErrorMessage: {
+            nameFieldLength: "Даўжыня імя павінна быць <strong>ад 2 да 20</strong> сімвалаў",
+            emailFieldFormat: "Увядзіце электронную пошту ў фармаце '<strong>email@example.domen</strong>'",
+            messageFieldLength: "Даўжыня паведамлення павінна быць больш <strong>чым 30</strong> знакаў",
+        },
     },
 
 
@@ -223,7 +229,13 @@ const translation: TranslationModel = {
             itLanguageFreq: "Основные языки проектов на GitHub",
             libAndFw: "Знание библиотек и фреймворков",
             commitFreq: "Частота коммитов на GitHub",
-        }
+        },
+
+        contactFormErrorMessage: {
+            nameFieldLength: "Длина имени должна быть <strong>от 2 до 20</strong> символов",
+            emailFieldFormat: "Введите электронную почту в формате '<strong>email@example.domen</strong>'",
+            messageFieldLength: "Длина сообщения должна быть больше <strong>чем 30</strong> символов",
+        },
     },
 
 
@@ -332,7 +344,13 @@ const translation: TranslationModel = {
             itLanguageFreq: "Main IT languages of projects on GitHub",
             libAndFw: "Libraries and frameworks skill",
             commitFreq: "Commit frequency on GitHub",
-        }
+        },
+
+        contactFormErrorMessage: {
+            nameFieldLength: "Name length should be <strong>from 2 to 20</strong> characters",
+            emailFieldFormat: "Enter email in format '<strong>email@example.domen</strong>'",
+            messageFieldLength: "Message length must be more <strong>than 30</strong> characters",
+        },
     }
 }
 

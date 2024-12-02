@@ -1,14 +1,10 @@
+import translation from "@scripts/const/translation";
 import { getElementFromDocument } from "@scripts/helpers/elements";
 import EmailJSBodyType from "@scripts/models/EmailJSBodyType";
+import Translator from "@scripts/service/Translator";
 
-interface IContactFormProps {
-    nameBoxSelector: string,
-    emailBoxSelector: string,
-    messageBoxSelector: string,
-    writeMessageBlockImgSelector: string
-}
-
-class ContactForm {
+class ContactFormEventer {
+    private _contactForm: HTMLFormElement;
     private _nameBox: HTMLInputElement;
     private _nameErrorBox: HTMLSpanElement;
     private _emailBox: HTMLInputElement;
@@ -17,14 +13,22 @@ class ContactForm {
     private _messageErrorBox: HTMLSpanElement;
     private _writeMessageBlockImg: HTMLImageElement;
 
-    constructor(props: IContactFormProps) {
-        this._nameBox = getElementFromDocument<HTMLInputElement>(props.nameBoxSelector);
+    constructor() {
+        this._contactForm = getElementFromDocument<HTMLFormElement>(".contact__write-message-block-form")
+        this._nameBox = getElementFromDocument<HTMLInputElement>("#contactFormNameBox");
         this._nameErrorBox = getElementFromDocument<HTMLSpanElement>("#contactFormNameErrorBox")
-        this._emailBox = getElementFromDocument<HTMLInputElement>(props.emailBoxSelector);
+        this._emailBox = getElementFromDocument<HTMLInputElement>("#contactFormEmailBox");
         this._emailErrorBox = getElementFromDocument<HTMLSpanElement>("#contactFormEmailErrorBox")
-        this._messageBox = getElementFromDocument<HTMLInputElement>(props.messageBoxSelector);
+        this._messageBox = getElementFromDocument<HTMLInputElement>("#contactFormMessageBox");
         this._messageErrorBox = getElementFromDocument<HTMLSpanElement>("#contactFormMessageErrorBox")
-        this._writeMessageBlockImg = getElementFromDocument<HTMLImageElement>(props.writeMessageBlockImgSelector);
+        this._writeMessageBlockImg = getElementFromDocument<HTMLImageElement>(".contact__write-message-block-image");
+
+        this._contactForm.addEventListener("focusout", () => {
+            this.hideAllErrorBox();
+        });
+        this._contactForm.addEventListener("focusin", () => {
+            this.validateForm();
+        });
 
         this._nameBox.addEventListener("input", () => {
             this.validateNameField();
@@ -36,7 +40,7 @@ class ContactForm {
 
         this._messageBox.addEventListener("input", () => {
             this.validateMessageField();
-        })
+        });
     }
 
     private getEmailJSBody(): EmailJSBodyType {
@@ -64,14 +68,21 @@ class ContactForm {
         }, 1000);
     }
 
+    private hideAllErrorBox() {
+        this._nameErrorBox.style.opacity = "0";
+        this._emailErrorBox.style.opacity = "0";
+        this._messageErrorBox.style.opacity = "0";
+    }
+
     private validateNameField(): boolean {
         const nameValue = this._nameBox.value.trim();
         let isNameFieldValid = true;
+        const nameErrorBoxTranslationValue = translation[Translator.CurrentLanguage].contactFormErrorMessage.nameFieldLength;
 
         if (nameValue.length < 2 || nameValue.length > 20) {
             isNameFieldValid = false;
             this._nameErrorBox.style.opacity = "1";
-            this._nameErrorBox.innerHTML = "Name length should be <strong>from 2 to 20</strong> characters";
+            this._nameErrorBox.innerHTML = nameErrorBoxTranslationValue;
         }
 
         if (isNameFieldValid)
@@ -83,13 +94,14 @@ class ContactForm {
     private validateEmailField(): boolean {
         const emailValue = this._emailBox.value.trim();
         let isEmailFieldValid = true;
+        const emailErrorBoxTranslationValue = translation[Translator.CurrentLanguage].contactFormErrorMessage.emailFieldFormat;
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
         if (!emailPattern.test(emailValue)) {
             isEmailFieldValid = false;
             this._emailErrorBox.style.opacity = "1";
-            this._emailErrorBox.innerHTML = "Enter email in format '<strong>email@example.domen</strong>'";
+            this._emailErrorBox.innerHTML = emailErrorBoxTranslationValue;
         }
 
         if (isEmailFieldValid)
@@ -101,11 +113,12 @@ class ContactForm {
     private validateMessageField(): boolean {
         const messageValue = this._messageBox.value.trim();
         let isMessageFieldValid = true;
+        const messageErrorBoxTranslationValue = translation[Translator.CurrentLanguage].contactFormErrorMessage.messageFieldLength;
 
         if (messageValue.length < 25) {
             isMessageFieldValid = false;
             this._messageErrorBox.style.opacity = "1";
-            this._messageErrorBox.innerHTML = "Message length must be more <strong>than 30</strong> characters";
+            this._messageErrorBox.innerHTML = messageErrorBoxTranslationValue;
         }
 
         if (isMessageFieldValid)
@@ -114,15 +127,18 @@ class ContactForm {
         return isMessageFieldValid;
     }
 
-    public sendEmail = async () => {
-        const emailJSBody = this.getEmailJSBody();
+    public validateForm(): boolean {
         const isNameFieldValid = this.validateNameField();
         const isEmailFieldValid = this.validateEmailField();
         const isMessageFieldValid = this.validateMessageField();
 
-        const isFormValid = isNameFieldValid && isEmailFieldValid && isMessageFieldValid;
+        return isNameFieldValid && isEmailFieldValid && isMessageFieldValid;
+    }
 
-        if (!isFormValid)
+    public sendEmail = async () => {
+        const emailJSBody = this.getEmailJSBody();
+
+        if (!this.validateForm())
             return;
 
         try {
@@ -144,5 +160,4 @@ class ContactForm {
     }
 }
 
-export default ContactForm;
-export { IContactFormProps };
+export default ContactFormEventer;
