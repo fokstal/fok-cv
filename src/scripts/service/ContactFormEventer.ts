@@ -27,19 +27,16 @@ class ContactFormEventer {
         this._contactForm.addEventListener("focusout", () => {
             this.hideAllErrorBox();
         });
-        this._contactForm.addEventListener("focusin", () => {
-            this.validateForm();
-        });
 
-        this._nameBox.addEventListener("input", () => {
+        this._nameBox.addEventListener("focusin", () => {
             this.validateNameField();
         });
 
-        this._emailBox.addEventListener("input", () => {
+        this._emailBox.addEventListener("focusin", () => {
             this.validateEmailField();
         });
 
-        this._messageBox.addEventListener("input", () => {
+        this._messageBox.addEventListener("focusin", () => {
             this.validateMessageField();
         });
     }
@@ -139,8 +136,6 @@ class ContactFormEventer {
     public sendEmail = async () => {
         const emailJSBody = this.getEmailJSBody();
 
-        showNotification(translation[Translator.CurrentLanguage].notification.successEmailSend, "green");
-
         if (!this.validateForm())
             return;
 
@@ -164,8 +159,5 @@ class ContactFormEventer {
         }
     }
 }
-
-"email has been sended!"
-"email send failed."
 
 export default ContactFormEventer;
