@@ -2,7 +2,9 @@ import translation from "@scripts/const/translation";
 import { getElementFromDocument } from "@scripts/helpers/elements";
 import EmailJSBodyType from "@scripts/models/EmailJSBodyType";
 import Translator from "@scripts/service/Translator";
-import showNotification from "./functions/showNotification";
+import showNotification from "@scripts/service/functions/showNotification";
+import { decrypt } from "@scripts/service/functions/crypto";
+import EMAIL_JS_DATA from "@scripts/const/EmailJS";
 
 class ContactFormEventer {
     private _contactForm: HTMLFormElement;
@@ -55,9 +57,9 @@ class ContactFormEventer {
 
     private getEmailJSBody(): EmailJSBodyType {
         return {
-            service_id: "service_3qx8cr6",
-            template_id: "template_cof2k3b",
-            user_id: "2jsGiS-j9bxmIA4gY",
+            service_id: decrypt(EMAIL_JS_DATA.service_id, EMAIL_JS_DATA.password),
+            template_id: decrypt(EMAIL_JS_DATA.template_id, EMAIL_JS_DATA.password),
+            user_id: decrypt(EMAIL_JS_DATA.user_id, EMAIL_JS_DATA.password),
             template_params: {
                 name: this._nameBox.value.trim(),
                 email: this._emailBox.value.trim(),
