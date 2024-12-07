@@ -4,6 +4,7 @@ import AccessModeWorker from "@scripts/service/AccessModeWorker";
 import ImageModalViewer from "@scripts/service/ImageModalViewer";
 import PageChanger from "@scripts/service/PageChanger";
 import { LANGUAGE_ENUM, PAGE_NAME_ENUM } from "@scripts/const/const";
+import { convertStringToLanguageEnum } from "@scripts/helpers/convertToEnum";
 
 interface AppConfig {
     componentElSelector: string,
@@ -20,6 +21,12 @@ class App {
     static isAccessModeBaseValue = false;
 
     static async startAsync(config: AppConfig) {
+        try {
+            App.baseLanguage = convertStringToLanguageEnum(navigator.language);
+        }
+        catch {
+            App.baseLanguage = LANGUAGE_ENUM.EN;
+        }
 
         const componentFactory = new ComponentFactory(config.componentElSelector);
         await componentFactory.initAsync();

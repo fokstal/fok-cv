@@ -4,7 +4,7 @@ import TranslationModel from "@scripts/models/TranslationModel";
 // «
 
 const translation: TranslationModel = {
-    BY: {
+    "be-BY": {
         // і
         // ў
 
@@ -128,7 +128,7 @@ const translation: TranslationModel = {
     },
 
 
-    RU: {
+    "ru-RU": {
         innerHtml: {
             // home page
             helloText: `
@@ -249,7 +249,7 @@ const translation: TranslationModel = {
     },
 
 
-    EN: {
+    "en-US": {
         innerHtml: {
             helloText: `
             Hello world!<br>

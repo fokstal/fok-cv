@@ -23,7 +23,7 @@ class Translator {
     }
 
     static get CurrentLanguage(): LANGUAGE_ENUM {
-        return convertStringToLanguageEnum(localStorage.getItem(STORAGE_KEYS.local.currentLanguage) || "EN");
+        return convertStringToLanguageEnum(localStorage.getItem(STORAGE_KEYS.local.currentLanguage) || LANGUAGE_ENUM.EN);
     }
 
     constructor(languageSelectElSelector: string, baseLanguage: LANGUAGE_ENUM) {
@@ -39,7 +39,7 @@ class Translator {
     changeLanguage = () => {
         const selectedLanguage: LANGUAGE_ENUM =
             convertStringToLanguageEnum(
-                this.languageSelectEl.options[this.languageSelectEl.selectedIndex].text);
+                this.languageSelectEl.options[this.languageSelectEl.selectedIndex].value);
 
         document.documentElement.setAttribute("lang", selectedLanguage);
 

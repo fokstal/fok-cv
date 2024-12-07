@@ -1,7 +1,7 @@
 enum LANGUAGE_ENUM {
-    BY = "BY",
-    EN = "EN",
-    RU = "RU",
+    BY = "be-BY",
+    EN = "en-US",
+    RU = "ru-RU",
 }
 
 enum PAGE_NAME_ENUM {

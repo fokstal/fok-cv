@@ -1,8 +1,11 @@
 import { LANGUAGE_ENUM, PAGE_NAME_ENUM } from "@scripts/const/const";
 
 const convertStringToLanguageEnum = (line: string): LANGUAGE_ENUM => {
-    if (line in LANGUAGE_ENUM)
-        return LANGUAGE_ENUM[line as keyof typeof LANGUAGE_ENUM];
+    for (const key in LANGUAGE_ENUM) {
+        if (LANGUAGE_ENUM[key as keyof typeof LANGUAGE_ENUM] === line) {
+            return LANGUAGE_ENUM[key as keyof typeof LANGUAGE_ENUM];
+        }
+    }
 
     throw new Error("This LANGUAGE is not supported!");
 }
