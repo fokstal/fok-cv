@@ -120,6 +120,11 @@ const translation: TranslationModel = {
             emailFieldFormat: "Увядзіце электронную пошту ў фармаце '<strong>email@example.domen</strong>'",
             messageFieldLength: "Даўжыня паведамлення павінна быць больш <strong>чым 30</strong> знакаў",
         },
+
+        notification: {
+            successEmailSend: "email паспяхова адпраўлены!",
+            failedEmailSend: "не атрымалася адправіць email"
+        },
     },
 
 
@@ -236,6 +241,11 @@ const translation: TranslationModel = {
             emailFieldFormat: "Введите электронную почту в формате '<strong>email@example.domen</strong>'",
             messageFieldLength: "Длина сообщения должна быть больше <strong>чем 30</strong> символов",
         },
+
+        notification: {
+            successEmailSend: "email успешно отправлен!",
+            failedEmailSend: "не удалось отправить email"
+        },
     },
 
 
@@ -350,6 +360,11 @@ const translation: TranslationModel = {
             nameFieldLength: "Name length should be <strong>from 2 to 20</strong> characters",
             emailFieldFormat: "Enter email in format '<strong>email@example.domen</strong>'",
             messageFieldLength: "Message length must be more <strong>than 30</strong> characters",
+        },
+
+        notification: {
+            successEmailSend: "email sent successfully!",
+            failedEmailSend: "failed to send email"
         },
     }
 }

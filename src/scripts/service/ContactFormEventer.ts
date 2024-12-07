@@ -139,6 +139,8 @@ class ContactFormEventer {
     public sendEmail = async () => {
         const emailJSBody = this.getEmailJSBody();
 
+        showNotification(translation[Translator.CurrentLanguage].notification.successEmailSend, "green");
+
         if (!this.validateForm())
             return;
 
@@ -152,15 +154,18 @@ class ContactFormEventer {
             });
 
             if (emailjsResp.ok) {
-                showNotification("email has been sended!", "green");
+                showNotification(translation[Translator.CurrentLanguage].notification.successEmailSend, "green");
                 this.setEmailSendedState();
             }
         }
         catch (err) {
-            showNotification("email send failed.", "orangered");
+            showNotification(translation[Translator.CurrentLanguage].notification.failedEmailSend, "orangered");
             console.error(`EmailJS err: ${err}`);
         }
     }
 }
+
+"email has been sended!"
+"email send failed."
 
 export default ContactFormEventer;

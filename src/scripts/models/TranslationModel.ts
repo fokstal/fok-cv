@@ -7,6 +7,7 @@ type TranslationModel = {
         imageAlt: TranslationModel_ImageAlt,
         chartTitle: TranslationModel_ChartTitle,
         contactFormErrorMessage: TranslationModel_ContactFormErrorMessage,
+        notification: TranslationModel_Notification,
     }
 }
 
@@ -101,5 +102,21 @@ type TranslationModel_ContactFormErrorMessage = {
     messageFieldLength: string,
 }
 
+
+
+// Notification
+
+type TranslationModel_Notification = {
+    successEmailSend: string,
+    failedEmailSend: string,
+}
+
 export default TranslationModel;
-export { TranslationModel_InnerHtml, TranslationModel_Title, TranslationModel_ImageAlt, TranslationModel_ChartTitle, TranslationModel_ContactFormErrorMessage };
+export { 
+    TranslationModel_InnerHtml, 
+    TranslationModel_Title, 
+    TranslationModel_ImageAlt, 
+    TranslationModel_ChartTitle, 
+    TranslationModel_ContactFormErrorMessage,
+    TranslationModel_Notification,
+};
