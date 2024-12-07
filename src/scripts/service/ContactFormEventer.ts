@@ -86,6 +86,20 @@ class ContactFormEventer {
         this._messageErrorBox.style.opacity = "0";
     }
 
+    private colorErrorBox(color: string, ...errorBoxList: HTMLElement[]) {
+        errorBoxList.forEach(errorBox => {
+            errorBox.style.color = color;
+        })
+    }
+
+    private visibleErrorBox(message: string, color: string, ...errorBoxList: HTMLElement[]) {
+        errorBoxList.forEach(errorBox => {
+            errorBox.style.opacity = "1";
+            errorBox.innerHTML = message;
+            errorBox.style.color = color;
+        })
+    }
+
     private validateNameField(): boolean {
         const nameValue = this._nameBox.value.trim();
         let isNameFieldValid = true;
@@ -93,8 +107,7 @@ class ContactFormEventer {
 
         if (nameValue.length < 2 || nameValue.length > 20) {
             isNameFieldValid = false;
-            this._nameErrorBox.style.opacity = "1";
-            this._nameErrorBox.innerHTML = nameErrorBoxTranslationValue;
+            this.visibleErrorBox(nameErrorBoxTranslationValue, "#434343", this._nameErrorBox);
         }
 
         if (isNameFieldValid)
@@ -112,8 +125,7 @@ class ContactFormEventer {
 
         if (!emailPattern.test(emailValue)) {
             isEmailFieldValid = false;
-            this._emailErrorBox.style.opacity = "1";
-            this._emailErrorBox.innerHTML = emailErrorBoxTranslationValue;
+            this.visibleErrorBox(emailErrorBoxTranslationValue, "#434343", this._emailErrorBox);
         }
 
         if (isEmailFieldValid)
@@ -129,8 +141,7 @@ class ContactFormEventer {
 
         if (messageValue.length < 25) {
             isMessageFieldValid = false;
-            this._messageErrorBox.style.opacity = "1";
-            this._messageErrorBox.innerHTML = messageErrorBoxTranslationValue;
+            this.visibleErrorBox(messageErrorBoxTranslationValue, "#434343", this._messageErrorBox);
         }
 
         if (isMessageFieldValid)
@@ -150,8 +161,10 @@ class ContactFormEventer {
     public sendEmail = async () => {
         const emailJSBody = this.getEmailJSBody();
 
-        if (!this.validateForm())
+        if (!this.validateForm()) {
+            this.colorErrorBox("orangered", this._nameErrorBox, this._emailErrorBox, this._messageErrorBox);
             return;
+        }
 
         try {
             const emailjsResp = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
