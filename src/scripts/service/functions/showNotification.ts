@@ -13,7 +13,7 @@ const showNotification = (message: string, color: string = "#434343") => {
     setTimeout(() => {
         notificationBlock.style.visibility = "hidden";
         notificationBlock.style.fontSize = "0px";
-    }, 2000);
+    }, 3000);
 }
 
 export default showNotification;
