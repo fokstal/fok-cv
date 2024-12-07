@@ -39,6 +39,18 @@ class ContactFormEventer {
         this._messageBox.addEventListener("focusin", () => {
             this.validateMessageField();
         });
+
+        this._nameBox.addEventListener("input", () => {
+            this.validateNameField();
+        });
+
+        this._emailBox.addEventListener("input", () => {
+            this.validateEmailField();
+        });
+
+        this._messageBox.addEventListener("input", () => {
+            this.validateMessageField();
+        });
     }
 
     private getEmailJSBody(): EmailJSBodyType {
