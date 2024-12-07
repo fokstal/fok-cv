@@ -2,6 +2,7 @@ import translation from "@scripts/const/translation";
 import { getElementFromDocument } from "@scripts/helpers/elements";
 import EmailJSBodyType from "@scripts/models/EmailJSBodyType";
 import Translator from "@scripts/service/Translator";
+import showNotification from "./functions/showNotification";
 
 class ContactFormEventer {
     private _contactForm: HTMLFormElement;
@@ -151,10 +152,12 @@ class ContactFormEventer {
             });
 
             if (emailjsResp.ok) {
+                showNotification("email has been sended!", "green");
                 this.setEmailSendedState();
             }
         }
         catch (err) {
+            showNotification("email send failed.", "orangered");
             console.error(`EmailJS err: ${err}`);
         }
     }

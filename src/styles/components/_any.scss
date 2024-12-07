@@ -47,4 +47,11 @@
     &-link--big {
         font-size: 200px;
     }
+
+    .notification-block {
+        display: inline-block;
+        visibility: hidden;
+        font-size: 0;
+        transition: all 1s;
+    }
 }
