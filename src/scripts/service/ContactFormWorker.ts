@@ -6,7 +6,7 @@ import showNotification from "@scripts/service/functions/showNotification";
 import { decrypt } from "@scripts/service/functions/crypto";
 import EMAIL_JS_DATA from "@scripts/const/EmailJS";
 
-class ContactFormEventer {
+class ContactFormWorker {
     private _contactForm: HTMLFormElement;
     private _nameBox: HTMLInputElement;
     private _nameErrorBox: HTMLSpanElement;
@@ -187,4 +187,4 @@ class ContactFormEventer {
     }
 }
 
-export default ContactFormEventer;
+export default ContactFormWorker;

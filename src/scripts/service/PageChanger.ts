@@ -6,7 +6,7 @@ import { convertStringToPageNameEnum } from "@scripts/helpers/convertToEnum";
 import { convertElement, getElementFromDocument } from "@scripts/helpers/elements";
 import * as echarts from "echarts";
 import ChartOptions from "@scripts/const/chartOptions/ChartOptions";
-import ContactFormEventer from "@scripts/service/ContactFormEventer";
+import ContactFormWorker from "@scripts/service/ContactFormWorker";
 
 interface PageChangerProps {
     componentFactory: ComponentFactory,
@@ -90,7 +90,7 @@ class PageChanger {
         }
 
         if (pageNameToSelect == PAGE_NAME_ENUM.contact) {
-            const contactForm = new ContactFormEventer();
+            const contactForm = new ContactFormWorker();
 
             window.sendContactToAdminEmail = contactForm.sendEmail;
         }
