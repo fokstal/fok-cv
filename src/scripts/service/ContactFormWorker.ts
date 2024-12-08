@@ -5,6 +5,7 @@ import Translator from "@scripts/service/Translator";
 import showNotification from "@scripts/service/functions/showNotification";
 import { decrypt } from "@scripts/service/functions/crypto";
 import EMAIL_JS_DATA from "@scripts/const/EmailJS";
+import CaptchaBlockWorker from "@scripts/service/CaptchaBlockWorker";
 
 class ContactFormWorker {
     private _contactForm: HTMLFormElement;
@@ -15,6 +16,7 @@ class ContactFormWorker {
     private _messageBox: HTMLInputElement;
     private _messageErrorBox: HTMLSpanElement;
     private _writeMessageBlockImg: HTMLImageElement;
+    private _captchaBlockWorker: CaptchaBlockWorker;
 
     constructor() {
         this._contactForm = getElementFromDocument<HTMLFormElement>(".contact__write-message-block-form")
@@ -53,6 +55,8 @@ class ContactFormWorker {
         this._messageBox.addEventListener("input", () => {
             this.validateMessageField();
         });
+
+        this._captchaBlockWorker = new CaptchaBlockWorker();
     }
 
     private getEmailJSBody(): EmailJSBodyType {
@@ -74,6 +78,7 @@ class ContactFormWorker {
         this._nameBox.value = "";
         this._emailBox.value = "";
         this._messageBox.value = "";
+        this._captchaBlockWorker.resetCaptcha();
 
         setTimeout(() => {
             this._writeMessageBlockImg.classList.remove("element-rotate");
@@ -163,6 +168,11 @@ class ContactFormWorker {
 
         if (!this.validateForm()) {
             this.colorErrorBox("orangered", this._nameErrorBox, this._emailErrorBox, this._messageErrorBox);
+            return;
+        }
+
+        if (!this._captchaBlockWorker._isCaptchaSuccess) {
+            this._captchaBlockWorker.testCaptcha();
             return;
         }
 
