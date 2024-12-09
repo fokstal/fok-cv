@@ -171,7 +171,7 @@ class ContactFormWorker {
             return;
         }
 
-        if (!this._captcha.IsCaptchaSuccess) {
+        if (!this._captcha.IsSuccess) {
             this._captcha.test();
             return;
         }

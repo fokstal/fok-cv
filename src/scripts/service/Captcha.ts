@@ -9,7 +9,7 @@ type CaptchaElementListType = {
     submitBtn: HTMLButtonElement,
 }
 
-type CaptchaSelectorListType = {
+type CaptchaSelectorForElementListType = {
     canvas: string,
     ctrl: string,
     textBox: string,
@@ -17,7 +17,7 @@ type CaptchaSelectorListType = {
     submitBtn: string,
 }
 
-const default_captchaSelectorList: CaptchaSelectorListType = {
+const default_captchaSelectorForElementList: CaptchaSelectorForElementListType = {
     canvas: "#captchaCanvas",
     ctrl: "#captchaCtrl",
     textBox: "#captchaInput",
@@ -26,28 +26,28 @@ const default_captchaSelectorList: CaptchaSelectorListType = {
 }
 
 class Captcha {
-    private _captchaElementList: CaptchaElementListType;
-    private _captchaLine = "";
-    private _isCaptchaSuccess = false;
-    private _captchaLength = 6;
+    private _elementList: CaptchaElementListType;
+    private _challengeLine = "";
+    private _challengeLineLength = 6;
+    private _isSuccess = false;
 
-    public get CaptchaLine() {
-        return this._captchaLine;
+    public get ChallengeLine() {
+        return this._challengeLine;
     }
 
-    public get IsCaptchaSuccess() {
-        return this._isCaptchaSuccess;
+    public get IsSuccess() {
+        return this._isSuccess;
     }
 
-    public get CaptchaLength() {
-        return this._captchaLength;
+    public get ChallengeLineLength() {
+        return this._challengeLineLength;
     }
-    public set CaptchaLength(length: number) {
-        this._captchaLength = length;
+    public set ChallengeLineLength(length: number) {
+        this._challengeLineLength = length;
     }
 
-    public constructor(captchaSelectorList: CaptchaSelectorListType = default_captchaSelectorList) {
-        this._captchaElementList = Captcha.getElementsBySelectorList(captchaSelectorList);
+    public constructor(selectorForElementList: CaptchaSelectorForElementListType = default_captchaSelectorForElementList) {
+        this._elementList = Captcha.getElementsBySelectorList(selectorForElementList);
 
         this.setEventListeners();
 
@@ -55,29 +55,29 @@ class Captcha {
     }
 
     public test() {
-        this._isCaptchaSuccess = this._captchaElementList.textBox.value === this._captchaLine;
+        this._isSuccess = this._elementList.textBox.value === this._challengeLine;
 
-        this._captchaElementList.submitBtn.style.color = this._isCaptchaSuccess ? "green" : "orangered";
+        this._elementList.submitBtn.style.color = this._isSuccess ? "green" : "orangered";
     }
 
     public reset() {
-        this._isCaptchaSuccess = false;
-        this._captchaElementList.textBox.value = "";
+        this._isSuccess = false;
+        this._elementList.textBox.value = "";
         this.print();
 
-        this._captchaElementList.resetBtn.classList.add("rotate");
+        this._elementList.resetBtn.classList.add("rotate");
 
         setTimeout(() => {
-            this._captchaElementList.resetBtn.classList.remove("rotate");
+            this._elementList.resetBtn.classList.remove("rotate");
         }, 500)
 
-        this._captchaElementList.submitBtn.style.color = "#434343";
+        this._elementList.submitBtn.style.color = "#434343";
     }
 
     private setEventListeners() {
-        this._captchaElementList.resetBtn.addEventListener("click", this.reset.bind(this));
-        this._captchaElementList.submitBtn.addEventListener("click", this.test.bind(this));
-        this._captchaElementList.textBox.addEventListener("focusout", this.test.bind(this));
+        this._elementList.resetBtn.addEventListener("click", this.reset.bind(this));
+        this._elementList.submitBtn.addEventListener("click", this.test.bind(this));
+        this._elementList.textBox.addEventListener("focusout", this.test.bind(this));
     }
 
     private print() {
@@ -88,15 +88,15 @@ class Captcha {
     private generateLine() {
         let line = "";
 
-        for (let i = 0; i < this._captchaLength; i++) {
+        for (let i = 0; i < this._challengeLineLength; i++) {
             line += getRandomAlphanumericCharacter();
         }
 
-        this._captchaLine = line;
+        this._challengeLine = line;
     }
 
     private drawLineToCanvas() {
-        const canvas = this._captchaElementList.canvas;
+        const canvas = this._elementList.canvas;
         const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -106,10 +106,10 @@ class Captcha {
         ctx.textBaseline = "middle";
         ctx.fillStyle = "#434343";
 
-        ctx.fillText(this._captchaLine, canvas.width / 2, canvas.height / 1.5);
+        ctx.fillText(this._challengeLine, canvas.width / 2, canvas.height / 1.5);
     }
 
-    public static getElementsBySelectorList(selectorList: CaptchaSelectorListType): CaptchaElementListType {
+    public static getElementsBySelectorList(selectorList: CaptchaSelectorForElementListType): CaptchaElementListType {
         return {
             canvas: getElementFromDocument<HTMLCanvasElement>(selectorList.canvas),
             ctrl: getElementFromDocument<HTMLDivElement>(selectorList.ctrl),
