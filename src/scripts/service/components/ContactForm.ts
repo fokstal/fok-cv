@@ -44,7 +44,7 @@ class ContactForm {
     private _elementList: ContactFormElementListType;
     private _captcha: Captcha;
 
-    constructor(selectorForElementList: ContactFormSelectorForElementListType = default_contactFormSelectorForElementList) {
+    public constructor(selectorForElementList: ContactFormSelectorForElementListType = default_contactFormSelectorForElementList) {
         this._elementList = Layout.getElementsBySelectorList
             <ContactFormElementListType, ContactFormSelectorForElementListType>(selectorForElementList);
 

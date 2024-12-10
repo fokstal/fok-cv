@@ -27,19 +27,19 @@ class Translator {
     private _baseLanguage: LANGUAGE_ENUM = LANGUAGE_ENUM.EN;
     private _currentLanguage: LANGUAGE_ENUM = this._baseLanguage;
 
-    get CurrentLanguage() {
+    public get CurrentLanguage() {
         return this._currentLanguage;
     }
-    set CurrentLanguage(language: LANGUAGE_ENUM) {
+    public set CurrentLanguage(language: LANGUAGE_ENUM) {
         this._currentLanguage = language;
         localStorage.setItem(STORAGE_KEYS.local.currentLanguage, language);
     }
 
-    static get CurrentLanguageFromStorage(): LANGUAGE_ENUM {
+    public static get CurrentLanguageFromStorage(): LANGUAGE_ENUM {
         return convertStringToLanguageEnum(localStorage.getItem(STORAGE_KEYS.local.currentLanguage) || LANGUAGE_ENUM.EN);
     }
 
-    constructor(
+    public constructor(
         baseLanguage: LANGUAGE_ENUM,
         selectorForElementList: TranslatorSelectorForElementListType = default_translatorSelectorForElementList,
     ) {
@@ -53,7 +53,7 @@ class Translator {
         this._elementList.selectList.value = this._currentLanguage;
     }
 
-    changeLanguage = () => {
+    public changeLanguage = () => {
         const selectedLanguage: LANGUAGE_ENUM =
             convertStringToLanguageEnum(
                 this._elementList.selectList.options[this._elementList.selectList.selectedIndex].value);
@@ -65,7 +65,7 @@ class Translator {
         this.translateSite();
     };
 
-    translateSite = () => {
+    public translateSite = () => {
         document
             .querySelectorAll("[translate-key]")
             .forEach(el => {

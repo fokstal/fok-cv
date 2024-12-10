@@ -22,7 +22,7 @@ const default_imageModalSelectorForElementList: ImageModalSelectorForElementList
 class ImageModal {
     private _elementList: ImageModalElementListType;
 
-    constructor(selectorForElementList: ImageModalSelectorForElementListType = default_imageModalSelectorForElementList) {
+    public constructor(selectorForElementList: ImageModalSelectorForElementListType = default_imageModalSelectorForElementList) {
         this._elementList = Layout.getElementsBySelectorList
             <ImageModalElementListType, ImageModalSelectorForElementListType>(selectorForElementList);
     }
