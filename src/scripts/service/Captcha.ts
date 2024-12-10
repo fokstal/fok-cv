@@ -1,5 +1,6 @@
 import { getElementFromDocument } from "@scripts/helpers/elements";
 import getRandomAlphanumericCharacter from "@scripts/helpers/getRandomAlphanumericCharacter";
+import Layout from "./Layout";
 
 type CaptchaElementListType = {
     canvas: HTMLCanvasElement,
@@ -47,7 +48,7 @@ class Captcha {
     }
 
     public constructor(selectorForElementList: CaptchaSelectorForElementListType = default_captchaSelectorForElementList) {
-        this._elementList = Captcha.getElementsBySelectorList(selectorForElementList);
+        this._elementList = Layout.getElementsBySelectorList<CaptchaElementListType, CaptchaSelectorForElementListType>(selectorForElementList);
 
         this.setEventListeners();
 
@@ -107,16 +108,6 @@ class Captcha {
         ctx.fillStyle = "#434343";
 
         ctx.fillText(this._challengeLine, canvas.width / 2, canvas.height / 1.5);
-    }
-
-    public static getElementsBySelectorList(selectorList: CaptchaSelectorForElementListType): CaptchaElementListType {
-        return {
-            canvas: getElementFromDocument<HTMLCanvasElement>(selectorList.canvas),
-            ctrl: getElementFromDocument<HTMLDivElement>(selectorList.ctrl),
-            textBox: getElementFromDocument<HTMLInputElement>(selectorList.textBox),
-            resetBtn: getElementFromDocument<HTMLButtonElement>(selectorList.resetBtn),
-            submitBtn: getElementFromDocument<HTMLButtonElement>(selectorList.submitBtn),
-        }
     }
 }
 
