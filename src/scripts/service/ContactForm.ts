@@ -30,14 +30,14 @@ type ContactFormSelectorForElementListType = {
 }
 
 const default_contactFormSelectorForElementList: ContactFormSelectorForElementListType = {
-    form: ".contact__write-message-block-form",
+    form: "#contactForm",
     nameBox: "#contactFormNameBox",
     nameErrorBox: "#contactFormNameErrorBox",
     emailBox: "#contactFormEmailBox",
     emailErrorBox: "#contactFormEmailErrorBox",
     messageBox: "#contactFormMessageBox",
     messageErrorBox: "#contactFormMessageErrorBox",
-    writeMessageBlockImg: ".contact__write-message-block-image",
+    writeMessageBlockImg: "#contactWriteMessageBlockImg",
 }
 
 class ContactForm {
