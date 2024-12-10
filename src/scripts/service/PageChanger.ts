@@ -50,18 +50,18 @@ class PageChanger {
             const isViewBurger = convertElement<HTMLInputElement>(el.currentTarget).checked;
 
             if (isViewBurger) {
-                this.componentFactory.root.style.visibility = "hidden";
-                this.componentFactory.root.style.opacity = "0";
+                this.componentFactory._rootElement.style.visibility = "hidden";
+                this.componentFactory._rootElement.style.opacity = "0";
             }
             else {
-                this.componentFactory.root.style.visibility = "visible";
-                this.componentFactory.root.style.opacity = "1";
+                this.componentFactory._rootElement.style.visibility = "visible";
+                this.componentFactory._rootElement.style.opacity = "1";
             }
         })
     }
 
     changePageByLink(pageNameToSelect: string) {
-        const root = this.componentFactory.root;
+        const root = this.componentFactory._rootElement;
 
         this.currentPage = convertStringToPageNameEnum(pageNameToSelect);
         this.burgerCheckbox.checked = false;
@@ -102,12 +102,12 @@ class PageChanger {
     }
 
     private setPageByCurrentPage() {
-        const components = this.componentFactory.components;
+        const components = this.componentFactory._componentList;
 
         if (components) {
             const currentPage = this._currentPage;
 
-            this.componentFactory.root.innerHTML = components.pageList[currentPage].outerHTML;
+            this.componentFactory._rootElement.innerHTML = components.pageList[currentPage].outerHTML;
 
             document.title = "fok ∙ " + currentPage;
         }
@@ -116,7 +116,7 @@ class PageChanger {
     private showSelectedLinkByCurrentPage() {
         const currentPage = this._currentPage;
 
-        this.componentFactory.container
+        this.componentFactory._containerElement
             .querySelectorAll(".header__nav")
             .forEach(navEl => {
                 navEl.querySelectorAll(".header__nav-link")
@@ -131,7 +131,7 @@ class PageChanger {
 
     private transformLogoByCurrentPage() {
         const currentPage = this._currentPage;
-        const logoLinkEl = convertElement<HTMLLinkElement>(this.componentFactory.container.querySelector(".logo-link"));
+        const logoLinkEl = convertElement<HTMLLinkElement>(this.componentFactory._containerElement.querySelector(".logo-link"));
 
         if (currentPage === PAGE_NAME_ENUM.home) {
             logoLinkEl.classList.add("logo-link--big");

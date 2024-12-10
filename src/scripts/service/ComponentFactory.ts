@@ -3,9 +3,9 @@ import { getElementFromDocument } from "@scripts/helpers/elements";
 import { ComponentsModel } from "@scripts/models/models";
 
 class ComponentFactory {
-    private _containerElement: HTMLDivElement;
-    private _rootElement: HTMLDivElement = document.createElement("div");
-    private _componentList?: ComponentsModel;
+    public _containerElement: HTMLDivElement;
+    public _rootElement: HTMLDivElement = document.createElement("div");
+    public _componentList?: ComponentsModel;
 
     public constructor(selectorForContainerElement: string = ".container") {
         this._containerElement = getElementFromDocument<HTMLDivElement>(selectorForContainerElement);
