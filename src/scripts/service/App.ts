@@ -6,21 +6,12 @@ import PageChanger from "@scripts/service/PageChanger";
 import { LANGUAGE_ENUM, PAGE_NAME_ENUM } from "@scripts/const/const";
 import { convertStringToLanguageEnum } from "@scripts/helpers/convertToEnum";
 
-interface AppConfig {
-    componentElSelector: string,
-    languageSelectElSelector: string,
-    accessModeImgElSelector: string,
-    imageModalElSelector: string,
-    imageModalContentElSelector: string,
-    overlayElSelector: string,
-}
-
 class App {
-    static startPageName = PAGE_NAME_ENUM.home;
-    static baseLanguage = LANGUAGE_ENUM.EN;
-    static isAccessModeBaseValue = false;
+    public static startPageName = PAGE_NAME_ENUM.home;
+    public static baseLanguage = LANGUAGE_ENUM.EN;
+    public static isAccessModeBaseValue = false;
 
-    static async startAsync(config: AppConfig) {
+    public static async startAsync() {
         try {
             App.baseLanguage = convertStringToLanguageEnum(navigator.language);
         }
@@ -28,7 +19,7 @@ class App {
             App.baseLanguage = LANGUAGE_ENUM.EN;
         }
 
-        const componentFactory = new ComponentFactory(config.componentElSelector);
+        const componentFactory = new ComponentFactory();
         await componentFactory.initAsync();
 
         const translator = new Translator(App.baseLanguage);
