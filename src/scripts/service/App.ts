@@ -1,6 +1,6 @@
 import ComponentFactory from "@scripts/service/ComponentFactory";
 import Translator from "@scripts/service/components/Translator";
-import AccessMode from "@scripts/service/AccessMode";
+import AccessMode from "@scripts/service/components/AccessMode";
 import ImageModal from "@scripts/service/components/ImageModal";
 import PageChanger from "@scripts/service/PageChanger";
 import { LANGUAGE_ENUM, PAGE_NAME_ENUM } from "@scripts/const/const";
