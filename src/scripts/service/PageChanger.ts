@@ -1,12 +1,12 @@
 import { STORAGE_KEYS, PAGE_NAME_ENUM } from "@scripts/const/const";
-import ImageModal from "@scripts/service/ImageModal";
+import ImageModal from "@scripts/service/components/ImageModal";
 import ComponentFactory from "@scripts/service/ComponentFactory";
-import Translator from "@scripts/service/Translator";
+import Translator from "@scripts/service/components/Translator";
 import { convertStringToPageNameEnum } from "@scripts/helpers/convertToEnum";
 import { convertElement, getElementFromDocument } from "@scripts/helpers/elements";
 import * as echarts from "echarts";
 import ChartOptions from "@scripts/const/chartOptions/ChartOptions";
-import ContactForm from "@scripts/service/ContactForm";
+import ContactForm from "@scripts/service/components/ContactForm";
 
 interface PageChangerProps {
     componentFactory: ComponentFactory,
