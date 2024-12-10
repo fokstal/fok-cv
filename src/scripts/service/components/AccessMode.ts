@@ -10,7 +10,7 @@ type AccessModeSelectorForElementListType = {
 }
 
 const default_accessModeSelectorForElementList: AccessModeSelectorForElementListType = {
-    button: ".access-mode-button-icon",
+    button: "#accessModeBtnIcon",
 }
 
 class AccessMode {

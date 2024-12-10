@@ -19,7 +19,7 @@ type TranslatorSelectorForElementListType = {
 }
 
 const default_translatorSelectorForElementList: TranslatorSelectorForElementListType = {
-    selectList: ".language-button-select-list",
+    selectList: "#languageSelectList",
 }
 
 class Translator {

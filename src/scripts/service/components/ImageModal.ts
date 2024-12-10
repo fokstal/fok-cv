@@ -14,9 +14,9 @@ type ImageModalSelectorForElementListType = {
 }
 
 const default_imageModalSelectorForElementList: ImageModalSelectorForElementListType = {
-    imageModal: ".image-modal",
-    imageModalContent: ".image-modal__content",
-    overlay: ".overlay",
+    imageModal: "#imageModal",
+    imageModalContent: "#imageModalContent",
+    overlay: "#overlay",
 }
 
 class ImageModal {
