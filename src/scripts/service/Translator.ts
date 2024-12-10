@@ -8,7 +8,7 @@ import {
     TranslationModel_InnerHtml,
     TranslationModel_Title
 } from "@scripts/models/TranslationModel";
-import Layout from "./Layout";
+import Layout from "@scripts/service/Layout";
 
 type TranslatorElementListType = {
     selectList: HTMLSelectElement,
