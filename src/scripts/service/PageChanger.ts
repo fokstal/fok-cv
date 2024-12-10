@@ -1,5 +1,5 @@
 import { STORAGE_KEYS, PAGE_NAME_ENUM } from "@scripts/const/const";
-import ImageModalViewer from "@scripts/service/ImageModalViewer";
+import ImageModal from "@scripts/service/ImageModal";
 import ComponentFactory from "@scripts/service/ComponentFactory";
 import Translator from "@scripts/service/Translator";
 import { convertStringToPageNameEnum } from "@scripts/helpers/convertToEnum";
@@ -11,14 +11,14 @@ import ContactForm from "@scripts/service/ContactForm";
 interface PageChangerProps {
     componentFactory: ComponentFactory,
     translator: Translator,
-    imageModalViewer: ImageModalViewer,
+    imageModalViewer: ImageModal,
     basePageName: PAGE_NAME_ENUM,
 }
 
 class PageChanger {
     componentFactory: ComponentFactory;
     translator: Translator;
-    imageModalViewer: ImageModalViewer;
+    imageModalViewer: ImageModal;
     basePageName: PAGE_NAME_ENUM;
     burgerCheckbox: HTMLInputElement;
 
@@ -98,7 +98,7 @@ class PageChanger {
         this.showSelectedLinkByCurrentPage();
         this.transformLogoByCurrentPage();
         this.translator.translateSite();
-        this.imageModalViewer.setImageModalEvents();
+        this.imageModalViewer.setEventToPhotosForShowImgModal();
     }
 
     private setPageByCurrentPage() {
