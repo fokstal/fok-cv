@@ -1,6 +1,5 @@
-import { getElementFromDocument } from "@scripts/helpers/elements";
 import getRandomAlphanumericCharacter from "@scripts/helpers/getRandomAlphanumericCharacter";
-import Layout from "./Layout";
+import Layout from "@scripts/service/Layout";
 
 type CaptchaElementListType = {
     canvas: HTMLCanvasElement,
@@ -48,7 +47,8 @@ class Captcha {
     }
 
     public constructor(selectorForElementList: CaptchaSelectorForElementListType = default_captchaSelectorForElementList) {
-        this._elementList = Layout.getElementsBySelectorList<CaptchaElementListType, CaptchaSelectorForElementListType>(selectorForElementList);
+        this._elementList = Layout.getElementsBySelectorList
+            <CaptchaElementListType, CaptchaSelectorForElementListType>(selectorForElementList);
 
         this.setEventListeners();
 
