@@ -97,7 +97,7 @@ class PageChanger {
 
         this.showSelectedLinkByCurrentPage();
         this.transformLogoByCurrentPage();
-        this.translator.translateSiteByCurrentLanguage();
+        this.translator.translateSite();
         this.imageModalViewer.setImageModalEvents();
     }
 

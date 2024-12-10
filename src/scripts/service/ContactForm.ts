@@ -84,12 +84,12 @@ class ContactForm {
             });
 
             if (emailjsResp.ok) {
-                showNotification(translation[Translator.CurrentLanguage].notification.successEmailSend, "green");
+                showNotification(translation[Translator.CurrentLanguageFromStorage].notification.successEmailSend, "green");
                 this.setEmailSendedState();
             }
         }
         catch (err) {
-            showNotification(translation[Translator.CurrentLanguage].notification.failedEmailSend, "orangered");
+            showNotification(translation[Translator.CurrentLanguageFromStorage].notification.failedEmailSend, "orangered");
             console.error(`EmailJS err: ${err}`);
         }
     }
@@ -155,7 +155,7 @@ class ContactForm {
     private validateNameField(): boolean {
         const nameValue = this._elementList.nameBox.value.trim();
         let isNameFieldValid = true;
-        const nameErrorBoxTranslationValue = translation[Translator.CurrentLanguage].contactFormErrorMessage.nameFieldLength;
+        const nameErrorBoxTranslationValue = translation[Translator.CurrentLanguageFromStorage].contactFormErrorMessage.nameFieldLength;
 
         if (nameValue.length < 2 || nameValue.length > 20) {
             isNameFieldValid = false;
@@ -171,7 +171,7 @@ class ContactForm {
     private validateEmailField(): boolean {
         const emailValue = this._elementList.emailBox.value.trim();
         let isEmailFieldValid = true;
-        const emailErrorBoxTranslationValue = translation[Translator.CurrentLanguage].contactFormErrorMessage.emailFieldFormat;
+        const emailErrorBoxTranslationValue = translation[Translator.CurrentLanguageFromStorage].contactFormErrorMessage.emailFieldFormat;
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -189,7 +189,7 @@ class ContactForm {
     private validateMessageField(): boolean {
         const messageValue = this._elementList.messageBox.value.trim();
         let isMessageFieldValid = true;
-        const messageErrorBoxTranslationValue = translation[Translator.CurrentLanguage].contactFormErrorMessage.messageFieldLength;
+        const messageErrorBoxTranslationValue = translation[Translator.CurrentLanguageFromStorage].contactFormErrorMessage.messageFieldLength;
 
         if (messageValue.length < 25) {
             isMessageFieldValid = false;

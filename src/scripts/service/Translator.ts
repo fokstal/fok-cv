@@ -1,6 +1,6 @@
 import { LANGUAGE_ENUM, STORAGE_KEYS } from "@scripts/const/const";
 import { convertStringToLanguageEnum } from "@scripts/helpers/convertToEnum";
-import { convertElement, getElementFromDocument } from "@scripts/helpers/elements";
+import { convertElement } from "@scripts/helpers/elements";
 import translation from "@scripts/const/translation";
 import {
     TranslationModel_ChartTitle,
@@ -8,47 +8,64 @@ import {
     TranslationModel_InnerHtml,
     TranslationModel_Title
 } from "@scripts/models/TranslationModel";
+import Layout from "./Layout";
+
+type TranslatorElementListType = {
+    selectList: HTMLSelectElement,
+}
+
+type TranslatorSelectorForElementListType = {
+    selectList: string,
+}
+
+const default_translatorSelectorForElementList: TranslatorSelectorForElementListType = {
+    selectList: ".language-button-select-list",
+}
 
 class Translator {
-    languageSelectEl: HTMLSelectElement;
-    baseLanguage: LANGUAGE_ENUM = LANGUAGE_ENUM.EN;
-    private _currentLanguage: LANGUAGE_ENUM = this.baseLanguage;
+    private _elementList: TranslatorElementListType;
+    private _baseLanguage: LANGUAGE_ENUM = LANGUAGE_ENUM.EN;
+    private _currentLanguage: LANGUAGE_ENUM = this._baseLanguage;
 
-    get currentLanguage() {
+    get CurrentLanguage() {
         return this._currentLanguage;
     }
-    set currentLanguage(language: LANGUAGE_ENUM) {
+    set CurrentLanguage(language: LANGUAGE_ENUM) {
         this._currentLanguage = language;
         localStorage.setItem(STORAGE_KEYS.local.currentLanguage, language);
     }
 
-    static get CurrentLanguage(): LANGUAGE_ENUM {
+    static get CurrentLanguageFromStorage(): LANGUAGE_ENUM {
         return convertStringToLanguageEnum(localStorage.getItem(STORAGE_KEYS.local.currentLanguage) || LANGUAGE_ENUM.EN);
     }
 
-    constructor(languageSelectElSelector: string, baseLanguage: LANGUAGE_ENUM) {
-        this.languageSelectEl = getElementFromDocument<HTMLSelectElement>(languageSelectElSelector);
-        this.baseLanguage = baseLanguage;
+    constructor(
+        baseLanguage: LANGUAGE_ENUM,
+        selectorForElementList: TranslatorSelectorForElementListType = default_translatorSelectorForElementList,
+    ) {
+        this._elementList = Layout.getElementsBySelectorList
+            <TranslatorElementListType, TranslatorSelectorForElementListType>(selectorForElementList);
+        this._baseLanguage = baseLanguage;
         this._currentLanguage =
             convertStringToLanguageEnum(
                 localStorage.getItem(STORAGE_KEYS.local.currentLanguage) || baseLanguage);
 
-        this.languageSelectEl.value = this._currentLanguage;
+        this._elementList.selectList.value = this._currentLanguage;
     }
 
     changeLanguage = () => {
         const selectedLanguage: LANGUAGE_ENUM =
             convertStringToLanguageEnum(
-                this.languageSelectEl.options[this.languageSelectEl.selectedIndex].value);
+                this._elementList.selectList.options[this._elementList.selectList.selectedIndex].value);
 
         document.documentElement.setAttribute("lang", selectedLanguage);
 
-        this.currentLanguage = selectedLanguage;
+        this.CurrentLanguage = selectedLanguage;
 
-        this.translateSiteByCurrentLanguage();
+        this.translateSite();
     };
 
-    translateSiteByCurrentLanguage = () => {
+    translateSite = () => {
         document
             .querySelectorAll("[translate-key]")
             .forEach(el => {
@@ -57,7 +74,6 @@ class Translator {
 
                 el.innerHTML = translation[this._currentLanguage].innerHtml[translateKey] || oldInnerHtml;
             });
-
 
         document
             .querySelectorAll("[translate-title-key]")

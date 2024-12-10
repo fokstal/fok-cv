@@ -31,7 +31,7 @@ class App {
         const componentFactory = new ComponentFactory(config.componentElSelector);
         await componentFactory.initAsync();
 
-        const translator = new Translator(config.languageSelectElSelector, App.baseLanguage);
+        const translator = new Translator(App.baseLanguage);
         const accessModeWorker = new AccessModeWorker(config.accessModeImgElSelector, App.isAccessModeBaseValue);
         const imageModalViewer = new ImageModalViewer(
             config.imageModalElSelector,
