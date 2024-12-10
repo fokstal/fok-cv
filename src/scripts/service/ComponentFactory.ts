@@ -3,16 +3,16 @@ import { getElementFromDocument } from "@scripts/helpers/elements";
 import { ComponentsModel } from "@scripts/models/models";
 
 class ComponentFactory {
-    container: HTMLDivElement;
-    root: HTMLDivElement = document.createElement("div");
-    components?: ComponentsModel;
+    private _containerElement: HTMLDivElement;
+    private _rootElement: HTMLDivElement = document.createElement("div");
+    private _componentList?: ComponentsModel;
 
-    constructor(containerElSelector: string) {
-        this.container = getElementFromDocument<HTMLDivElement>(containerElSelector);
+    public constructor(selectorForContainerElement: string = ".container") {
+        this._containerElement = getElementFromDocument<HTMLDivElement>(selectorForContainerElement);
     }
 
-    async initAsync() {
-        this.components = {
+    public async initAsync() {
+        this._componentList = {
             header: ComponentFactory.getComponentFromLayout
                 (await ComponentFactory.getLayoutFromFileAsync(`${FOLDERS.components.index}${COMPONENT_NAMES.header}.html`)),
             pageList: await Promise.all(Object.values(COMPONENT_NAMES.pages).map(async (pageName) => {
@@ -30,18 +30,18 @@ class ComponentFactory {
                 (await ComponentFactory.getLayoutFromFileAsync(`${FOLDERS.components.index}${COMPONENT_NAMES.imgModal}.html`)),
         }
 
-        this.root.classList.add("root");
+        this._rootElement.classList.add("root");
 
         this.setComponentsToContainer(
-            this.components.header,
-            this.root,
-            this.components.footer,
-            this.components.overlay,
-            this.components.imgModal
+            this._componentList.header,
+            this._rootElement,
+            this._componentList.footer,
+            this._componentList.overlay,
+            this._componentList.imgModal
         );
     }
 
-    static async getLayoutFromFileAsync(pathToFile: string): Promise<string> {
+    public static async getLayoutFromFileAsync(pathToFile: string): Promise<string> {
         try {
             const resp = await fetch(window.location.href + pathToFile)
 
@@ -60,7 +60,7 @@ class ComponentFactory {
         }
     }
 
-    static getComponentFromLayout(layout: string): HTMLElement {
+    public static getComponentFromLayout(layout: string): HTMLElement {
         const tempDiv: HTMLDivElement = document.createElement("div");
 
         tempDiv.innerHTML = layout;
@@ -70,7 +70,7 @@ class ComponentFactory {
 
     private setComponentsToContainer(...components: HTMLElement[]) {
         components.forEach(component => {
-            this.container.appendChild(component);
+            this._containerElement.appendChild(component);
         });
     }
 }
