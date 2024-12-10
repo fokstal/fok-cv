@@ -1,5 +1,5 @@
 import { convertElement } from "@scripts/helpers/elements";
-import Layout from "./Layout";
+import Layout from "@scripts/service/Layout";
 
 type ImageModalElementListType = {
     imageModal: HTMLDivElement,
