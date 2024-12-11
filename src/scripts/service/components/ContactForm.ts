@@ -80,12 +80,12 @@ class ContactForm {
             });
 
             if (emailjsResp.ok) {
-                showNotification(translation[Translator.CurrentLanguageFromStorage].notification.successEmailSend, "green");
+                showNotification({ message: translation[Translator.CurrentLanguageFromStorage].notification.successEmailSend, color: "green" });
                 this.setEmailSendedState();
             }
         }
         catch (err) {
-            showNotification(translation[Translator.CurrentLanguageFromStorage].notification.failedEmailSend, "orangered");
+            showNotification({ message: translation[Translator.CurrentLanguageFromStorage].notification.failedEmailSend, color: "orangered" });
             console.error(`EmailJS err: ${err}`);
         }
     }

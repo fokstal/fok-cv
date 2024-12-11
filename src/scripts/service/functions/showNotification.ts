@@ -1,6 +1,12 @@
 import { getElementFromDocument } from "@scripts/helpers/elements";
 
-const showNotification = (message: string, color: string = "#434343") => {
+interface IShowNotificationProps {
+    message: string,
+    color?: string,
+    ms?: number,
+}
+
+const showNotification = ({ message, color = "#434343", ms = 3000 }: IShowNotificationProps) => {
     const notificationBlock = getElementFromDocument<HTMLElement>("#notificationBlock");
     const content = notificationBlock.querySelector("#notificationBlockContent") as HTMLElement;
 
@@ -13,7 +19,8 @@ const showNotification = (message: string, color: string = "#434343") => {
     setTimeout(() => {
         notificationBlock.style.visibility = "hidden";
         notificationBlock.style.fontSize = "0px";
-    }, 3000);
+    }, ms);
 }
 
 export default showNotification;
+export { IShowNotificationProps }
