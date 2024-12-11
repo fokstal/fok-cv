@@ -91,15 +91,16 @@
 
     &__network {
         &-list {
-            @include flex-row-justify-space;
-            width: 40vw;
+            @include flex-row;
+            justify-content: center;
+            gap: 10vw;
             margin: 5% auto;
         }
 
         &-link {
             &-icon {
                 display: block;
-                width: min(70px, 5vw);
+                width: min(70px, 10vw);
             }
         }
     }
