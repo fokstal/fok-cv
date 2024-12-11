@@ -165,6 +165,8 @@ class ContactForm {
         if (isNameFieldValid)
             this._elementList.nameErrorBox.style.opacity = "0";
 
+        this._elementList.nameBox.style.borderColor = isNameFieldValid ? "green" : "orangered";
+
         return isNameFieldValid;
     }
 
@@ -183,6 +185,8 @@ class ContactForm {
         if (isEmailFieldValid)
             this._elementList.emailErrorBox.style.opacity = "0";
 
+        this._elementList.emailBox.style.borderColor = isEmailFieldValid ? "green" : "orangered";
+
         return isEmailFieldValid;
     }
 
@@ -198,6 +202,8 @@ class ContactForm {
 
         if (isMessageFieldValid)
             this._elementList.messageErrorBox.style.opacity = "0";
+
+        this._elementList.messageBox.style.borderColor = isMessageFieldValid ? "green" : "orangered";
 
         return isMessageFieldValid;
     }
