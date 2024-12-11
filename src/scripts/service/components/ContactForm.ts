@@ -64,12 +64,8 @@ class ContactForm {
     public submit = async () => {
         const emailJSBody = this.generateEmailJSBody();
 
-        if (!this.validate()) {
+        if (!this.validate() && !this._captcha.IsSuccess) {
             this.colorErrorBox("orangered", this._elementList.nameErrorBox, this._elementList.emailErrorBox, this._elementList.messageErrorBox);
-            return;
-        }
-
-        if (!this._captcha.IsSuccess) {
             this._captcha.test();
             return;
         }
@@ -125,6 +121,11 @@ class ContactForm {
         this._elementList.nameBox.value = "";
         this._elementList.emailBox.value = "";
         this._elementList.messageBox.value = "";
+
+        this._elementList.nameBox.style.borderColor = "#8f8f9d";
+        this._elementList.emailBox.style.borderColor = "#8f8f9d";
+        this._elementList.messageBox.style.borderColor = "#8f8f9d";
+
         this._captcha.reset();
 
         setTimeout(() => {
