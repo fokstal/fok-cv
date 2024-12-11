@@ -6,7 +6,6 @@ type CaptchaElementListType = {
     ctrl: HTMLDivElement,
     textBox: HTMLInputElement,
     resetBtn: HTMLButtonElement,
-    submitBtn: HTMLButtonElement,
 }
 
 type CaptchaSelectorForElementListType = {
@@ -14,7 +13,6 @@ type CaptchaSelectorForElementListType = {
     ctrl: string,
     textBox: string,
     resetBtn: string,
-    submitBtn: string,
 }
 
 const default_captchaSelectorForElementList: CaptchaSelectorForElementListType = {
@@ -22,7 +20,6 @@ const default_captchaSelectorForElementList: CaptchaSelectorForElementListType =
     ctrl: "#captchaCtrl",
     textBox: "#captchaInput",
     resetBtn: "#captchaResetBtn",
-    submitBtn: "#captchaSubmitBtn",
 }
 
 class Captcha {
@@ -58,7 +55,7 @@ class Captcha {
     public test() {
         this._isSuccess = this._elementList.textBox.value === this._challengeLine;
 
-        this._elementList.submitBtn.style.color = this._isSuccess ? "green" : "orangered";
+        this._elementList.textBox.style.borderColor = this._isSuccess ? "green" : "orangered";
     }
 
     public reset() {
@@ -72,13 +69,12 @@ class Captcha {
             this._elementList.resetBtn.classList.remove("rotate");
         }, 500)
 
-        this._elementList.submitBtn.style.color = "#434343";
+        this._elementList.textBox.style.borderColor = "#434343";
     }
 
     private setEventListeners() {
         this._elementList.resetBtn.addEventListener("click", this.reset.bind(this));
-        this._elementList.submitBtn.addEventListener("click", this.test.bind(this));
-        this._elementList.textBox.addEventListener("focusout", this.test.bind(this));
+        this._elementList.textBox.addEventListener("input", this.test.bind(this));
     }
 
     private print() {
