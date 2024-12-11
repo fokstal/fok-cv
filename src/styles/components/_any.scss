@@ -36,6 +36,11 @@
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 70%;
+
     &-link {
         font-family: $_font-family-logo;
         font-weight: 500;
@@ -49,10 +54,23 @@
     }
 
     .notification-block {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        width: 80%;
+        gap: 15px;
         visibility: hidden;
         font-size: 0;
         transition: all 1s;
         font-family: $_font-family-notification;
+
+        &__content {
+            display: flex;
+            align-items: center;
+            height: 80px;
+            overflow: hidden;
+            white-space: wrap;
+            text-overflow: ellipsis;
+            line-height: 1;
+        }
     }
 }

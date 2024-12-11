@@ -14,7 +14,7 @@ const showNotification = ({ message, color = "#434343", ms = 3000 }: IShowNotifi
     content.style.color = color;
 
     notificationBlock.style.visibility = "visible";
-    notificationBlock.style.fontSize = "32px";
+    notificationBlock.style.fontSize = "min(24px, 5vw)";
 
     setTimeout(() => {
         notificationBlock.style.visibility = "hidden";
