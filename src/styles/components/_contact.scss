@@ -21,12 +21,16 @@
                 &-text-box {
                     width: 100%;
                     font-size: 20px;
+                    border: 1px #8f8f9d solid;
+                    border-radius: 2px;
                 }
 
                 &-text-box-area {
                     width: 100%;
                     font-size: 20px;
                     resize: vertical;
+                    border: 1px #8f8f9d solid;
+                    border-radius: 2px;
                 }
 
                 &-error-box {
@@ -41,7 +45,7 @@
 
             &-send-button {
                 display: block;
-                background-color: #F9EDDF!important;
+                background-color: #F9EDDF !important;
                 width: 120px;
                 height: 40px;
                 margin: 0 auto;
