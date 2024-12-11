@@ -8,67 +8,66 @@ import * as echarts from "echarts";
 import ChartOptions from "@scripts/const/chartOptions/ChartOptions";
 import ContactForm from "@scripts/service/components/ContactForm";
 
-interface PageChangerProps {
+interface IPagesProps {
     componentFactory: ComponentFactory,
     translator: Translator,
     imageModalViewer: ImageModal,
     basePageName: PAGE_NAME_ENUM,
 }
 
-class PageChanger {
-    componentFactory: ComponentFactory;
-    translator: Translator;
-    imageModalViewer: ImageModal;
-    basePageName: PAGE_NAME_ENUM;
-    burgerCheckbox: HTMLInputElement;
-
+class Pages {
+    private _componentFactory: ComponentFactory;
+    private _translator: Translator;
+    private _imageModal: ImageModal;
+    private _basePageName: PAGE_NAME_ENUM;
+    private _burgerCheckbox: HTMLInputElement;
     private _currentPage: PAGE_NAME_ENUM;
 
-    get currentPage() {
+    public get CurrentPage() {
         return this._currentPage;
     }
-    set currentPage(pageName) {
+    private set CurrentPage(pageName) {
         this._currentPage = pageName;
         sessionStorage.setItem(STORAGE_KEYS.session.currentPage, pageName);
     }
 
-    constructor(props: PageChangerProps) {
-        this.componentFactory = props.componentFactory;
-        this.translator = props.translator;
-        this.imageModalViewer = props.imageModalViewer;
-        this.basePageName = props.basePageName;
-        this._currentPage = this.basePageName;
+    public constructor(props: IPagesProps, burgerCheckboxSelector: string = "#viewBurgerNavCheckbox") {
+        this._componentFactory = props.componentFactory;
+        this._translator = props.translator;
+        this._imageModal = props.imageModalViewer;
+        this._basePageName = props.basePageName;
+        this._currentPage = this._basePageName;
 
-        this.currentPage = convertStringToPageNameEnum(
+        this.CurrentPage = convertStringToPageNameEnum(
             sessionStorage.getItem(STORAGE_KEYS.session.currentPage) || props.basePageName);
 
-        this.burgerCheckbox = getElementFromDocument<HTMLInputElement>("#viewBurgerNavCheckbox");
+        this._burgerCheckbox = getElementFromDocument<HTMLInputElement>(burgerCheckboxSelector);
 
-        this.changePageByLink(this.currentPage)
+        this.change(this.CurrentPage)
 
-        this.burgerCheckbox.addEventListener("click", (el) => {
+        this._burgerCheckbox.addEventListener("click", (el) => {
             const isViewBurger = convertElement<HTMLInputElement>(el.currentTarget).checked;
 
             if (isViewBurger) {
-                this.componentFactory._rootElement.style.visibility = "hidden";
-                this.componentFactory._rootElement.style.opacity = "0";
+                this._componentFactory._rootElement.style.visibility = "hidden";
+                this._componentFactory._rootElement.style.opacity = "0";
             }
             else {
-                this.componentFactory._rootElement.style.visibility = "visible";
-                this.componentFactory._rootElement.style.opacity = "1";
+                this._componentFactory._rootElement.style.visibility = "visible";
+                this._componentFactory._rootElement.style.opacity = "1";
             }
         })
     }
 
-    changePageByLink(pageNameToSelect: string) {
-        const root = this.componentFactory._rootElement;
+    public change(pageNameToSelect: string) {
+        const root = this._componentFactory._rootElement;
 
-        this.currentPage = convertStringToPageNameEnum(pageNameToSelect);
-        this.burgerCheckbox.checked = false;
+        this.CurrentPage = convertStringToPageNameEnum(pageNameToSelect);
+        this._burgerCheckbox.checked = false;
         root.style.visibility = "visible";
         root.style.opacity = "1";
 
-        this.setPageByCurrentPage();
+        this.set();
 
         if (pageNameToSelect == PAGE_NAME_ENUM.exp) {
             const itLanguageChart = echarts.init((getElementFromDocument<HTMLCanvasElement>("#it-language-chart")));
@@ -95,28 +94,28 @@ class PageChanger {
             window.sendContactToAdminEmail = contactForm.submit;
         }
 
-        this.showSelectedLinkByCurrentPage();
-        this.transformLogoByCurrentPage();
-        this.translator.translateSite();
-        this.imageModalViewer.setEventToPhotosForShowImgModal();
+        this.showSelectedLink();
+        this.transformLogo();
+        this._translator.translateSite();
+        this._imageModal.setEventToPhotosForShowImgModal();
     }
 
-    private setPageByCurrentPage() {
-        const components = this.componentFactory._componentList;
+    private set() {
+        const components = this._componentFactory._componentList;
 
         if (components) {
             const currentPage = this._currentPage;
 
-            this.componentFactory._rootElement.innerHTML = components.pageList[currentPage].outerHTML;
+            this._componentFactory._rootElement.innerHTML = components.pageList[currentPage].outerHTML;
 
             document.title = "fok ∙ " + currentPage;
         }
     }
 
-    private showSelectedLinkByCurrentPage() {
+    private showSelectedLink() {
         const currentPage = this._currentPage;
 
-        this.componentFactory._containerElement
+        this._componentFactory._containerElement
             .querySelectorAll(".header__nav")
             .forEach(navEl => {
                 navEl.querySelectorAll(".header__nav-link")
@@ -129,9 +128,9 @@ class PageChanger {
             });
     }
 
-    private transformLogoByCurrentPage() {
+    private transformLogo() {
         const currentPage = this._currentPage;
-        const logoLinkEl = convertElement<HTMLLinkElement>(this.componentFactory._containerElement.querySelector(".logo-link"));
+        const logoLinkEl = convertElement<HTMLLinkElement>(this._componentFactory._containerElement.querySelector(".logo-link"));
 
         if (currentPage === PAGE_NAME_ENUM.home) {
             logoLinkEl.classList.add("logo-link--big");
@@ -142,4 +141,4 @@ class PageChanger {
     }
 }
 
-export default PageChanger
+export default Pages

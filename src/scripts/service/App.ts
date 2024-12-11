@@ -2,7 +2,7 @@ import ComponentFactory from "@scripts/service/ComponentFactory";
 import Translator from "@scripts/service/components/Translator";
 import AccessMode from "@scripts/service/components/AccessMode";
 import ImageModal from "@scripts/service/components/ImageModal";
-import PageChanger from "@scripts/service/PageChanger";
+import Pages from "@scripts/service/Pages";
 import { LANGUAGE_ENUM, PAGE_NAME_ENUM } from "@scripts/const/const";
 import { convertStringToLanguageEnum } from "@scripts/helpers/convertToEnum";
 
@@ -26,14 +26,14 @@ class App {
         const accessModeWorker = new AccessMode(App.isAccessModeBaseValue);
         const imageModalViewer = new ImageModal();
 
-        const pageChanger = new PageChanger({
+        const pageChanger = new Pages({
             componentFactory: componentFactory,
             translator: translator,
             imageModalViewer: imageModalViewer,
             basePageName: App.startPageName,
         });
 
-        window.changePageByLink = pageChanger.changePageByLink.bind(pageChanger);
+        window.changePageByLink = pageChanger.change.bind(pageChanger);
         window.toggleAccessMode = accessModeWorker.toggle;
         window.changeLanguage = translator.changeLanguage;
     }
