@@ -11,7 +11,7 @@ import ContactForm from "@scripts/service/components/ContactForm";
 interface IPagesProps {
     componentFactory: ComponentFactory,
     translator: Translator,
-    imageModalViewer: ImageModal,
+    imageModal: ImageModal,
     basePageName: PAGE_NAME_ENUM,
 }
 
@@ -34,7 +34,7 @@ class Pages {
     public constructor(props: IPagesProps, burgerCheckboxSelector: string = "#viewBurgerNavCheckbox") {
         this._componentFactory = props.componentFactory;
         this._translator = props.translator;
-        this._imageModal = props.imageModalViewer;
+        this._imageModal = props.imageModal;
         this._basePageName = props.basePageName;
         this._currentPage = this._basePageName;
 

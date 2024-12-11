@@ -23,18 +23,18 @@ class App {
         await componentFactory.initAsync();
 
         const translator = new Translator(App.baseLanguage);
-        const accessModeWorker = new AccessMode(App.isAccessModeBaseValue);
-        const imageModalViewer = new ImageModal();
+        const accessMode = new AccessMode(App.isAccessModeBaseValue);
+        const imageModal = new ImageModal();
 
-        const pageChanger = new Pages({
+        const pages = new Pages({
             componentFactory: componentFactory,
             translator: translator,
-            imageModalViewer: imageModalViewer,
+            imageModal: imageModal,
             basePageName: App.startPageName,
         });
 
-        window.changePageByLink = pageChanger.change.bind(pageChanger);
-        window.toggleAccessMode = accessModeWorker.toggle;
+        window.changePageByLink = pages.change.bind(pages);
+        window.toggleAccessMode = accessMode.toggle;
         window.changeLanguage = translator.changeLanguage;
     }
 }
