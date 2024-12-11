@@ -74,6 +74,7 @@ class Captcha {
 
     private setEventListeners() {
         this._elementList.resetBtn.addEventListener("click", this.reset.bind(this));
+        this._elementList.textBox.addEventListener("focusin", this.test.bind(this));
         this._elementList.textBox.addEventListener("input", this.test.bind(this));
     }
 
