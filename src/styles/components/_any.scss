@@ -45,8 +45,7 @@
         font-family: $_font-family-logo;
         font-weight: 500;
         font-size: 80px;
-
-        transition: font-size .5s;
+        transition: font-size .5s ease-in-out!important;
     }
 
     &-link--big {
