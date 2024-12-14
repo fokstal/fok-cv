@@ -25,7 +25,6 @@
             justify-content: center;
             align-items: center;
 
-
             &-title {
                 font-size: 20px !important;
                 font-weight: 400 !important;
@@ -33,8 +32,8 @@
             }
 
             &-element {
-                width: 40vw;
-                height: min(650px, 40vw);
+                width: min(650px, 70vw);
+                height: min(650px, 60vw);
             }
 
             @media (max-width:1366px) {}
