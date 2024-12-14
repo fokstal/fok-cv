@@ -7,13 +7,16 @@
         &-list {
             @include flex-row;
             text-align: center;
+
+            &-item {
+                margin: 0 .65rem;
+            }
         }
 
         &-link {
             font-weight: 500;
             font-size: 26px;
             color: $_color-dark-gray;
-            margin: 0 .65rem;
 
             border-bottom: 1px solid transparent;
             transition: all $_transition-duration ease;
