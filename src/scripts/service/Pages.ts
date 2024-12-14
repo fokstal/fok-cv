@@ -49,12 +49,15 @@ class Pages {
             const isViewBurger = convertElement<HTMLInputElement>(el.currentTarget).checked;
 
             if (isViewBurger) {
-                this._componentFactory._rootElement.style.visibility = "hidden";
                 this._componentFactory._rootElement.style.opacity = "0";
+
+                setTimeout(() => {
+                    this._componentFactory._rootElement.style.visibility = "hidden";
+                }, 500);
             }
             else {
-                this._componentFactory._rootElement.style.visibility = "visible";
                 this._componentFactory._rootElement.style.opacity = "1";
+                this._componentFactory._rootElement.style.visibility = "visible";
             }
         })
     }

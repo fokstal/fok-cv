@@ -31,6 +31,7 @@ body {
 
         .root {
             flex: 1 1 auto;
+            transition: opacity .5s;
 
             main {
                 animation: fade 1s;
