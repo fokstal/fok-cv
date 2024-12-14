@@ -119,7 +119,7 @@
             @include title-center;
         }
 
-        &-works-list-item {
+        &-works-list-item:not(:first-child) {
             margin-top: 100px;
         }
 
