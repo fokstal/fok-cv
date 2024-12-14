@@ -138,7 +138,7 @@
 
             &-photo {
                 margin: 20px auto 0 auto;
-                max-width: 50%;
+                width: max(275px, 50%);
             }
         }
     }

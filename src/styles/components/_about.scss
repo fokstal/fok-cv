@@ -1,11 +1,15 @@
 .about {
     &__personal-info {
-        @include flex-row;
+        @include flex-row(start);
 
         &-photo {
             display: inline-block;
             width: min(550px, 40vw);
             border-radius: 0 $_border-radius-img 0 0;
+
+            @media (max-width: 580px) {
+                width: 55vw;
+            }
         }
 
         &-text {
@@ -25,6 +29,7 @@
 
         @media (max-width: 720px) {
             flex-direction: column;
+            align-items: center;
         }
     }
 
@@ -41,7 +46,7 @@
         &-photo {
             display: inline-block;
             margin: 20px auto 0 auto;
-            width: 60vw;
+            width: max(275px, 60vw);
             border-radius: $_border-radius-img 0 $_border-radius-img 0;
         }
     }
