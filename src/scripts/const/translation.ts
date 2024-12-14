@@ -46,7 +46,7 @@ const translation: TranslationModel = {
             udemyTitle: "Udemy.com",
             udemyCourseName: "ASP.NET Core MVC. Частка 1",
             skillsTitle: "Навыкі",
-            andAlsoText: "а таксама...",
+            technologyTitle: "тэхналогіі...",
 
             // about page
             about: "пра мяне",
@@ -167,7 +167,7 @@ const translation: TranslationModel = {
             udemyTitle: "Udemy.com",
             udemyCourseName: "ASP.NET Core MVC. Часть 1",
             skillsTitle: "Навыки",
-            andAlsoText: "а также...",
+            technologyTitle: "технологии...",
 
             // about page
             about: "обо мне",
@@ -287,7 +287,7 @@ const translation: TranslationModel = {
             udemyTitle: "Udemy.com",
             udemyCourseName: "ASP.NET Core MVC. Part 1",
             skillsTitle: "Skills",
-            andAlsoText: "and also...",
+            technologyTitle: "technology...",
 
             // about page
             about: "about",

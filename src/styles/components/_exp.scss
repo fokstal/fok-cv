@@ -24,7 +24,7 @@
             text-align: center;
             justify-content: center;
             align-items: center;
-            
+
 
             &-title {
                 font-size: 20px !important;
@@ -40,17 +40,47 @@
             @media (max-width:1366px) {}
         }
 
-        &-any {
+        &-technology {
             display: block;
-            width: max(270px, 40vw);
-            margin: 130px auto 0 auto;
+            width: max(270px, 60vw);
+            margin: 0 auto 130px auto;
             text-align: center;
 
             &-title {
                 font-size: 20px !important;
             }
 
-            &-list {
+            &-favorite-list {
+                margin-bottom: 20px;
+
+                &-item {
+                    display: inline-flex;
+                    width: max(180px, 14vw);
+                    padding: 5px;
+                    margin: 2px 0;
+                    @include border;
+                    font-size: max(24px, 1.5vw);
+                    justify-content: center;
+                    align-items: center;
+
+                    &:hover {
+                        opacity: .1;
+                        transition: opacity $_transition-duration;
+                    }
+
+                    &[title] {
+                        cursor: help;
+                    }
+
+                    img {
+                        width: min(60px, 10vw);
+                        margin: 0;
+                        padding-right: 10px;
+                    }
+                }
+            }
+
+            &-any-list {
                 display: block;
 
                 &-item {

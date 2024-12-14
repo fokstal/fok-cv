@@ -30,7 +30,7 @@ type TranslationModel_InnerHtml = {
     udemyTitle: string,
     udemyCourseName: string,
     skillsTitle: string,
-    andAlsoText: string,
+    technologyTitle: string,
 
     // about page
     about: string,
