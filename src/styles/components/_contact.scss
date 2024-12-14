@@ -94,7 +94,7 @@
             @include flex-row;
             justify-content: center;
             gap: 10vw;
-            margin: 5% auto;
+            margin: max(50px, 5%) auto;
         }
 
         &-link {
