@@ -10,7 +10,42 @@
 </head>
 
 <body>
+    <div class="loader" id="loader">
+        <div class="loader__ring"></div>
+    </div>
     <div class="container"></div>
 </body>
+
+<style>
+    .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .loader__ring {
+        height: 50px;
+        width: 50px;
+        margin: 0;
+        padding: 0;
+
+        border: 3px gainsboro solid;
+        border-top: 3px green solid;
+        border-radius: 50%;
+
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
 
 </html>
