@@ -1,0 +1,1 @@
+git branch -D main-public && git checkout -b main-public &&  shopt -s extglob && rm -rf !(public|docs) && mv public/* ./ && rmdir public && rm -f .gitignore && git add . && git commit -m "*publish" && git push origin main-public -f && git checkout main
