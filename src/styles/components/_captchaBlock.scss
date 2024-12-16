@@ -34,8 +34,16 @@
             height: 20px;
             transition: transform .2s;
 
-            &:hover {
-                transform: rotate(45deg);
+            @media (hover: hover) {
+                &:hover {
+                    transform: rotate(45deg);
+                }
+            }
+
+            @media (hover: none) {
+                &:active {
+                    transform: rotate(45deg);
+                }
             }
         }
     }

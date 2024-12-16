@@ -21,8 +21,16 @@
             border-bottom: 1px solid transparent;
             transition: all $_transition-duration ease;
 
-            &:hover {
-                border-bottom: 1px solid $_color-dark-gray
+            @media (hover: hover) {
+                &:hover {
+                    border-bottom: 1px solid $_color-dark-gray
+                }
+            }
+
+            @media (hover: none) {
+                &:active {
+                    border-bottom: 1px solid $_color-dark-gray
+                }
             }
 
             &--selected {
@@ -63,9 +71,18 @@
                     transform: translateX(-81.5%);
                 }
 
-                &:hover~.header__burger-nav-button-icon {
-                    opacity: .7;
-                    transition: opacity $_transition-duration;
+                @media (hover: hover) {
+                    &:hover~.header__burger-nav-button-icon {
+                        opacity: .7;
+                        transition: opacity $_transition-duration;
+                    }
+                }
+
+                @media (hover: none) {
+                    &:active~.header__burger-nav-button-icon {
+                        opacity: .7;
+                        transition: opacity $_transition-duration;
+                    }
                 }
 
                 &:checked~.header__burger-nav-button-icon .header__burger-nav-button-icon-line_first {

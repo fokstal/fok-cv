@@ -30,9 +30,18 @@
 }
 
 
-@mixin hover-opacity() {
-    &:hover {
-        opacity: .7;
-        transition: opacity $_transition-duration;
+@mixin hover-opacity($opacity-value: .7) {
+    @media (hover: hover) {
+        &:hover {
+            opacity: $opacity-value;
+            transition: opacity $_transition-duration;
+        }
+    }
+
+    @media (hover: none) {
+        &:active {
+            opacity: $opacity-value;
+            transition: opacity $_transition-duration;
+        }
     }
 }
