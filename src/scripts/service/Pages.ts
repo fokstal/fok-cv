@@ -22,6 +22,10 @@ class Pages {
     private _basePageName: PAGE_NAME_ENUM;
     private _burgerCheckbox: HTMLInputElement;
     private _currentPage: PAGE_NAME_ENUM;
+    private _touchCoordinate = {
+        startX: 0,
+        endX: 0,
+    }
 
     public get CurrentPage() {
         return this._currentPage;
@@ -59,7 +63,23 @@ class Pages {
                 this._componentFactory._rootElement.style.opacity = "1";
                 this._componentFactory._rootElement.style.visibility = "visible";
             }
-        })
+        });
+
+        window.addEventListener("touchstart", (event) => {
+            this._touchCoordinate.startX = event.touches[0].pageX;
+        });
+
+        window.addEventListener("touchend", (event) => {
+            this._touchCoordinate.endX = event.changedTouches[0].pageX;
+
+            if (!this._burgerCheckbox.checked && this._touchCoordinate.startX - this._touchCoordinate.endX > 250) {
+                this._burgerCheckbox.click();
+            }
+
+            if (this._burgerCheckbox.checked && this._touchCoordinate.startX - this._touchCoordinate.endX < -250) {
+                this._burgerCheckbox.click();
+            }
+        });
     }
 
     public change(pageNameToSelect: string) {
