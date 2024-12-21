@@ -5,12 +5,8 @@
         width: max(270px, 40vw);
     }
 
-    &__control {
+    &__wrapper {
         @include flex-row-justify-space;
-        width: 200px;
-    }
-
-    &__copyright-link {
-        margin-top: 20px;
+        gap: 20px;
     }
 }

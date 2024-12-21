@@ -1,9 +1,10 @@
 <footer class="footer">
     <hr class="footer__line">
-    <div class="footer__control">
-        <button class="share-button" translate-title-key="shareLink" title="Share link on site">
-            <img class="share-button-icon" src="./assets/icons/any/share-one.svg">
-        </button>
+    <div class="footer__wrapper">
+        <a class="copyright-link footer__wrapper-copyright-link" href="https://github.com/Fokstal" target="_blank"
+            rel="noopener noreferrer">
+            © <small>2024-2025</small>, Fokstal
+        </a>
         <div class="language-button" translate-title-key="changeLanguage" title="Change language">
             <select id="languageSelectList" class="language-button-select-list" onchange="changeLanguage()">
                 <option class="language-button-select-list-item" value="be-BY">BY</option>
@@ -11,12 +12,6 @@
                 <option class="language-button-select-list-item" value="en-US">EN</option>
             </select>
         </div>
-        <button class="access-mode-button" onclick="toggleAccessMode()" translate-title-key="accessMode" title="Accessibility mode toggle">
-            <img id="accessModeBtnIcon" class="access-mode-button-icon" src="./assets/icons/any/eye-closed.svg">
-        </button>
     </div>
-    <a class="copyright-link footer__copyright-link" href="https://github.com/Fokstal" target="_blank" rel="noopener noreferrer">
-        © <small>2024-2025</small>, Fokstal
-    </a>
 </footer>
 </div>

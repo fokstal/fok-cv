@@ -17,7 +17,6 @@ const STORAGE_KEYS = {
     },
     session: {
         currentPage: "currentPage",
-        isAccessMode: "isAccessMode",
     },
 }
 

@@ -1,6 +1,5 @@
 import ComponentFactory from "@scripts/service/ComponentFactory";
 import Translator from "@scripts/service/components/Translator";
-import AccessMode from "@scripts/service/components/AccessMode";
 import ImageModal from "@scripts/service/components/ImageModal";
 import Pages from "@scripts/service/Pages";
 import { LANGUAGE_ENUM, PAGE_NAME_ENUM } from "@scripts/const/const";
@@ -23,7 +22,6 @@ class App {
         await componentFactory.initAsync();
 
         const translator = new Translator(App.baseLanguage);
-        const accessMode = new AccessMode(App.isAccessModeBaseValue);
         const imageModal = new ImageModal();
 
         const pages = new Pages({
@@ -34,7 +32,6 @@ class App {
         });
 
         window.changePageByLink = pages.change.bind(pages);
-        window.toggleAccessMode = accessMode.toggle;
         window.changeLanguage = translator.changeLanguage;
     }
 }

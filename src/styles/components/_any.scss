@@ -1,31 +1,11 @@
-.share-button {
-    width: 24px;
-    height: 24px;
-}
-
 .language-button {
     @include border;
     font-size: 14px;
-    margin: 0 20px;
 
     &-select-list {
         background: none;
         border: none;
         cursor: pointer;
-    }
-}
-
-.access-mode-button {
-    width: 24px;
-    height: 24px;
-
-    &-icon {
-        opacity: 1;
-        transition: opacity .2s;
-
-        &--fade-out {
-            opacity: 0;
-        }
     }
 }
 
