@@ -1,4 +1,4 @@
-import { STORAGE_KEYS, PAGE_NAME_ENUM } from "@scripts/const/const";
+import { STORAGE_KEYS, PAGE_NAME_ENUM, SWIPE_LENGTH } from "@scripts/const/const";
 import ImageModal from "@scripts/service/components/ImageModal";
 import ComponentFactory from "@scripts/service/ComponentFactory";
 import Translator from "@scripts/service/components/Translator";
@@ -72,11 +72,11 @@ class Pages {
         window.addEventListener("touchend", (event) => {
             this._touchCoordinate.endX = event.changedTouches[0].pageX;
 
-            if (!this._burgerCheckbox.checked && this._touchCoordinate.startX - this._touchCoordinate.endX > 250) {
+            if (!this._burgerCheckbox.checked && this._touchCoordinate.startX - this._touchCoordinate.endX > SWIPE_LENGTH) {
                 this._burgerCheckbox.click();
             }
 
-            if (this._burgerCheckbox.checked && this._touchCoordinate.startX - this._touchCoordinate.endX < -250) {
+            if (this._burgerCheckbox.checked && this._touchCoordinate.startX - this._touchCoordinate.endX < -SWIPE_LENGTH) {
                 this._burgerCheckbox.click();
             }
         });
